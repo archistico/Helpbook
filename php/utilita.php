@@ -12,4 +12,10 @@ function convertiApostrofi($stringa) {
     return htmlspecialchars($stringa, ENT_QUOTES,'UTF-8', true);
 }
 
+function pulisciStringa($stringa) {
+    return str_replace("'", " ", str_replace('"', ' ', trim($stringa))); 
+}
+
 ?>
+
+

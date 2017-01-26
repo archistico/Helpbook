@@ -1,0 +1,37 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28-lug-2016, 1.20.58
+    Author     : Emilie
+*/
+
+hr.fatturazione {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 0px;
+    border-top: 3px solid #ccc;
+}
+
+hr.visualizzafattura {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0px;
+    border-top: 3px solid #ccc;
+}
+
+.img-ridotta20 {
+    display: block;
+    max-width: 20%;
+    height: auto;
+}
+
+.text-grigio {
+    color: #AAA;
+}
+
+.icone-unite .inlinea {
+    display: inline;
+}
