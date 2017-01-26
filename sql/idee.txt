@@ -1,0 +1,8 @@
+Entrate
+Uscite
+Titolo
+Documento
+Tipologia
+Causale
+Data
+Provenienza
