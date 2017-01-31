@@ -2,9 +2,9 @@
 include 'db_connect.php';
 include 'functions.php';
 sec_session_start(); // usiamo la nostra funzione per avviare una sessione php sicura
-if(isset($_POST['email'], $_POST['pw'])) {
+if(isset($_POST['email'], $_POST['p'])) {
    $email = $_POST['email'];
-   $password = $_POST['pw']; // Recupero la password criptata.
+   $password = $_POST['p']; // Recupero la password criptata.
    if(login($email, $password, $mysqli) == true) {
       // Login eseguito
       header('Location: ./index.php');

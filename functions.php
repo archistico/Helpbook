@@ -13,11 +13,11 @@ function sec_session_start() {
 
 function login($email, $password, $mysqli) {
    // Usando statement sql 'prepared' non sarà possibile attuare un attacco di tipo SQL injection.
-   if ($stmt = $mysqli->prepare("SELECT id, username, password, salt FROM utente WHERE email = ? LIMIT 1")) {
+   if ($stmt = $mysqli->prepare("SELECT idutente, username, password, salt, ruolo FROM utenti WHERE email = ? LIMIT 1")) {
       $stmt->bind_param('s', $email); // esegue il bind del parametro '$email'.
       $stmt->execute(); // esegue la query appena creata.
       $stmt->store_result();
-      $stmt->bind_result($user_id, $username, $db_password, $salt); // recupera il risultato della query e lo memorizza nelle relative variabili.
+      $stmt->bind_result($user_id, $username, $db_password, $salt, $ruolo); // recupera il risultato della query e lo memorizza nelle relative variabili.
       $stmt->fetch();
       $password = hash('sha512', $password.$salt); // codifica la password usando una chiave univoca.
       if($stmt->num_rows == 1) { // se l'utente esiste
@@ -36,6 +36,7 @@ function login($email, $password, $mysqli) {
                $username = preg_replace("/[^a-zA-Z0-9_\-]+/", "", $username); // ci proteggiamo da un attacco XSS
                $_SESSION['username'] = $username;
                $_SESSION['login_string'] = hash('sha512', $password.$user_browser);
+               $_SESSION['username_ruolo'] = $ruolo;
                // Login eseguito con successo.
                return true;
          } else {
@@ -79,7 +80,7 @@ function login_check($mysqli) {
      $login_string = $_SESSION['login_string'];
      $username = $_SESSION['username'];
      $user_browser = $_SERVER['HTTP_USER_AGENT']; // reperisce la stringa 'user-agent' dell'utente.
-     if ($stmt = $mysqli->prepare("SELECT password FROM utente WHERE id = ? LIMIT 1")) {
+     if ($stmt = $mysqli->prepare("SELECT password FROM utenti WHERE idutente = ? LIMIT 1")) {
         $stmt->bind_param('i', $user_id); // esegue il bind del parametro '$user_id'.
         $stmt->execute(); // Esegue la query creata.
         $stmt->store_result();

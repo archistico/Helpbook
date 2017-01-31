@@ -13,10 +13,13 @@ if(isset($_POST['email'], $_POST['p'], $_POST['username'])) {
    $password = hash('sha512', $password.$random_salt);
    // Inserisci a questo punto il codice SQL per eseguire la INSERT nel tuo database
    // Assicurati di usare statement SQL 'prepared'.
-   if ($insert_stmt = $mysqli->prepare("INSERT INTO utente (username, email, password, salt) VALUES (?, ?, ?, ?)")) {
-      $insert_stmt->bind_param('ssss', $username, $email, $password, $random_salt);
+   $fksoggetto = '1';
+
+   if ($insert_stmt = $mysqli->prepare("INSERT INTO utenti (fksoggetto, username, email, password, salt) VALUES (?, ?, ?, ?, ?)")) {
+      $insert_stmt->bind_param('sssss', $fksoggetto, $username, $email, $password, $random_salt);
       // Esegui la query ottenuta.
       $insert_stmt->execute();
+      echo 'Inserito';
    }
 
 } else {

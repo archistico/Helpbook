@@ -31,21 +31,21 @@
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <img src="dist/img/avatar3.png" class="user-image" alt="User Image">
-                                    <span class="hidden-xs">Emilie Rollandin</span>
+                                    <span class="hidden-xs"><?php $username = $_SESSION['username']; $username_ruolo = $_SESSION['username_ruolo']; echo $username; ?></span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
                                     <li class="user-header">
                                         <img src="dist/img/avatar3.png" class="img-circle" alt="User Image">
                                         <p>
-                                            Emilie Rollandin
-                                            <small>Amministratore</small>
+                                            <?php echo $username; ?>
+                                            <small><?php echo $username_ruolo; ?></small>
                                         </p>
                                     </li>
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
                                         <div class="pull-right">
-                                            <a href="#" class="btn btn-default btn-flat">Logout</a>
+                                            <a href="logout.php" class="btn btn-default btn-flat">Logout</a>
                                         </div>
                                     </li>
                                 </ul>
