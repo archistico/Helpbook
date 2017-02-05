@@ -5,7 +5,7 @@
             <i class="fa fa-bank"></i> <span>Home</span>
         </a>
     </li>
-    <li class="treeview">
+    <li class="<?php echo ($menugenerale)?'active':''; ?> treeview">
         <a href="#">
             <i class="fa fa-user"></i> <span>Rubrica</span>
             <i class="fa fa-angle-left pull-right"></i>

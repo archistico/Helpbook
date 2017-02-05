@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9a7bde4d-5f14-4267-a957-ffc0dc02a0ef" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/navbar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/magazzinolista.php" afterPath="$PROJECT_DIR$/magazzinolista.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/magazzinosoggetto.php" afterPath="$PROJECT_DIR$/magazzinosoggetto.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/magazzinosoggettoseleziona.php" afterPath="$PROJECT_DIR$/magazzinosoggettoseleziona.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentilista.php" afterPath="$PROJECT_DIR$/movimentilista.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentilistanonpagati.php" afterPath="$PROJECT_DIR$/movimentilistanonpagati.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentilistasoggetto.php" afterPath="$PROJECT_DIR$/movimentilistasoggetto.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentilistasoggettoSQL.php" afterPath="$PROJECT_DIR$/movimentilistasoggettoSQL.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentoPDF.php" afterPath="$PROJECT_DIR$/movimentoPDF.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentochiudi.php" afterPath="$PROJECT_DIR$/movimentochiudi.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentonuovo.php" afterPath="$PROJECT_DIR$/movimentonuovo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentonuovoSQL.php" afterPath="$PROJECT_DIR$/movimentonuovoSQL.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentovisualizza.php" afterPath="$PROJECT_DIR$/movimentovisualizza.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operamodifica.php" afterPath="$PROJECT_DIR$/operamodifica.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operamodificaSQL.php" afterPath="$PROJECT_DIR$/operamodificaSQL.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operamodificaseleziona.php" afterPath="$PROJECT_DIR$/operamodificaseleziona.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operanuova.php" afterPath="$PROJECT_DIR$/operanuova.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operanuovaSQL.php" afterPath="$PROJECT_DIR$/operanuovaSQL.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operelista.php" afterPath="$PROJECT_DIR$/operelista.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sidebarmenu.php" afterPath="$PROJECT_DIR$/sidebarmenu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettilista.php" afterPath="$PROJECT_DIR$/soggettilista.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettocerca.php" afterPath="$PROJECT_DIR$/soggettocerca.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettocercaSQL.php" afterPath="$PROJECT_DIR$/soggettocercaSQL.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettomodifica.php" afterPath="$PROJECT_DIR$/soggettomodifica.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettomodificaSQL.php" afterPath="$PROJECT_DIR$/soggettomodificaSQL.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettomodificaseleziona.php" afterPath="$PROJECT_DIR$/soggettomodificaseleziona.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettonuovo.php" afterPath="$PROJECT_DIR$/soggettonuovo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettonuovoSQL.php" afterPath="$PROJECT_DIR$/soggettonuovoSQL.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stampalista.php" afterPath="$PROJECT_DIR$/stampalista.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stampalistaanno.php" afterPath="$PROJECT_DIR$/stampalistaanno.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stampalistaannoSQL.php" afterPath="$PROJECT_DIR$/stampalistaannoSQL.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stampanuova.php" afterPath="$PROJECT_DIR$/stampanuova.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stampanuovaSQL.php" afterPath="$PROJECT_DIR$/stampanuovaSQL.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="sidebarmenu.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sidebarmenu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/footer.php" />
+        <option value="$PROJECT_DIR$/movimentoPDF.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/navbar.php" />
+        <option value="$PROJECT_DIR$/magazzinolista.php" />
+        <option value="$PROJECT_DIR$/magazzinosoggetto.php" />
+        <option value="$PROJECT_DIR$/magazzinosoggettoseleziona.php" />
+        <option value="$PROJECT_DIR$/movimentilista.php" />
+        <option value="$PROJECT_DIR$/movimentilistanonpagati.php" />
+        <option value="$PROJECT_DIR$/movimentilistasoggetto.php" />
+        <option value="$PROJECT_DIR$/movimentilistasoggettoSQL.php" />
+        <option value="$PROJECT_DIR$/movimentochiudi.php" />
+        <option value="$PROJECT_DIR$/movimentonuovo.php" />
+        <option value="$PROJECT_DIR$/movimentonuovoSQL.php" />
+        <option value="$PROJECT_DIR$/movimentovisualizza.php" />
+        <option value="$PROJECT_DIR$/operamodifica.php" />
+        <option value="$PROJECT_DIR$/operamodificaseleziona.php" />
+        <option value="$PROJECT_DIR$/operamodificaSQL.php" />
+        <option value="$PROJECT_DIR$/operanuova.php" />
+        <option value="$PROJECT_DIR$/operanuovaSQL.php" />
+        <option value="$PROJECT_DIR$/operelista.php" />
+        <option value="$PROJECT_DIR$/soggettilista.php" />
+        <option value="$PROJECT_DIR$/soggettocerca.php" />
+        <option value="$PROJECT_DIR$/soggettocercaSQL.php" />
+        <option value="$PROJECT_DIR$/soggettomodifica.php" />
+        <option value="$PROJECT_DIR$/soggettomodificaseleziona.php" />
+        <option value="$PROJECT_DIR$/soggettomodificaSQL.php" />
+        <option value="$PROJECT_DIR$/soggettonuovo.php" />
+        <option value="$PROJECT_DIR$/soggettonuovoSQL.php" />
+        <option value="$PROJECT_DIR$/stampalista.php" />
+        <option value="$PROJECT_DIR$/stampalistaanno.php" />
+        <option value="$PROJECT_DIR$/stampalistaannoSQL.php" />
+        <option value="$PROJECT_DIR$/stampanuova.php" />
+        <option value="$PROJECT_DIR$/stampanuovaSQL.php" />
+        <option value="$PROJECT_DIR$/sidebarmenu.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hb" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
+    <property name="js.eslint.eslintPackage" value="C:\Users\ARCHI\AppData\Roaming\npm\node_modules\eslint" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9a7bde4d-5f14-4267-a957-ffc0dc02a0ef" name="Default" comment="" />
+      <created>1486285891386</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1486285891386</updated>
+      <workItem from="1486285899482" duration="3152000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3152000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/controllo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registrazione.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process_registrazione.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1485883661378" expanded="true" signature="753:840" ph="INSERT INTO utenti... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <marker date="1486291757286" expanded="true" signature="12343:12386" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/magazzinolista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding>
+            <marker date="1486291869266" expanded="true" signature="7297:7316" ph="..." />
+            <marker date="1486291869266" expanded="true" signature="7625:7644" ph="..." />
+            <marker date="1486291869266" expanded="true" signature="7851:7870" ph="..." />
+            <marker date="1486291869266" expanded="true" signature="7938:7957" ph="..." />
+            <marker date="1486291869266" expanded="true" signature="8612:8631" ph="..." />
+            <marker date="1486291869266" expanded="true" signature="8809:8828" ph="..." />
+            <marker date="1486291869266" expanded="true" signature="8889:8908" ph="..." />
+            <marker date="1486291869266" expanded="true" signature="9063:9082" ph="..." />
+            <marker date="1486291869266" expanded="true" signature="9141:9160" ph="..." />
+            <marker date="1486291869266" expanded="true" signature="12329:12348" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/magazzinosoggetto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding>
+            <marker date="1486291879734" expanded="true" signature="5536:5555" ph="..." />
+            <marker date="1486291879734" expanded="true" signature="5864:5883" ph="..." />
+            <marker date="1486291879734" expanded="true" signature="6090:6109" ph="..." />
+            <marker date="1486291879734" expanded="true" signature="6177:6196" ph="..." />
+            <marker date="1486291879734" expanded="true" signature="6851:6870" ph="..." />
+            <marker date="1486291879734" expanded="true" signature="7048:7067" ph="..." />
+            <marker date="1486291879734" expanded="true" signature="7128:7147" ph="..." />
+            <marker date="1486291879734" expanded="true" signature="7302:7321" ph="..." />
+            <marker date="1486291879734" expanded="true" signature="7380:7399" ph="..." />
+            <marker date="1486291879734" expanded="true" signature="10459:10478" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/magazzinosoggettoseleziona.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movimentilista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movimentilistanonpagati.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movimentilistasoggetto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movimentilistasoggettoSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movimentochiudi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding>
+            <marker date="1486291937894" expanded="true" signature="4224:4291" ph="SELECT movim... movimenti" />
+            <marker date="1486291937894" expanded="true" signature="4579:4647" ph="UPDATE movim... " />
+            <marker date="1486291937894" expanded="true" signature="4892:4960" ph="UPDATE movim... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movimentonuovo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movimentonuovoSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding>
+            <marker date="1486291953698" expanded="true" signature="8734:8866" ph="SELECT MAX(n... movimenti" />
+            <marker date="1486291953698" expanded="true" signature="9162:9852" ph="INSERT INTO movimenti... " />
+            <marker date="1486291953698" expanded="true" signature="9969:10696" ph="INSERT INTO movimenti... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movimentoPDF.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+          <folding>
+            <marker date="1486291067444" expanded="true" signature="4859:5237" ph="SELECT libri... movimentidettaglio" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movimentovisualizza.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding>
+            <marker date="1486291964567" expanded="true" signature="4494:4521" ph="..." />
+            <marker date="1486291964567" expanded="true" signature="5251:5443" ph="INSERT INTO movimentidettaglio... " />
+            <marker date="1486291964567" expanded="true" signature="5651:5678" ph="..." />
+            <marker date="1486291964567" expanded="true" signature="5909:5936" ph="..." />
+            <marker date="1486291964567" expanded="true" signature="6639:6666" ph="..." />
+            <marker date="1486291964567" expanded="true" signature="7396:7475" ph="DELETE FROM " />
+            <marker date="1486291964567" expanded="true" signature="7708:7735" ph="..." />
+            <marker date="1486291964567" expanded="true" signature="7967:7994" ph="..." />
+            <marker date="1486291964567" expanded="true" signature="8350:8377" ph="..." />
+            <marker date="1486291964567" expanded="true" signature="18066:18093" ph="..." />
+            <marker date="1486291964567" expanded="true" signature="18274:18301" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/operamodifica.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/operamodificaseleziona.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/operamodificaSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/operanuova.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/operanuovaSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding>
+            <marker date="1486292004351" expanded="true" signature="6367:6661" ph="INSERT INTO libri... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/operelista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soggettilista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soggettocerca.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soggettocercaSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soggettomodifica.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soggettomodificaseleziona.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soggettomodificaSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soggettonuovo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soggettonuovoSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding>
+            <marker date="1486292079545" expanded="true" signature="8026:8440" ph="INSERT INTO soggetti... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stampalista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stampalistaanno.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stampalistaannoSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stampalistaopera.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stampanuova.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="25" column="10" lean-forward="false" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stampanuovaSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding>
+            <marker date="1486292117814" expanded="true" signature="6922:7196" ph="INSERT INTO stampe... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidebarmenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

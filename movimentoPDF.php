@@ -1,3 +1,4 @@
+<?php include 'controllo.php'; ?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
