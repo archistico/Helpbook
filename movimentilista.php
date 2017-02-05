@@ -63,10 +63,13 @@ include 'php/utilita.php';
                     session_start();
                     if(isset($_SESSION['sqlerrori'])) {
                         echo "<div class='alert alert-danger alert-dismissible'><h4><i class='icon fa fa-ban'></i> ATTENZIONE!</h4>Ci sono degli errori</div>";
+                        echo "<div class='alert alert-danger alert-dismissible'>".$_SESSION['sqlerrori']."</div>";
+                        unset($_SESSION['sqlerrori']);
                     }
 
                     if(isset($_SESSION['sqlok'])) {
                         echo "<div class='alert alert-success alert-dismissible'><h4><i class='icon fa fa-check'></i> OK!</h4>Inserimento riuscito</div>";
+                        unset($_SESSION['sqlok']);
                     }
 
                     ?>
@@ -74,8 +77,6 @@ include 'php/utilita.php';
 
                     <!-- Main row -->
                     <div class="row">
-
-
 
                         <div class="col-md-12">
 

@@ -1,6 +1,8 @@
 <?php
 
 include 'controllo.php';
+include 'php/config.php';
+include 'php/utilita.php';
 
 // RECUPERO DATI E AGGIUNGO
 define('CHARSET', 'UTF-8');
@@ -98,59 +100,59 @@ if (!isset($_GET['note'])) {
     $note = pulisciStringa($_GET['note']);
 }
 
+$dettagliolibri = json_decode($_GET['opere']);
+
+// Caricamento dati FINE
+
 if (empty($errors)) {
-    try {
-        include 'php/config.php';
+   try {
+       $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+       $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+       $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
 
-        $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-        $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
+       date_default_timezone_set('Europe/Rome');
 
-        date_default_timezone_set('Europe/Rome');
+       $result = $db->query("SELECT MAX(numero) AS ultimo FROM movimenti WHERE anno = '" . $dataEmissione->format('Y') . "' AND fktipologia = " . $tipologia . "");
+       $row = $result->fetch(PDO::FETCH_ASSOC);
+       $numero = $row['ultimo'] + 1;
 
-        $result = $db->query("SELECT MAX(numero) AS ultimo FROM movimenti WHERE anno = '" . $dataEmissione->format('Y') . "' AND fktipologia = " . $tipologia . "");
-        $row = $result->fetch(PDO::FETCH_ASSOC);
-        $numero = $row['ultimo'] + 1;
+       if (!isset($dataPagamento)) {
+           $db->exec("INSERT INTO movimenti (idmovimento, fktipologia, fkcausale, fkmagazzino, numero, anno, riferimento, fksoggetto, movimentodata, pagamentoentro, pagata, fkpagamentotipologia, datapagamento, spedizionecosto, spedizionesconto, fkaspetto, fktrasporto, note, cancellato) VALUES (NULL, '" . $tipologia . "', '" . $causale . "', '" . $fkmagazzino . "', '" . $numero . "', '" . $dataEmissione->format('Y') . "', '" . $riferimento . "', '" . $cliente . "', '" . $dataEmissione->format('Y-m-d') . "', '" . $dataEntro->format('Y-m-d') . "', '" . $pagato . "', '" . $modalita . "', NULL, '" . $spedizione . "', '" . $spedizionesconto . "', '" . $aspetto . "', '" . $trasporto . "', '" . $note . "', '0');");
+       } else {
+           $db->exec("INSERT INTO movimenti (idmovimento, fktipologia, fkcausale, fkmagazzino, numero, anno, riferimento, fksoggetto, movimentodata, pagamentoentro, pagata, fkpagamentotipologia, datapagamento, spedizionecosto, spedizionesconto, fkaspetto, fktrasporto, note, cancellato) VALUES (NULL, '" . $tipologia . "', '" . $causale . "', '" . $fkmagazzino . "', '" . $numero . "', '" . $dataEmissione->format('Y') . "', '" . $riferimento . "', '" . $cliente . "', '" . $dataEmissione->format('Y-m-d') . "', '" . $dataEntro->format('Y-m-d') . "', '" . $pagato . "', '" . $modalita . "', '" . $dataPagamento->format('Y-m-d') . "', '" . $spedizione . "', '" . $spedizionesconto . "', '" . $aspetto . "', '" . $trasporto . "', '" . $note . "', '0');");
+       }
 
-        if (!isset($dataPagamento)) {
-            $db->exec("INSERT INTO movimenti (idmovimento, fktipologia, fkcausale, fkmagazzino, numero, anno, riferimento, fksoggetto, movimentodata, pagamentoentro, pagata, fkpagamentotipologia, datapagamento, spedizionecosto, spedizionesconto, fkaspetto, fktrasporto, note, cancellato) VALUES (NULL, '" . $tipologia . "', '" . $causale . "', '" . $fkmagazzino . "', '" . $numero . "', '" . $dataEmissione->format('Y') . "', '" . $riferimento . "', '" . $cliente . "', '" . $dataEmissione->format('Y-m-d') . "', '" . $dataEntro->format('Y-m-d') . "', '" . $pagato . "', '" . $modalita . "', NULL, '" . $spedizione . "', '" . $spedizionesconto . "', '" . $aspetto . "', '" . $trasporto . "', '" . $note . "', '0');");
-        } else {
-            $db->exec("INSERT INTO movimenti (idmovimento, fktipologia, fkcausale, fkmagazzino, numero, anno, riferimento, fksoggetto, movimentodata, pagamentoentro, pagata, fkpagamentotipologia, datapagamento, spedizionecosto, spedizionesconto, fkaspetto, fktrasporto, note, cancellato) VALUES (NULL, '" . $tipologia . "', '" . $causale . "', '" . $fkmagazzino . "', '" . $numero . "', '" . $dataEmissione->format('Y') . "', '" . $riferimento . "', '" . $cliente . "', '" . $dataEmissione->format('Y-m-d') . "', '" . $dataEntro->format('Y-m-d') . "', '" . $pagato . "', '" . $modalita . "', '" . $dataPagamento->format('Y-m-d') . "', '" . $spedizione . "', '" . $spedizionesconto . "', '" . $aspetto . "', '" . $trasporto . "', '" . $note . "', '0');");
-        }
+       for ($c = 0; $c < count($dettagliolibri); $c++) {
 
+           $ddd = new DDTDettaglio();
 
+           $ddd->ddd_fkddt = $ddt->ddt_ultimoID;
+           $ddd->ddd_quantita = $prodotti[$c]->quantita;
+           $ddd->ddd_fkprodotto = $prodotti[$c]->fkprodotto;
+           $ddd->ddd_tracciabilita = $prodotti[$c]->tracciabilita;
 
-        $prodotti = json_decode($_GET['opere']);
-        for($c=0; $c<count($prodotti) ; $c++) {
+           if ($ddd->AggiungiSQL()) {
+               // OK
+           } else {
+               $errore['creazioneDDD'] = 'Errore Database lista prodotti';
+           }
+       }
 
-            $ddd = new DDTDettaglio();
-
-            $ddd->ddd_fkddt = $ddt->ddt_ultimoID;
-            $ddd->ddd_quantita = $prodotti[$c]->quantita;
-            $ddd->ddd_fkprodotto = $prodotti[$c]->fkprodotto;
-            $ddd->ddd_tracciabilita = $prodotti[$c]->tracciabilita;
-
-            if ($ddd->AggiungiSQL()) {
-                // OK
-            } else {
-                $errore['creazioneDDD'] = 'Errore Database lista prodotti';
-            }
-        }
-
-
-        // chiude il database
-        $db = NULL;
-    } catch (PDOException $e) {
-        $errors['database'] = "Errore inserimento nel database";
-    }
+       // chiude il database
+       $db = NULL;
+   } catch (PDOException $e) {
+       $errors['database'] = "Errore inserimento nel database";
+   }
 }
 
+// Mando il messaggio del risultato e redirigo
 
+session_start();
 if (!empty($errors)) {
-    echo "<div class='alert alert-danger alert-dismissible'><h4><i class='icon fa fa-ban'></i> ATTENZIONE!</h4>Ci sono degli errori</div>";
+    $_SESSION['sqlerrori'] = implode(", ", $errors);
 } else {
-    echo "<div class='alert alert-success alert-dismissible'><h4><i class='icon fa fa-check'></i> OK!</h4>Inserimento riuscito</div>";
+    $_SESSION['sqlok'] = "INSERIMENTO OK";
 }
 
 header('Location: ./movimentilista.php');
