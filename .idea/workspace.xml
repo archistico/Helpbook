@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a7bde4d-5f14-4267-a957-ffc0dc02a0ef" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/ARCHI.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/librijson.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/magazzinolista.php" afterPath="$PROJECT_DIR$/magazzinolista.php" />
@@ -21,6 +24,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operanuova.php" afterPath="$PROJECT_DIR$/operanuova.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operanuovaSQL.php" afterPath="$PROJECT_DIR$/operanuovaSQL.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operelista.php" afterPath="$PROJECT_DIR$/operelista.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/utilita.php" afterPath="$PROJECT_DIR$/php/utilita.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sidebarmenu.php" afterPath="$PROJECT_DIR$/sidebarmenu.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettilista.php" afterPath="$PROJECT_DIR$/soggettilista.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettocerca.php" afterPath="$PROJECT_DIR$/soggettocerca.php" />
@@ -48,7 +52,30 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="movimentonuovoSQL.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/movimentonuovoSQL.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="100" column="6" lean-forward="false" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
+              <folding>
+                <marker date="1486316583095" expanded="true" signature="2709:2841" ph="SELECT MAX(n... movimenti" />
+                <marker date="1486316583095" expanded="true" signature="2993:3683" ph="INSERT INTO movimenti... " />
+                <marker date="1486316583095" expanded="true" signature="3728:4455" ph="INSERT INTO movimenti... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>dbLibri</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>dbLibri</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -82,8 +109,6 @@
         <option value="$PROJECT_DIR$/movimentilistasoggetto.php" />
         <option value="$PROJECT_DIR$/movimentilistasoggettoSQL.php" />
         <option value="$PROJECT_DIR$/movimentochiudi.php" />
-        <option value="$PROJECT_DIR$/movimentonuovo.php" />
-        <option value="$PROJECT_DIR$/movimentonuovoSQL.php" />
         <option value="$PROJECT_DIR$/movimentovisualizza.php" />
         <option value="$PROJECT_DIR$/operamodifica.php" />
         <option value="$PROJECT_DIR$/operamodificaseleziona.php" />
@@ -91,6 +116,11 @@
         <option value="$PROJECT_DIR$/operanuova.php" />
         <option value="$PROJECT_DIR$/operanuovaSQL.php" />
         <option value="$PROJECT_DIR$/operelista.php" />
+        <option value="$PROJECT_DIR$/php/operejson.php" />
+        <option value="$PROJECT_DIR$/php/utilita.php" />
+        <option value="$PROJECT_DIR$/php/librijson.php" />
+        <option value="$PROJECT_DIR$/movimentonuovo.php" />
+        <option value="$PROJECT_DIR$/movimentonuovoSQL.php" />
       </list>
     </option>
   </component>
@@ -106,6 +136,25 @@
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Spelling</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Spelling</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -143,7 +192,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="C:\Users\ARCHI\AppData\Roaming\npm\node_modules\eslint" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
@@ -217,34 +266,34 @@
       <option name="presentableId" value="Default" />
       <updated>1486285891386</updated>
       <workItem from="1486285899482" duration="3152000" />
-      <workItem from="1486303673498" duration="1208000" />
+      <workItem from="1486303673498" duration="7905000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4360000" />
+    <option name="totallyTimeSpent" value="11057000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12604167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,26 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/movimentonuovoSQL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding>
-            <marker date="1486306202636" expanded="true" signature="8771:8903" ph="SELECT MAX(n... movimenti" />
-            <marker date="1486306202636" expanded="true" signature="9199:9889" ph="INSERT INTO movimenti... " />
-            <marker date="1486306202636" expanded="true" signature="10006:10733" ph="INSERT INTO movimenti... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/movimentonuovo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/movimentochiudi.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -653,6 +682,70 @@
         <state relative-caret-position="462">
           <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/libri.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <marker date="1474036248972" expanded="true" signature="408:745" ph="SELECT libri... libri" />
+            <marker date="1474036248972" expanded="true" signature="1573:1934" ph="SELECT libri... libri" />
+            <marker date="1474036248972" expanded="true" signature="3009:3655" ph="SELECT libri... movimentidettaglio" />
+            <marker date="1474036248972" expanded="true" signature="5571:5577" ph="€" />
+            <marker date="1474036248972" expanded="true" signature="6226:6623" ph="SELECT libri... libri" />
+            <marker date="1474036248972" expanded="true" signature="6950:6956" ph="€" />
+            <marker date="1474036248972" expanded="true" signature="7900:7940" ph="SELECT * FRO... libri" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/utilita.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/librijson.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="363" lean-forward="false" selection-start-line="10" selection-start-column="363" selection-end-line="10" selection-end-column="363" />
+          <folding>
+            <marker date="1486312538748" expanded="true" signature="382:684" ph="SELECT libri... libri" />
+            <marker date="1486312538748" expanded="true" signature="382:719" ph="SELECT libri... libri" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movimentonuovo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="612" column="5" lean-forward="true" selection-start-line="612" selection-start-column="5" selection-end-line="612" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#3;n#form#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#3;n#form#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#16889#16897#0#HTML" expanded="true" />
+            <element signature="e#17852#17858#0#HTML" expanded="true" />
+            <marker date="1486314448649" expanded="true" signature="20227:20233" ph="€" />
+            <marker date="1486314448649" expanded="true" signature="21513:21519" ph="€" />
+            <marker date="1486314448649" expanded="true" signature="21647:21652" ph="..." />
+            <marker date="1486314448649" expanded="true" signature="21750:21756" ph="€" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movimentonuovoSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="100" column="6" lean-forward="false" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
+          <folding>
+            <marker date="1486316583095" expanded="true" signature="2709:2841" ph="SELECT MAX(n... movimenti" />
+            <marker date="1486316583095" expanded="true" signature="2993:3683" ph="INSERT INTO movimenti... " />
+            <marker date="1486316583095" expanded="true" signature="3728:4455" ph="INSERT INTO movimenti... " />
+          </folding>
         </state>
       </provider>
     </entry>
