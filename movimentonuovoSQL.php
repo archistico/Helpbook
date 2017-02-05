@@ -10,6 +10,7 @@ define('REPLACE_FLAGS', ENT_COMPAT | ENT_XHTML);
 
 $errors = array();
 
+
 if (empty($_GET['cliente'])) {
     $errors['cliente'] = 'ID cliente non passato';
 } else {
@@ -102,49 +103,71 @@ if (!isset($_GET['note'])) {
 
 $dettagliolibri = json_decode($_GET['opere']);
 
-// Caricamento dati FINE
+// ***************  Caricamento dati FINE
 
-if (empty($errors)) {
-   try {
-       $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
-       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-       $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-       $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
+// METODO CON ROLLBACK
+$db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_EMULATE_PREPARES => false ));
 
-       date_default_timezone_set('Europe/Rome');
+// Trova il numero del movimento
+$sqlultimo = "SELECT MAX(numero) AS ultimo FROM movimenti WHERE anno = '" . $dataEmissione->format('Y') . "' AND fktipologia = " . $tipologia;
+$result = $db->query($sqlultimo);
+$row = $result->fetch(PDO::FETCH_ASSOC);
+$numeroMovimento = $row['ultimo'] + 1;
 
-       $result = $db->query("SELECT MAX(numero) AS ultimo FROM movimenti WHERE anno = '" . $dataEmissione->format('Y') . "' AND fktipologia = " . $tipologia . "");
-       $row = $result->fetch(PDO::FETCH_ASSOC);
-       $numero = $row['ultimo'] + 1;
+//Inizia la transazione
+$db->beginTransaction();
 
-       if (!isset($dataPagamento)) {
-           $db->exec("INSERT INTO movimenti (idmovimento, fktipologia, fkcausale, fkmagazzino, numero, anno, riferimento, fksoggetto, movimentodata, pagamentoentro, pagata, fkpagamentotipologia, datapagamento, spedizionecosto, spedizionesconto, fkaspetto, fktrasporto, note, cancellato) VALUES (NULL, '" . $tipologia . "', '" . $causale . "', '" . $fkmagazzino . "', '" . $numero . "', '" . $dataEmissione->format('Y') . "', '" . $riferimento . "', '" . $cliente . "', '" . $dataEmissione->format('Y-m-d') . "', '" . $dataEntro->format('Y-m-d') . "', '" . $pagato . "', '" . $modalita . "', NULL, '" . $spedizione . "', '" . $spedizionesconto . "', '" . $aspetto . "', '" . $trasporto . "', '" . $note . "', '0');");
-       } else {
-           $db->exec("INSERT INTO movimenti (idmovimento, fktipologia, fkcausale, fkmagazzino, numero, anno, riferimento, fksoggetto, movimentodata, pagamentoentro, pagata, fkpagamentotipologia, datapagamento, spedizionecosto, spedizionesconto, fkaspetto, fktrasporto, note, cancellato) VALUES (NULL, '" . $tipologia . "', '" . $causale . "', '" . $fkmagazzino . "', '" . $numero . "', '" . $dataEmissione->format('Y') . "', '" . $riferimento . "', '" . $cliente . "', '" . $dataEmissione->format('Y-m-d') . "', '" . $dataEntro->format('Y-m-d') . "', '" . $pagato . "', '" . $modalita . "', '" . $dataPagamento->format('Y-m-d') . "', '" . $spedizione . "', '" . $spedizionesconto . "', '" . $aspetto . "', '" . $trasporto . "', '" . $note . "', '0');");
-       }
+try {
 
-       for ($c = 0; $c < count($dettagliolibri); $c++) {
+    // In base a se c'è o meno la data di pagamento
+    if (!isset($dataPagamento)) {
+        //Query MOVIMENTO
+        $sql = "INSERT INTO movimenti 
+               (fktipologia, fkcausale, fkmagazzino, numero, anno, 
+                riferimento, fksoggetto, movimentodata, pagamentoentro, pagata, 
+                fkpagamentotipologia, datapagamento, spedizionecosto, spedizionesconto, fkaspetto, 
+                fktrasporto, note, cancellato)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+        $stmt = $db->prepare($sql);
+        $stmt->execute(array($tipologia, $causale, $fkmagazzino, $numeroMovimento, $dataEmissione->format('Y'), $riferimento, $cliente, $dataEmissione->format('Y-m-d'), $dataEntro->format('Y-m-d'), $pagato, $modalita, NULL, $spedizione, $spedizionesconto, $aspetto, $trasporto, $note, 0));
+    } else {
+        //Query MOVIMENTO
+        $sql = "INSERT INTO movimenti 
+               (fktipologia, fkcausale, fkmagazzino, numero, anno, 
+                riferimento, fksoggetto, movimentodata, pagamentoentro, pagata, 
+                fkpagamentotipologia, datapagamento, spedizionecosto, spedizionesconto, fkaspetto, 
+                fktrasporto, note, cancellato)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+        $stmt = $db->prepare($sql);
+        $stmt->execute(array($tipologia, $causale, $fkmagazzino, $numeroMovimento, $dataEmissione->format('Y'), $riferimento, $cliente, $dataEmissione->format('Y-m-d'), $dataEntro->format('Y-m-d'), $pagato, $modalita, $dataPagamento->format('Y-m-d'), $spedizione, $spedizionesconto, $aspetto, $trasporto, $note, 0));
+    }
+    $idmovimento = $db->lastInsertId();
 
-           $ddd = new DDTDettaglio();
+    for ($c = 0; $c < count($dettagliolibri); $c++) {
+        $idlibro = $dettagliolibri[$c]->libroid;
+        $quantita = $dettagliolibri[$c]->quantita;
+        $sconto = $dettagliolibri[$c]->sconto;
 
-           $ddd->ddd_fkddt = $ddt->ddt_ultimoID;
-           $ddd->ddd_quantita = $prodotti[$c]->quantita;
-           $ddd->ddd_fkprodotto = $prodotti[$c]->fkprodotto;
-           $ddd->ddd_tracciabilita = $prodotti[$c]->tracciabilita;
+        //Query DETTAGLI
+        $sql = "INSERT INTO movimentidettaglio 
+                (fkmovimento, fklibro, quantita, sconto, cancellato) 
+                VALUES (?,?,?,?,?);";
+        $stmt = $db->prepare($sql);
+        $stmt->execute(array($idmovimento,$idlibro,$quantita,$sconto,0));
+    }
 
-           if ($ddd->AggiungiSQL()) {
-               // OK
-           } else {
-               $errore['creazioneDDD'] = 'Errore Database lista prodotti';
-           }
-       }
-
-       // chiude il database
-       $db = NULL;
-   } catch (PDOException $e) {
-       $errors['database'] = "Errore inserimento nel database";
-   }
+    //Se non ci sono eccezioni commit
+    $db->commit();
 }
+//Se sollevate eccezioni
+catch(Exception $e){
+    echo $e->getMessage();
+    //Rollback la transazione
+    $db->rollBack();
+    $errors['DB'] = 'Errore nel database';
+}
+
+$db = NULL;
 
 // Mando il messaggio del risultato e redirigo
 

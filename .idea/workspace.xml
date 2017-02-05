@@ -57,36 +57,18 @@
       <file leaf-file-name="movimentonuovoSQL.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/movimentonuovoSQL.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+            <state relative-caret-position="880">
+              <caret line="169" column="11" lean-forward="false" selection-start-line="169" selection-start-column="11" selection-end-line="169" selection-end-column="11" />
               <folding>
-                <marker date="1486328248136" expanded="true" signature="2772:2904" ph="SELECT MAX(n... movimenti" />
-                <marker date="1486328248136" expanded="true" signature="3052:3742" ph="INSERT INTO movimenti... " />
-                <marker date="1486328248136" expanded="true" signature="3785:4512" ph="INSERT INTO movimenti... " />
+                <marker date="1486331596880" expanded="true" signature="2619:2732" ph="SELECT MAX(n... movimenti" />
+                <marker date="1486331596880" expanded="true" signature="3048:3069" ph="INSERT INTO movimenti... " />
+                <marker date="1486331596880" expanded="true" signature="3048:3366" ph="INSERT INTO movimenti... " />
+                <marker date="1486331596880" expanded="true" signature="3048:3390" ph="INSERT INTO movimenti... " />
+                <marker date="1486331596880" expanded="true" signature="3048:3443" ph="INSERT INTO movimenti... " />
+                <marker date="1486331596880" expanded="true" signature="3048:3444" ph="INSERT INTO movimenti... " />
+                <marker date="1486331596880" expanded="true" signature="3828:4223" ph="INSERT INTO movimenti... " />
+                <marker date="1486331596880" expanded="true" signature="4870:5006" ph="INSERT INTO movimentidettaglio... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding>
-                <marker date="1486325535710" expanded="true" signature="290:346" ph="INSERT INTO tentativilogin... " />
-                <marker date="1486325535710" expanded="true" signature="464:520" ph="UPDATE users... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="movimentilista.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/movimentilista.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="71" column="24" lean-forward="false" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -210,20 +192,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hb" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -305,12 +273,12 @@
       <option name="presentableId" value="Default" />
       <updated>1486285891386</updated>
       <workItem from="1486285899482" duration="3152000" />
-      <workItem from="1486303673498" duration="13314000" />
+      <workItem from="1486303673498" duration="16704000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16466000" />
+    <option name="totallyTimeSpent" value="19856000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -592,26 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/movimentovisualizza.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-          <folding>
-            <marker date="1486306207593" expanded="true" signature="4531:4558" ph="..." />
-            <marker date="1486306207593" expanded="true" signature="5288:5480" ph="INSERT INTO movimentidettaglio... " />
-            <marker date="1486306207593" expanded="true" signature="5688:5715" ph="..." />
-            <marker date="1486306207593" expanded="true" signature="5946:5973" ph="..." />
-            <marker date="1486306207593" expanded="true" signature="6676:6703" ph="..." />
-            <marker date="1486306207593" expanded="true" signature="7433:7512" ph="DELETE FROM " />
-            <marker date="1486306207593" expanded="true" signature="7745:7772" ph="..." />
-            <marker date="1486306207593" expanded="true" signature="8004:8031" ph="..." />
-            <marker date="1486306207593" expanded="true" signature="8387:8414" ph="..." />
-            <marker date="1486306207593" expanded="true" signature="18103:18130" ph="..." />
-            <marker date="1486306207593" expanded="true" signature="18311:18338" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/movimentoPDF.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -789,10 +737,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/movimentidettaglio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1471892651695" expanded="true" signature="439:817" ph="SELECT libri... movimentidettaglio" />
+            <marker date="1471892651695" expanded="true" signature="1190:1196" ph="€" />
+            <marker date="1471892651695" expanded="true" signature="1404:1410" ph="€" />
+            <marker date="1471892651695" expanded="true" signature="1539:1545" ph="€" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movimentovisualizza.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="122" column="235" lean-forward="true" selection-start-line="122" selection-start-column="38" selection-end-line="122" selection-end-column="235" />
+          <folding>
+            <marker date="1486306207593" expanded="true" signature="4531:4558" ph="..." />
+            <marker date="1486306207593" expanded="true" signature="5288:5480" ph="INSERT INTO movimentidettaglio... " />
+            <marker date="1486306207593" expanded="true" signature="5688:5715" ph="..." />
+            <marker date="1486306207593" expanded="true" signature="5946:5973" ph="..." />
+            <marker date="1486306207593" expanded="true" signature="6676:6703" ph="..." />
+            <marker date="1486306207593" expanded="true" signature="7433:7512" ph="DELETE FROM " />
+            <marker date="1486306207593" expanded="true" signature="7745:7772" ph="..." />
+            <marker date="1486306207593" expanded="true" signature="8004:8031" ph="..." />
+            <marker date="1486306207593" expanded="true" signature="8387:8414" ph="..." />
+            <marker date="1486306207593" expanded="true" signature="18103:18130" ph="..." />
+            <marker date="1486306207593" expanded="true" signature="18311:18338" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
           <folding>
             <marker date="1486325535710" expanded="true" signature="290:346" ph="INSERT INTO tentativilogin... " />
             <marker date="1486325535710" expanded="true" signature="464:520" ph="UPDATE users... " />
@@ -802,12 +783,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/movimentonuovoSQL.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        <state relative-caret-position="880">
+          <caret line="169" column="11" lean-forward="false" selection-start-line="169" selection-start-column="11" selection-end-line="169" selection-end-column="11" />
           <folding>
-            <marker date="1486328248136" expanded="true" signature="2772:2904" ph="SELECT MAX(n... movimenti" />
-            <marker date="1486328248136" expanded="true" signature="3052:3742" ph="INSERT INTO movimenti... " />
-            <marker date="1486328248136" expanded="true" signature="3785:4512" ph="INSERT INTO movimenti... " />
+            <marker date="1486331596880" expanded="true" signature="2619:2732" ph="SELECT MAX(n... movimenti" />
+            <marker date="1486331596880" expanded="true" signature="3048:3069" ph="INSERT INTO movimenti... " />
+            <marker date="1486331596880" expanded="true" signature="3048:3366" ph="INSERT INTO movimenti... " />
+            <marker date="1486331596880" expanded="true" signature="3048:3390" ph="INSERT INTO movimenti... " />
+            <marker date="1486331596880" expanded="true" signature="3048:3443" ph="INSERT INTO movimenti... " />
+            <marker date="1486331596880" expanded="true" signature="3048:3444" ph="INSERT INTO movimenti... " />
+            <marker date="1486331596880" expanded="true" signature="3828:4223" ph="INSERT INTO movimenti... " />
+            <marker date="1486331596880" expanded="true" signature="4870:5006" ph="INSERT INTO movimentidettaglio... " />
           </folding>
         </state>
       </provider>
