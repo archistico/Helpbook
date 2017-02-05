@@ -53,27 +53,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="movimentonuovoSQL.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/movimentonuovoSQL.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="169" column="11" lean-forward="false" selection-start-line="169" selection-start-column="11" selection-end-line="169" selection-end-column="11" />
-              <folding>
-                <marker date="1486331596880" expanded="true" signature="2619:2732" ph="SELECT MAX(n... movimenti" />
-                <marker date="1486331596880" expanded="true" signature="3048:3069" ph="INSERT INTO movimenti... " />
-                <marker date="1486331596880" expanded="true" signature="3048:3366" ph="INSERT INTO movimenti... " />
-                <marker date="1486331596880" expanded="true" signature="3048:3390" ph="INSERT INTO movimenti... " />
-                <marker date="1486331596880" expanded="true" signature="3048:3443" ph="INSERT INTO movimenti... " />
-                <marker date="1486331596880" expanded="true" signature="3048:3444" ph="INSERT INTO movimenti... " />
-                <marker date="1486331596880" expanded="true" signature="3828:4223" ph="INSERT INTO movimenti... " />
-                <marker date="1486331596880" expanded="true" signature="4870:5006" ph="INSERT INTO movimentidettaglio... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -102,11 +82,9 @@
         <option value="$PROJECT_DIR$/soggettomodificaSQL.php" />
         <option value="$PROJECT_DIR$/soggettonuovo.php" />
         <option value="$PROJECT_DIR$/soggettonuovoSQL.php" />
-        <option value="$PROJECT_DIR$/stampalista.php" />
         <option value="$PROJECT_DIR$/stampalistaanno.php" />
         <option value="$PROJECT_DIR$/stampalistaannoSQL.php" />
         <option value="$PROJECT_DIR$/stampanuova.php" />
-        <option value="$PROJECT_DIR$/stampanuovaSQL.php" />
         <option value="$PROJECT_DIR$/magazzinolista.php" />
         <option value="$PROJECT_DIR$/magazzinosoggetto.php" />
         <option value="$PROJECT_DIR$/magazzinosoggettoseleziona.php" />
@@ -126,8 +104,10 @@
         <option value="$PROJECT_DIR$/php/librijson.php" />
         <option value="$PROJECT_DIR$/movimentonuovo.php" />
         <option value="$PROJECT_DIR$/test/test.php" />
-        <option value="$PROJECT_DIR$/movimentilista.php" />
         <option value="$PROJECT_DIR$/movimentonuovoSQL.php" />
+        <option value="$PROJECT_DIR$/stampanuovaSQL.php" />
+        <option value="$PROJECT_DIR$/stampalista.php" />
+        <option value="$PROJECT_DIR$/movimentilista.php" />
       </list>
     </option>
   </component>
@@ -273,18 +253,18 @@
       <option name="presentableId" value="Default" />
       <updated>1486285891386</updated>
       <workItem from="1486285899482" duration="3152000" />
-      <workItem from="1486303673498" duration="16704000" />
+      <workItem from="1486303673498" duration="18617000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19856000" />
+    <option name="totallyTimeSpent" value="21769000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12604167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12604167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -464,14 +444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stampalista.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stampalistaanno.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -493,16 +465,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stampanuovaSQL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-          <folding>
-            <marker date="1486306101502" expanded="true" signature="6956:7230" ph="INSERT INTO stampe... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -729,14 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/movimentilista.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="71" column="24" lean-forward="false" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/movimentidettaglio.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -783,8 +737,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/movimentonuovoSQL.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="169" column="11" lean-forward="false" selection-start-line="169" selection-start-column="11" selection-end-line="169" selection-end-column="11" />
+        <state relative-caret-position="3476">
+          <caret line="158" column="37" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
             <marker date="1486331596880" expanded="true" signature="2619:2732" ph="SELECT MAX(n... movimenti" />
             <marker date="1486331596880" expanded="true" signature="3048:3069" ph="INSERT INTO movimenti... " />
@@ -795,6 +749,33 @@
             <marker date="1486331596880" expanded="true" signature="3828:4223" ph="INSERT INTO movimenti... " />
             <marker date="1486331596880" expanded="true" signature="4870:5006" ph="INSERT INTO movimentidettaglio... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stampanuovaSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="78" column="18" lean-forward="true" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+          <folding>
+            <marker date="1486333214880" expanded="true" signature="1740:1768" ph="INSERT INTO stampe .... " />
+            <marker date="1486333214880" expanded="true" signature="1740:1812" ph="INSERT INTO stampe... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stampalista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="70" column="16" lean-forward="false" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movimentilista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="70" column="145" lean-forward="false" selection-start-line="70" selection-start-column="145" selection-end-line="70" selection-end-column="145" />
+          <folding />
         </state>
       </provider>
     </entry>

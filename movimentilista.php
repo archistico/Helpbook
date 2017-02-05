@@ -68,7 +68,7 @@ include 'php/utilita.php';
                     }
 
                     if(isset($_SESSION['sqlok'])) {
-                        echo "<div class='alert alert-success alert-dismissible'><h4><i class='icon fa fa-check'></i> OK!</h4>Inserimento riuscito</div>";
+                        echo "<div class='alert alert-success alert-dismissible'><h4><i class='icon fa fa-check'></i> OK!</h4>Operazione riuscita</div>";
                         unset($_SESSION['sqlok']);
                     }
 
