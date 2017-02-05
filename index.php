@@ -20,6 +20,7 @@
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <?php
+                $menu = "Home";
                 include 'navbar.php';
                 ?>
             </header>

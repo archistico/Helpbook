@@ -22,6 +22,7 @@
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <?php
+                $menu = "Stampe";
                 include 'navbar.php';
                 ?>
             </header>

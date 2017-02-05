@@ -5,7 +5,7 @@
             <i class="fa fa-bank"></i> <span>Home</span>
         </a>
     </li>
-    <li class="<?php echo ($menugenerale)?'active':''; ?> treeview">
+    <li class="<?php echo ($menu=='Rubrica')?'active':''; ?> treeview">
         <a href="#">
             <i class="fa fa-user"></i> <span>Rubrica</span>
             <i class="fa fa-angle-left pull-right"></i>
@@ -18,7 +18,7 @@
             <!-- <li><a href="soggettilistaPDF.php"><i class="fa fa-file-pdf-o"></i> PDF soggetti</a></li> -->
         </ul>
     </li>
-    <li class="treeview">
+    <li class="<?php echo ($menu=='Opere')?'active':''; ?> treeview">
         <a href="#">
             <i class="fa fa-book"></i> <span>Opere</span>
             <i class="fa fa-angle-left pull-right"></i>
@@ -30,7 +30,7 @@
             <!-- <li><a href="operelistaPDF.php"><i class="fa fa-file-pdf-o"></i> PDF opere</a></li> -->
         </ul>
     </li>
-    <li class="treeview">
+    <li class="<?php echo ($menu=='Movimenti')?'active':''; ?> treeview">
         <a href="#">
             <i class="fa fa-exchange"></i> <span>Movimenti</span>
             <i class="fa fa-angle-left pull-right"></i>
@@ -42,7 +42,7 @@
             <li><a href="movimentilistanonpagati.php"><i class="fa fa-money"></i> Lista non pagati</a></li>
         </ul>
     </li>
-    <li class="treeview">
+    <li class="<?php echo ($menu=='Stampe')?'active':''; ?> treeview">
         <a href="#">
             <i class="fa fa-print"></i> <span>Stampe</span>
             <i class="fa fa-angle-left pull-right"></i>
@@ -54,7 +54,7 @@
             <li><a href="stampalistaopera.php"><i class="fa fa-list-alt"></i> Totale stampe per opera</a></li>
         </ul>
     </li>
-    <li class="treeview">
+    <li class="<?php echo ($menu=='Magazzini')?'active':''; ?> treeview">
         <a href="#">
             <i class="fa fa-building"></i> <span>Magazzini</span>
             <i class="fa fa-angle-left pull-right"></i>
@@ -64,7 +64,7 @@
             <li><a href="magazzinosoggettoseleziona.php"><i class="fa fa-building-o"></i> Magazzino per soggetto</a></li>
         </ul>
     </li>
-    <li class="treeview">
+    <li class="<?php echo ($menu=='Report')?'active':''; ?> treeview">
         <a href="#">
             <i class="fa fa-table"></i> <span>Report</span>
             <i class="fa fa-angle-left pull-right"></i>

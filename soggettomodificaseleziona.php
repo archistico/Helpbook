@@ -22,6 +22,7 @@
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <?php
+                $menu = "Rubrica";
                 include 'navbar.php';
                 ?>
             </header>
