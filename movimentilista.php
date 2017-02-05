@@ -1,4 +1,7 @@
-<?php include 'controllo.php'; ?>
+<?php
+include 'controllo.php';
+include 'php/utilita.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -56,12 +59,23 @@
                 <!-- Main content -->
                 <section class="content">
 
+                    <?php
+                    session_start();
+                    if(isset($_SESSION['sqlerrori'])) {
+                        echo "<div class='alert alert-danger alert-dismissible'><h4><i class='icon fa fa-ban'></i> ATTENZIONE!</h4>Ci sono degli errori</div>";
+                    }
+
+                    if(isset($_SESSION['sqlok'])) {
+                        echo "<div class='alert alert-success alert-dismissible'><h4><i class='icon fa fa-check'></i> OK!</h4>Inserimento riuscito</div>";
+                    }
+
+                    ?>
+
+
                     <!-- Main row -->
                     <div class="row">
 
-                        <?php
-                        include 'php/utilita.php';
-                        ?>
+
 
                         <div class="col-md-12">
 

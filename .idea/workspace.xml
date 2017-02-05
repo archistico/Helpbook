@@ -5,6 +5,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/ARCHI.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/librijson.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/magazzinolista.php" afterPath="$PROJECT_DIR$/magazzinolista.php" />
@@ -53,15 +54,38 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="movimentonuovoSQL.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="movimentonuovoSQL.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/movimentonuovoSQL.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="100" column="6" lean-forward="false" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
+            <state relative-caret-position="1490">
+              <caret line="152" column="132" lean-forward="true" selection-start-line="152" selection-start-column="10" selection-end-line="152" selection-end-column="132" />
               <folding>
-                <marker date="1486316583095" expanded="true" signature="2709:2841" ph="SELECT MAX(n... movimenti" />
-                <marker date="1486316583095" expanded="true" signature="2993:3683" ph="INSERT INTO movimenti... " />
-                <marker date="1486316583095" expanded="true" signature="3728:4455" ph="INSERT INTO movimenti... " />
+                <marker date="1486326544516" expanded="true" signature="2687:2819" ph="SELECT MAX(n... movimenti" />
+                <marker date="1486326544516" expanded="true" signature="2971:3661" ph="INSERT INTO movimenti... " />
+                <marker date="1486326544516" expanded="true" signature="3706:4433" ph="INSERT INTO movimenti... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="movimentilista.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/movimentilista.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="65" column="21" lean-forward="true" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <marker date="1486325535710" expanded="true" signature="290:346" ph="INSERT INTO tentativilogin... " />
+                <marker date="1486325535710" expanded="true" signature="464:520" ph="UPDATE users... " />
               </folding>
             </state>
           </provider>
@@ -104,7 +128,6 @@
         <option value="$PROJECT_DIR$/magazzinolista.php" />
         <option value="$PROJECT_DIR$/magazzinosoggetto.php" />
         <option value="$PROJECT_DIR$/magazzinosoggettoseleziona.php" />
-        <option value="$PROJECT_DIR$/movimentilista.php" />
         <option value="$PROJECT_DIR$/movimentilistanonpagati.php" />
         <option value="$PROJECT_DIR$/movimentilistasoggetto.php" />
         <option value="$PROJECT_DIR$/movimentilistasoggettoSQL.php" />
@@ -120,7 +143,9 @@
         <option value="$PROJECT_DIR$/php/utilita.php" />
         <option value="$PROJECT_DIR$/php/librijson.php" />
         <option value="$PROJECT_DIR$/movimentonuovo.php" />
+        <option value="$PROJECT_DIR$/test/test.php" />
         <option value="$PROJECT_DIR$/movimentonuovoSQL.php" />
+        <option value="$PROJECT_DIR$/movimentilista.php" />
       </list>
     </option>
   </component>
@@ -182,6 +207,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hb" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hb" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -266,12 +305,12 @@
       <option name="presentableId" value="Default" />
       <updated>1486285891386</updated>
       <workItem from="1486285899482" duration="3152000" />
-      <workItem from="1486303673498" duration="7905000" />
+      <workItem from="1486303673498" duration="11891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11057000" />
+    <option name="totallyTimeSpent" value="15043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -362,14 +401,6 @@
           <folding>
             <marker date="1485883661378" expanded="true" signature="753:840" ph="INSERT INTO utenti... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/process_login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -561,14 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/movimentilista.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/movimentovisualizza.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -701,14 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/utilita.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/librijson.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -737,15 +752,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/utilita.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <marker date="1485885393773" expanded="true" signature="1091:1175" ph="SELECT idute... utenti" />
+            <marker date="1485885393773" expanded="true" signature="3026:3096" ph="INSERT INTO tentativilogin... " />
+            <marker date="1485885393773" expanded="true" signature="3488:3566" ph="SELECT time " />
+            <marker date="1485885393773" expanded="true" signature="4336:4390" ph="SELECT passw... utenti" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/movimentonuovoSQL.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="100" column="6" lean-forward="false" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
+        <state relative-caret-position="1490">
+          <caret line="152" column="132" lean-forward="true" selection-start-line="152" selection-start-column="10" selection-end-line="152" selection-end-column="132" />
           <folding>
-            <marker date="1486316583095" expanded="true" signature="2709:2841" ph="SELECT MAX(n... movimenti" />
-            <marker date="1486316583095" expanded="true" signature="2993:3683" ph="INSERT INTO movimenti... " />
-            <marker date="1486316583095" expanded="true" signature="3728:4455" ph="INSERT INTO movimenti... " />
+            <marker date="1486326544516" expanded="true" signature="2687:2819" ph="SELECT MAX(n... movimenti" />
+            <marker date="1486326544516" expanded="true" signature="2971:3661" ph="INSERT INTO movimenti... " />
+            <marker date="1486326544516" expanded="true" signature="3706:4433" ph="INSERT INTO movimenti... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <marker date="1486325535710" expanded="true" signature="290:346" ph="INSERT INTO tentativilogin... " />
+            <marker date="1486325535710" expanded="true" signature="464:520" ph="UPDATE users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movimentilista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="65" column="21" lean-forward="true" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -41,7 +41,7 @@ if (empty($_GET['fkmagazzino'])) {
 if (!isset($_GET['riferimento'])) {
     $riferimento = '-';
 } else {
-    $riferimento = str_replace("'", "''",$_GET['riferimento']);
+    $riferimento = pulisciStringa($_GET['riferimento']);
 }
 
 if (!isset($_GET['spedizione'])) {
@@ -95,10 +95,8 @@ if (empty($_GET['dataPagamento'])) {
 if (!isset($_GET['note'])) {
     $note = '-';
 } else {
-    $note = str_replace("'", "''",$_GET['note']);
+    $note = pulisciStringa($_GET['note']);
 }
-
-die();
 
 if (empty($errors)) {
     try {
@@ -121,6 +119,26 @@ if (empty($errors)) {
             $db->exec("INSERT INTO movimenti (idmovimento, fktipologia, fkcausale, fkmagazzino, numero, anno, riferimento, fksoggetto, movimentodata, pagamentoentro, pagata, fkpagamentotipologia, datapagamento, spedizionecosto, spedizionesconto, fkaspetto, fktrasporto, note, cancellato) VALUES (NULL, '" . $tipologia . "', '" . $causale . "', '" . $fkmagazzino . "', '" . $numero . "', '" . $dataEmissione->format('Y') . "', '" . $riferimento . "', '" . $cliente . "', '" . $dataEmissione->format('Y-m-d') . "', '" . $dataEntro->format('Y-m-d') . "', '" . $pagato . "', '" . $modalita . "', '" . $dataPagamento->format('Y-m-d') . "', '" . $spedizione . "', '" . $spedizionesconto . "', '" . $aspetto . "', '" . $trasporto . "', '" . $note . "', '0');");
         }
 
+
+
+        $prodotti = json_decode($_GET['opere']);
+        for($c=0; $c<count($prodotti) ; $c++) {
+
+            $ddd = new DDTDettaglio();
+
+            $ddd->ddd_fkddt = $ddt->ddt_ultimoID;
+            $ddd->ddd_quantita = $prodotti[$c]->quantita;
+            $ddd->ddd_fkprodotto = $prodotti[$c]->fkprodotto;
+            $ddd->ddd_tracciabilita = $prodotti[$c]->tracciabilita;
+
+            if ($ddd->AggiungiSQL()) {
+                // OK
+            } else {
+                $errore['creazioneDDD'] = 'Errore Database lista prodotti';
+            }
+        }
+
+
         // chiude il database
         $db = NULL;
     } catch (PDOException $e) {
@@ -128,12 +146,14 @@ if (empty($errors)) {
     }
 }
 
+
 if (!empty($errors)) {
     echo "<div class='alert alert-danger alert-dismissible'><h4><i class='icon fa fa-ban'></i> ATTENZIONE!</h4>Ci sono degli errori</div>";
 } else {
     echo "<div class='alert alert-success alert-dismissible'><h4><i class='icon fa fa-check'></i> OK!</h4>Inserimento riuscito</div>";
 }
 
+header('Location: ./movimentilista.php');
 ?>
 
 
