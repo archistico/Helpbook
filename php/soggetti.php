@@ -12,10 +12,10 @@ function soggettiSelect() {
     foreach ($result as $row) {
       $row = get_object_vars($row);
       if(empty($row['provincia'])) {
-        print "<option value='" . $row['idsoggetto'] . "'>" . convertiStringaToHTML($row['denominazione']) . "</option>\n";
+        print "<option value='" . $row['idsoggetto'] . "'>" . $row['denominazione'] . "</option>\n";
       }
       else {
-        print "<option value='" . $row['idsoggetto'] . "'>" . convertiStringaToHTML($row['denominazione']) . " (".$row['provincia'].")</option>\n";
+        print "<option value='" . $row['idsoggetto'] . "'>" . $row['denominazione'] . " (".$row['provincia'].")</option>\n";
       }
     }
     // chiude il database
@@ -37,10 +37,10 @@ function soggettiSelectID($id) {
     foreach ($result as $row) {
       $row = get_object_vars($row);
       if(empty($row['provincia'])) {
-        print "<option value='" . $row['idsoggetto'] . "' ".($row['idsoggetto']==$id?'selected':'').">" . convertiStringaToHTML($row['denominazione']) . "</option>\n";
+        print "<option value='" . $row['idsoggetto'] . "' ".($row['idsoggetto']==$id?'selected':'').">" . $row['denominazione'] . "</option>\n";
       }
       else {
-        print "<option value='" . $row['idsoggetto'] . "' ".($row['idsoggetto']==$id?'selected':'').">" . convertiStringaToHTML($row['denominazione']) . " (".$row['provincia'].")</option>\n";
+        print "<option value='" . $row['idsoggetto'] . "' ".($row['idsoggetto']==$id?'selected':'').">" . $row['denominazione'] . " (".$row['provincia'].")</option>\n";
       }
     }
     // chiude il database

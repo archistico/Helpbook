@@ -35,3 +35,8 @@ hr.visualizzafattura {
 .icone-unite .inlinea {
     display: inline;
 }
+
+a.disattivato {
+    pointer-events: none;
+    cursor: default;
+}

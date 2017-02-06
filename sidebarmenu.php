@@ -12,7 +12,6 @@
         </a>
         <ul class="treeview-menu">
             <li><a href="soggettonuovo.php"><i class="fa fa-plus"></i> Nuovo soggetto</a></li>
-            <li><a href="soggettocerca.php"><i class="fa fa-search"></i> Cerca soggetto</a></li>
             <li><a href="soggettomodificaseleziona.php"><i class="fa fa-pencil"></i> Modifica soggetto</a></li>
             <li><a href="soggettilista.php"><i class="fa fa-list-alt"></i> Lista soggetti</a></li>
             <!-- <li><a href="soggettilistaPDF.php"><i class="fa fa-file-pdf-o"></i> PDF soggetti</a></li> -->

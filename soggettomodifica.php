@@ -129,8 +129,8 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Denominazione / Cognome</em></label>
-                    <input type="text" class="form-control" placeholder="Denominazione" name='cognome' value='<?php echo $denominazione; ?>' required>
-                    <input type="hidden" name="idsoggetto" value="<?php echo $fksoggetto; ?>">
+                    <input type="text" class="form-control" placeholder="Denominazione" name='cognome' value='<?php echo pulisciDB($denominazione); ?>' required>
+                    <input type="hidden" name="idsoggetto" value="<?php echo pulisciDB($fksoggetto); ?>">
                   </div>
                 </div>
                 <!-- /.col -->
@@ -167,7 +167,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Indirizzo <em>(opzionale)</em></label>
-                    <input type="text" class="form-control" placeholder="Indirizzo (via, piazza, ...)" value='<?php echo $indirizzo; ?>' name='indirizzo'>
+                    <input type="text" class="form-control" placeholder="Indirizzo (via, piazza, ...)" value='<?php echo pulisciDB($indirizzo); ?>' name='indirizzo'>
                   </div>
                 </div>
                 <!-- /.col -->
@@ -175,7 +175,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Città <em>(opzionale)</em></label>
-                    <input type="text" class="form-control" placeholder="Città" value='<?php echo $comune; ?>' name='comune'>
+                    <input type="text" class="form-control" placeholder="Città" value='<?php echo pulisciDB($comune); ?>' name='comune'>
                   </div>
                 </div>
                 <!-- /.col -->
@@ -188,7 +188,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>CAP <em>(opzionale)</em></label>
-                    <input type="text" class="form-control" placeholder="Cap" value='<?php echo $cap; ?>' name='cap'>
+                    <input type="text" class="form-control" placeholder="Cap" value='<?php echo pulisciDB($cap); ?>' name='cap'>
                   </div>
                 </div>
                 <!-- /.col -->
@@ -197,7 +197,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Provincia <em>(opzionale)</em></label>
-                    <input type="text" class="form-control" placeholder="Provincia" value='<?php echo $provincia; ?>' name='provincia'>
+                    <input type="text" class="form-control" placeholder="Provincia" value='<?php echo pulisciDB($provincia); ?>' name='provincia'>
                   </div>
                 </div>
                 <!-- /.col -->
@@ -211,7 +211,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Telefono <em>(opzionale)</em></label>
-                    <input type="text" class="form-control" placeholder="Telefono" value='<?php echo $telefono; ?>' name='telefono'>
+                    <input type="text" class="form-control" placeholder="Telefono" value='<?php echo pulisciDB($telefono); ?>' name='telefono'>
                   </div>
                 </div>
                 <!-- /.col -->
@@ -220,7 +220,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Cellulare <em>(opzionale)</em></label>
-                    <input type="text" class="form-control" placeholder="Cellulare" value='<?php echo $cellulare; ?>' name='cellulare'>
+                    <input type="text" class="form-control" placeholder="Cellulare" value='<?php echo pulisciDB($cellulare); ?>' name='cellulare'>
                   </div>
                 </div>
                 <!-- /.col -->
@@ -233,7 +233,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label>Email <em>(opzionale)</em></label>
-                    <input type="text" class="form-control" placeholder="Email" value='<?php echo $email; ?>' name='email'>
+                    <input type="text" class="form-control" placeholder="Email" value='<?php echo pulisciDB($email); ?>' name='email'>
                   </div>
                 </div>
                 <!-- /.col -->
@@ -267,7 +267,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>PIVA <em>(opzionale)</em></label>
-                    <input type="text" class="form-control" placeholder="Numero di Partita IVA" value='<?php echo $piva; ?>' name='piva'>
+                    <input type="text" class="form-control" placeholder="Numero di Partita IVA" value='<?php echo pulisciDB($piva); ?>' name='piva'>
                   </div>
                 </div>
                 <!-- /.col -->
@@ -276,7 +276,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Codice fiscale <em>(opzionale)</em></label>
-                    <input type="text" class="form-control" placeholder="Codice fiscale" value='<?php echo $cf; ?>' name='codicefiscale'>
+                    <input type="text" class="form-control" placeholder="Codice fiscale" value='<?php echo pulisciDB($cf); ?>' name='codicefiscale'>
                   </div>
                 </div>
                 <!-- /.col -->
@@ -291,7 +291,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label>Note <em>(opzionale)</em></label>
-                    <input type="text" class="form-control" placeholder="Note" value='<?php echo $note; ?>' name='note'>
+                    <input type="text" class="form-control" placeholder="Note" value='<?php echo pulisciDB($note); ?>' name='note'>
                   </div>
                 </div>
                 <!-- /.col -->

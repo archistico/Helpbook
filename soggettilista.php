@@ -76,9 +76,9 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Denominazione</th>
-                                            <th style="width: 130px">Telefono</th>
-                                            <th style="width: 130px">Cellulare</th>
-                                            <th style="width: 130px">Email</th>
+                                            <th>Telefono</th>
+                                            <th>Cellulare</th>
+                                            <th>Email</th>
                                             <th>X</th>
                                         </tr>
                                         </thead>
@@ -116,6 +116,7 @@
     <script>
         $(function () {
             $('#soggettitabella').DataTable({
+                "iDisplayLength": 50,
                 "paging": true,
                 "lengthChange": true,
                 "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Tutti"]],
