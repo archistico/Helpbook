@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a7bde4d-5f14-4267-a957-ffc0dc02a0ef" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/movimentocancella.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/movimentocancellasql.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/soggettocancellasql.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test2.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test3.php" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/soggettocerca.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/soggettocercaSQL.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/emilie.css" afterPath="$PROJECT_DIR$/dist/css/emilie.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/movimenti.php" afterPath="$PROJECT_DIR$/php/movimenti.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/soggetti.php" afterPath="$PROJECT_DIR$/php/soggetti.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/utilita.php" afterPath="$PROJECT_DIR$/php/utilita.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sidebarmenu.php" afterPath="$PROJECT_DIR$/sidebarmenu.php" />
@@ -89,6 +92,9 @@
         <option value="$PROJECT_DIR$/soggettocancellasql.php" />
         <option value="$PROJECT_DIR$/soggettilista.php" />
         <option value="$PROJECT_DIR$/soggettocancella.php" />
+        <option value="$PROJECT_DIR$/movimentocancella.php" />
+        <option value="$PROJECT_DIR$/php/movimenti.php" />
+        <option value="$PROJECT_DIR$/movimentocancellasql.php" />
       </list>
     </option>
   </component>
@@ -236,12 +242,12 @@
       <workItem from="1486285899482" duration="3152000" />
       <workItem from="1486303673498" duration="18617000" />
       <workItem from="1486369660369" duration="2205000" />
-      <workItem from="1486387350924" duration="12156000" />
+      <workItem from="1486387350924" duration="13855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36130000" />
+    <option name="totallyTimeSpent" value="37829000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -277,32 +283,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/navbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <marker date="1486305884548" expanded="true" signature="12375:12418" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/soggettocerca.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/soggettocercaSQL.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -734,10 +714,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/movimentilista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="74" column="22" lean-forward="true" selection-start-line="61" selection-start-column="20" selection-end-line="74" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soggettilista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soggettocancella.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="698">
+          <caret line="124" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/movimenti.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="494" column="0" lean-forward="true" selection-start-line="494" selection-start-column="0" selection-end-line="494" selection-end-column="0" />
+          <folding>
+            <marker date="1486414463336" expanded="true" signature="3740:3746" ph="€" />
+            <marker date="1486414463336" expanded="true" signature="3855:3861" ph="€" />
+            <marker date="1486414463336" expanded="true" signature="4029:4040" ph="..." />
+            <marker date="1486414463336" expanded="true" signature="4131:4140" ph="..." />
+            <marker date="1486414463336" expanded="true" signature="4311:4328" ph="..." />
+            <marker date="1486414463336" expanded="true" signature="4479:4496" ph="..." />
+            <marker date="1486414463336" expanded="true" signature="8616:8622" ph="€" />
+            <marker date="1486414463336" expanded="true" signature="8731:8737" ph="€" />
+            <marker date="1486414463336" expanded="true" signature="8905:8916" ph="..." />
+            <marker date="1486414463336" expanded="true" signature="9007:9016" ph="..." />
+            <marker date="1486414463336" expanded="true" signature="9187:9204" ph="..." />
+            <marker date="1486414463336" expanded="true" signature="9355:9372" ph="..." />
+            <marker date="1486414463336" expanded="true" signature="10120:11080" ph="SELECT movim... movimenti" />
+            <marker date="1486414463336" expanded="true" signature="13272:13278" ph="€" />
+            <marker date="1486414463336" expanded="true" signature="13387:13393" ph="€" />
+            <marker date="1486414463336" expanded="true" signature="13561:13572" ph="..." />
+            <marker date="1486414463336" expanded="true" signature="13663:13672" ph="..." />
+            <marker date="1486414463336" expanded="true" signature="13843:13860" ph="..." />
+            <marker date="1486414463336" expanded="true" signature="14011:14028" ph="..." />
+            <marker date="1486414463336" expanded="true" signature="14891:15115" ph="SELECT libri... movimentidettaglio" />
+            <marker date="1486414463336" expanded="true" signature="16276:16500" ph="SELECT libri... movimentidettaglio" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/movimentonuovoSQL.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="181" column="2" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="181" selection-end-column="2" />
+        <state relative-caret-position="443">
+          <caret line="170" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
             <marker date="1486331596880" expanded="true" signature="2619:2732" ph="SELECT MAX(n... movimenti" />
             <marker date="1486331596880" expanded="true" signature="3048:3069" ph="INSERT INTO movimenti... " />
@@ -751,10 +785,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/movimentocancella.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="79" column="62" lean-forward="true" selection-start-line="79" selection-start-column="62" selection-end-line="79" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/soggettocancellasql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="66" column="42" lean-forward="true" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="42" />
+        <state relative-caret-position="242">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="19" selection-end-column="1" />
           <folding>
             <marker date="1486413091554" expanded="true" signature="808:981" ph="SELECT COUNT... movimenti" />
             <marker date="1486413091554" expanded="true" signature="825:904" ph="SELECT COUNT... movimenti" />
@@ -765,29 +807,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/movimentilista.php">
+    <entry file="file://$PROJECT_DIR$/movimentocancellasql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="74" column="22" lean-forward="true" selection-start-line="61" selection-start-column="20" selection-end-line="74" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/soggettocancella.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="105" column="102" lean-forward="false" selection-start-line="105" selection-start-column="102" selection-end-line="105" selection-end-column="102" />
+        <state relative-caret-position="544">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
-            <marker date="1486413594391" expanded="true" signature="4277:4288" ph="..." />
+            <marker date="1486415139146" expanded="true" signature="903:946" ph="DELETE FROM " />
+            <marker date="1486415139146" expanded="true" signature="1097:1149" ph="DELETE FROM " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/soggettilista.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

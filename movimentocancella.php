@@ -2,14 +2,15 @@
 include 'controllo.php';
 include 'php/utilita.php';
 include 'php/config.php';
-include 'php/soggetti.php';
+include 'php/movimenti.php';
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> HelpBook | SOGGETTO - CANCELLA</title>
+    <title> HelpBook | MOVIMENTO - CANCELLA</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <?php include 'link.php'; ?>
@@ -27,7 +28,7 @@ include 'php/soggetti.php';
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <?php
-        $menu = "Rubrica";
+        $menu = "Movimenti";
         include 'navbar.php';
         ?>
     </header>
@@ -48,12 +49,12 @@ include 'php/soggetti.php';
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                SOGGETTO
+                MOVIMENTO
                 <small>CANCELLA</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="#">Soggetto</a></li>
+                <li><a href="#">Movimento</a></li>
                 <li class="active">Cancella</li>
             </ol>
         </section>
@@ -72,20 +73,19 @@ include 'php/soggetti.php';
                     <div class='row'>
                         <div class='col-md-12'>
 
-
                             <?php
 
                             $errors = array();
 
-                            if (empty($_GET['fksoggetto'])) {
-                                $errors['fksoggetto'] = 'fksoggetto non passato';
+                            if (empty($_GET['idmovimento'])) {
+                                $errors['idmovimento'] = 'idmovimento non passato';
                             } else {
-                                $fksoggetto = $_GET['fksoggetto'];
+                                $idmovimento = $_GET['idmovimento'];
                             }
 
                             if (empty($errors)) {
-                                echo "<p>Il cliente verrà cancellato solo se non ha movimenti associati</p>";
-                                echo "<h1>" . pulisciDB(soggettoDenominazioneID($fksoggetto)) . "</h1>";
+                                echo "<p>Il movimento verrà cancellato</p>";
+                                echo "<h1>" . pulisciDB(movimentoNomeByID($idmovimento)) . "</h1>";
                             } else {
                                 echo "<div class='alert alert-danger alert-dismissible'><h4><i class='icon fa fa-ban'></i> ATTENZIONE!</h4>Ci sono degli errori</div>";
                             }
@@ -103,7 +103,7 @@ include 'php/soggetti.php';
                             </div>
                             <div class='col-md-6'>
                                 <a class='btn btn-block btn-danger btn-lg'
-                                   href='soggettocancellasql.php?fksoggetto=<?php echo $fksoggetto; ?>'>Cancella cliente</a>
+                                   href='movimentocancellasql.php?idmovimento=<?php echo $idmovimento; ?>'>Cancella movimento</a>
                             </div>
                         </div>
                         <?php

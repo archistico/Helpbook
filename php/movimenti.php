@@ -468,3 +468,47 @@ function movimentoDettagli($idmovimento) {
     throw new PDOException("Error  : " . $e->getMessage());
   }
 }
+
+function movimentoNomeByID($idmovimento) {
+    try {
+        include 'config.php';
+        $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+        $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
+
+        $result = $db->query('SELECT soggetti.denominazione, soggetti.indirizzo, soggetti.cap, soggetti.comune, soggetti.provincia, soggetti.telefono, soggetti.email, soggetti.piva, soggetti.codicefiscale, '
+            . 'movimentitipologia.movimentotipologia, movimentitipologia.codice, '
+            . 'movimenti.anno, movimenti.numero, movimenti.movimentodata, movimenti.pagamentoentro, movimenti.pagata, movimenti.datapagamento, movimenti.spedizionecosto, movimenti.spedizionesconto, movimenti.riferimento, movimenti.chiuso, '
+            . 'movimenticausale.movimentocausale, '
+            . 'movimentiaspetto.movimentoaspetto, '
+            . 'movimentitrasporto.movimentotrasporto, '
+            . 'pagamentitipologia.pagamentotipologia '
+            . 'FROM movimenti '
+            . 'INNER JOIN movimentitipologia ON movimenti.fktipologia=movimentitipologia.idmovimentotipologia '
+            . 'INNER JOIN movimentiaspetto ON movimenti.fkaspetto=movimentiaspetto.idmovimentoaspetto '
+            . 'INNER JOIN movimentitrasporto ON movimenti.fktrasporto=movimentitrasporto.idmovimentotrasporto '
+            . 'INNER JOIN soggetti ON movimenti.fksoggetto=soggetti.idsoggetto '
+            . 'INNER JOIN pagamentitipologia ON movimenti.fkpagamentotipologia=pagamentitipologia.idpagamentotipologia '
+            . 'INNER JOIN movimenticausale ON movimenti.fkcausale=movimenticausale.idmovimentocausale '
+            . 'WHERE movimenti.cancellato=0 AND movimenti.idmovimento='.$idmovimento);
+
+        foreach ($result as $row) {
+            $row = get_object_vars($row);
+
+            $mov_denominazione = $row['denominazione'];
+            $mov_codice = $row['codice'];
+            $mov_anno = $row['anno'];
+            $mov_numero = $row['numero'];
+
+        }
+        // chiude il database
+        $db = NULL;
+        $num_padded = sprintf("%03d", $mov_numero);
+
+        return $mov_anno."-".$mov_codice."-".$num_padded." ".$mov_denominazione;
+
+    } catch (PDOException $e) {
+        throw new PDOException("Error  : " . $e->getMessage());
+    }
+}
