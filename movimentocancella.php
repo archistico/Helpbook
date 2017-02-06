@@ -99,7 +99,7 @@ include 'php/movimenti.php';
                         ?>
                         <div class='row'>
                             <div class='col-md-6'>
-                                <a class='btn btn-block btn-default btn-lg' href='soggettilista.php'>Annulla</a>
+                                <a class='btn btn-block btn-default btn-lg' href='movimentilista.php'>Annulla</a>
                             </div>
                             <div class='col-md-6'>
                                 <a class='btn btn-block btn-danger btn-lg'
