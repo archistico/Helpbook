@@ -70,15 +70,16 @@
                                     <h3 class="box-title">Lista soggetti</h3>
                                 </div>
                                 <!-- /.box-header -->
-                                <div class="box-body no-padding">
+                                <div class="box-body">
                                     <table id='soggettitabella' class='table table-bordered table-hover'>
                                         <thead>
                                         <tr>
+                                            <th>#</th>
                                             <th>Denominazione</th>
                                             <th style="width: 130px">Telefono</th>
                                             <th style="width: 130px">Cellulare</th>
                                             <th style="width: 130px">Email</th>
-                                            <th></th>
+                                            <th>X</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -119,8 +120,8 @@
                 "lengthChange": true,
                 "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Tutti"]],
                 "searching": true,
-                "ordering": true,
-                "order": [[ 1, 'asc' ]],
+                "ordering": false,
+                "order": [[ 2, 'asc' ]],
                 "info": true,
                 "autoWidth": true,
                 "language": {

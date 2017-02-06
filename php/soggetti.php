@@ -150,11 +150,16 @@ function soggettiListaTabella() {
         foreach ($result as $row) {
             $row = get_object_vars($row);
             print "<tr>\n";
+            print "<td>";
+            print "<a class='btn btn-xs btn-warning' href='soggettomodifica.php?fksoggetto=".$row['idsoggetto']."' role='button' style='width: 30px; margin-right: 3px; margin-bottom: 3px'><i class = 'fa fa-pencil'></i></a>";
+            print "</td>";
             print "<td>".$row['denominazione']."</td>\n";
             print "<td>".$row['telefono']."</td>\n";
             print "<td>".$row['cellulare']."</td>\n";
             print "<td>".$row['email']."</td>\n";
-            print "<td><a class='btn btn-xs btn-info' href='soggettocercaSQL.php?fksoggetto=".$row['idsoggetto']."' role='button' style='margin-right: 5px'><i class = 'fa fa-eye'></i></a></td>\n";
+            print "<td>";
+            print "<a class='btn btn-xs btn-danger' href='soggettocancella.php?fksoggetto=".$row['idsoggetto']."' role='button' style='width: 30px;margin-bottom: 3px'><i class = 'fa fa-remove'></i></a>";
+            print "</td>";
             print "</tr>\n";
         }
         // chiude il database
