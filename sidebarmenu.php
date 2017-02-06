@@ -24,7 +24,7 @@
         </a>
         <ul class="treeview-menu">
             <li><a href="operanuova.php"><i class="fa fa-plus"></i> Nuova opera</a></li>
-            <li><a href="operamodificaseleziona.php"><i class="fa fa-pencil"></i> Modifica opera</a></li>
+            <!-- <li><a href="operamodificaseleziona.php"><i class="fa fa-pencil"></i> Modifica opera</a></li> -->
             <li><a href="operelista.php"><i class="fa fa-list-alt"></i> Lista opere</a></li>
             <!-- <li><a href="operelistaPDF.php"><i class="fa fa-file-pdf-o"></i> PDF opere</a></li> -->
         </ul>
@@ -37,8 +37,8 @@
         <ul class="treeview-menu">
             <li><a href="movimentonuovo.php"><i class="fa fa-plus"></i> Nuovo movimento</a></li>
             <li><a href="movimentilista.php"><i class="fa fa-list-alt"></i> Lista movimenti</a></li>
-            <li><a href="movimentilistasoggetto.php"><i class="fa fa-list-alt"></i> Lista per soggetto</a></li>
-            <li><a href="movimentilistanonpagati.php"><i class="fa fa-money"></i> Lista non pagati</a></li>
+            <!-- <li><a href="movimentilistasoggetto.php"><i class="fa fa-list-alt"></i> Lista per soggetto</a></li> -->
+            <!-- <li><a href="movimentilistanonpagati.php"><i class="fa fa-money"></i> Lista non pagati</a></li> -->
         </ul>
     </li>
     <li class="<?php echo ($menu=='Stampe')?'active':''; ?> treeview">
@@ -63,6 +63,7 @@
             <li><a href="magazzinosoggettoseleziona.php"><i class="fa fa-building-o"></i> Magazzino per soggetto</a></li>
         </ul>
     </li>
+    <!--
     <li class="<?php echo ($menu=='Report')?'active':''; ?> treeview">
         <a href="#">
             <i class="fa fa-table"></i> <span>Report</span>
@@ -75,4 +76,5 @@
             <li><a href="movimentilista.php"><i class="fa fa-line-chart"></i> Calcolo diritti d'autore</a></li>
         </ul>
     </li>
+     -->
 </ul>
