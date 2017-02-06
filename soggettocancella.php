@@ -103,7 +103,7 @@ include 'php/soggetti.php';
                             </div>
                             <div class='col-md-6'>
                                 <a class='btn btn-block btn-danger btn-lg'
-                                   href='soggettocancellasql.php?fksoggetto=".$fksoggetto."'>Cancella cliente</a>
+                                   href='soggettocancellasql.php?fksoggetto=<?php echo $fksoggetto; ?>'>Cancella cliente</a>
                             </div>
                         </div>
                         <?php

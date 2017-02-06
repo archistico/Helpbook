@@ -56,6 +56,21 @@
                 <!-- Main content -->
                 <section class="content">
 
+                    <?php
+                    session_start();
+                    if(isset($_SESSION['sqlerrori'])) {
+                        echo "<div class='alert alert-danger alert-dismissible'><h4><i class='icon fa fa-ban'></i> ATTENZIONE!</h4>Ci sono degli errori</div>";
+                        echo "<div class='alert alert-danger alert-dismissible'>".$_SESSION['sqlerrori']."</div>";
+                        unset($_SESSION['sqlerrori']);
+                    }
+
+                    if(isset($_SESSION['sqlok'])) {
+                        echo "<div class='alert alert-success alert-dismissible'><h4><i class='icon fa fa-check'></i> OK!</h4>Operazione riuscita</div>";
+                        unset($_SESSION['sqlok']);
+                    }
+
+                    ?>
+
                     <!-- Main row -->
                     <div class="row">
 
