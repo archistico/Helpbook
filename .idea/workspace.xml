@@ -2,44 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a7bde4d-5f14-4267-a957-ffc0dc02a0ef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/ARCHI.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/librijson.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/magazzinolista.php" afterPath="$PROJECT_DIR$/magazzinolista.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/magazzinosoggetto.php" afterPath="$PROJECT_DIR$/magazzinosoggetto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/magazzinosoggettoseleziona.php" afterPath="$PROJECT_DIR$/magazzinosoggettoseleziona.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentilista.php" afterPath="$PROJECT_DIR$/movimentilista.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentilistanonpagati.php" afterPath="$PROJECT_DIR$/movimentilistanonpagati.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentilistasoggetto.php" afterPath="$PROJECT_DIR$/movimentilistasoggetto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentilistasoggettoSQL.php" afterPath="$PROJECT_DIR$/movimentilistasoggettoSQL.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentochiudi.php" afterPath="$PROJECT_DIR$/movimentochiudi.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentonuovo.php" afterPath="$PROJECT_DIR$/movimentonuovo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentonuovoSQL.php" afterPath="$PROJECT_DIR$/movimentonuovoSQL.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentovisualizza.php" afterPath="$PROJECT_DIR$/movimentovisualizza.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operamodifica.php" afterPath="$PROJECT_DIR$/operamodifica.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operamodificaSQL.php" afterPath="$PROJECT_DIR$/operamodificaSQL.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operamodificaseleziona.php" afterPath="$PROJECT_DIR$/operamodificaseleziona.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operanuova.php" afterPath="$PROJECT_DIR$/operanuova.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operanuovaSQL.php" afterPath="$PROJECT_DIR$/operanuovaSQL.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operelista.php" afterPath="$PROJECT_DIR$/operelista.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/utilita.php" afterPath="$PROJECT_DIR$/php/utilita.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sidebarmenu.php" afterPath="$PROJECT_DIR$/sidebarmenu.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettilista.php" afterPath="$PROJECT_DIR$/soggettilista.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettocerca.php" afterPath="$PROJECT_DIR$/soggettocerca.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettocercaSQL.php" afterPath="$PROJECT_DIR$/soggettocercaSQL.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettomodifica.php" afterPath="$PROJECT_DIR$/soggettomodifica.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettomodificaSQL.php" afterPath="$PROJECT_DIR$/soggettomodificaSQL.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettomodificaseleziona.php" afterPath="$PROJECT_DIR$/soggettomodificaseleziona.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettonuovo.php" afterPath="$PROJECT_DIR$/soggettonuovo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettonuovoSQL.php" afterPath="$PROJECT_DIR$/soggettonuovoSQL.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stampalista.php" afterPath="$PROJECT_DIR$/stampalista.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stampalistaanno.php" afterPath="$PROJECT_DIR$/stampalistaanno.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stampalistaannoSQL.php" afterPath="$PROJECT_DIR$/stampalistaannoSQL.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stampanuova.php" afterPath="$PROJECT_DIR$/stampanuova.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stampanuovaSQL.php" afterPath="$PROJECT_DIR$/stampanuovaSQL.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,7 +16,35 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="soggettilista.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/soggettilista.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="624">
+              <caret line="88" column="42" lean-forward="false" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="soggetti.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/soggetti.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="153" column="5" lean-forward="true" selection-start-line="153" selection-start-column="5" selection-end-line="153" selection-end-column="5" />
+              <folding>
+                <marker date="1474624242039" expanded="true" signature="385:488" ph="SELECT denom... soggetti" />
+                <marker date="1474624242039" expanded="true" signature="1426:1529" ph="SELECT denom... soggetti" />
+                <marker date="1474624242039" expanded="true" signature="4205:4254" ph="SELECT * FRO... soggetti" />
+                <marker date="1474624242039" expanded="true" signature="5452:5565" ph="SELECT sogge... soggetti" />
+                <marker date="1474624242039" expanded="true" signature="6113:6130" ph="..." />
+                <marker date="1474624242039" expanded="true" signature="6769:6944" ph="SELECT sogge... soggetti" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -74,7 +65,6 @@
         <option value="$PROJECT_DIR$/navbar.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/sidebarmenu.php" />
-        <option value="$PROJECT_DIR$/soggettilista.php" />
         <option value="$PROJECT_DIR$/soggettocerca.php" />
         <option value="$PROJECT_DIR$/soggettocercaSQL.php" />
         <option value="$PROJECT_DIR$/soggettomodifica.php" />
@@ -108,6 +98,7 @@
         <option value="$PROJECT_DIR$/stampanuovaSQL.php" />
         <option value="$PROJECT_DIR$/stampalista.php" />
         <option value="$PROJECT_DIR$/movimentilista.php" />
+        <option value="$PROJECT_DIR$/soggettilista.php" />
       </list>
     </option>
   </component>
@@ -158,8 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -172,8 +161,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hb" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -254,33 +259,34 @@
       <updated>1486285891386</updated>
       <workItem from="1486285899482" duration="3152000" />
       <workItem from="1486303673498" duration="18617000" />
+      <workItem from="1486369660369" duration="2205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21769000" />
+    <option name="totallyTimeSpent" value="23974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12604167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12604167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,22 +320,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="33" lean-forward="false" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/link.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -378,14 +368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/soggettilista.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/soggettocerca.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -421,14 +403,6 @@
     <entry file="file://$PROJECT_DIR$/soggettomodificaSQL.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/soggettonuovo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
           <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
           <folding />
         </state>
@@ -650,10 +624,8 @@
         <state relative-caret-position="632">
           <caret line="612" column="5" lean-forward="true" selection-start-line="612" selection-start-column="5" selection-end-line="612" selection-end-column="5" />
           <folding>
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#3;n#form#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#3;n#form#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#16889#16897#0#HTML" expanded="true" />
-            <element signature="e#17852#17858#0#HTML" expanded="true" />
+            <element signature="e#16889#16897#0#HTML" expanded="false" />
+            <element signature="e#17852#17858#0#HTML" expanded="false" />
             <marker date="1486314448649" expanded="true" signature="20227:20233" ph="€" />
             <marker date="1486314448649" expanded="true" signature="21513:21519" ph="€" />
             <marker date="1486314448649" expanded="true" signature="21647:21652" ph="..." />
@@ -728,10 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <marker date="1486325535710" expanded="true" signature="290:346" ph="INSERT INTO tentativilogin... " />
-            <marker date="1486325535710" expanded="true" signature="464:520" ph="UPDATE users... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -763,6 +731,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/movimentilista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="70" column="145" lean-forward="false" selection-start-line="70" selection-start-column="145" selection-end-line="70" selection-end-column="145" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/stampalista.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -771,10 +747,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/movimentilista.php">
+    <entry file="file://$PROJECT_DIR$/soggettonuovo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="70" column="145" lean-forward="false" selection-start-line="70" selection-start-column="145" selection-end-line="70" selection-end-column="145" />
+        <state relative-caret-position="462">
+          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/soggetti.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="153" column="5" lean-forward="true" selection-start-line="153" selection-start-column="5" selection-end-line="153" selection-end-column="5" />
+          <folding>
+            <marker date="1474624242039" expanded="true" signature="385:488" ph="SELECT denom... soggetti" />
+            <marker date="1474624242039" expanded="true" signature="1426:1529" ph="SELECT denom... soggetti" />
+            <marker date="1474624242039" expanded="true" signature="4205:4254" ph="SELECT * FRO... soggetti" />
+            <marker date="1474624242039" expanded="true" signature="5452:5565" ph="SELECT sogge... soggetti" />
+            <marker date="1474624242039" expanded="true" signature="6113:6130" ph="..." />
+            <marker date="1474624242039" expanded="true" signature="6769:6944" ph="SELECT sogge... soggetti" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soggettilista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="88" column="42" lean-forward="false" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
           <folding />
         </state>
       </provider>

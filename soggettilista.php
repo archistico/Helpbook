@@ -71,7 +71,8 @@
                                 </div>
                                 <!-- /.box-header -->
                                 <div class="box-body no-padding">
-                                    <table class="table table-striped">
+                                    <table id='soggettitabella' class='table table-bordered table-hover'>
+                                        <thead>
                                         <tr>
                                             <th>Denominazione</th>
                                             <th style="width: 130px">Telefono</th>
@@ -79,10 +80,13 @@
                                             <th style="width: 130px">Email</th>
                                             <th></th>
                                         </tr>
+                                        </thead>
+                                        <tbody>
                                         <?php
                                         include 'php/soggetti.php';
                                         soggettiListaTabella();
                                         ?>
+                                        </tbody>
                                     </table>
                                 </div>
                                 <!-- /.box-body -->
@@ -108,4 +112,35 @@
         <!-- ./wrapper -->
         <?php include 'script.php'; ?>
     </body>
+    <script>
+        $(function () {
+            $('#soggettitabella').DataTable({
+                "paging": true,
+                "lengthChange": true,
+                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Tutti"]],
+                "searching": true,
+                "ordering": true,
+                "order": [[ 1, 'asc' ]],
+                "info": true,
+                "autoWidth": true,
+                "language": {
+                    "lengthMenu": "Mostra _MENU_ clienti per pagina",
+                    "zeroRecords": "Nessun cliente",
+                    "info": "Pagina _PAGE_ di _PAGES_",
+                    "sSearch": "Cerca: ",
+                    "infoEmpty": "Nessun cliente",
+                    "infoFiltered": "(filtrati _MAX_ prodotti)"
+                },
+                "oPaginate": {
+                    "sFirst": "Inizio",
+                    "sPrevious": "Precedente",
+                    "sNext": "Prossimo",
+                    "sLast": "Fine"
+                },
+                "sLoadingRecords": "In caricamento...",
+                "sProcessing": "In caricamento..."
+            });
+
+        });
+    </script>
 </html>
