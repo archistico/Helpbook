@@ -50,7 +50,7 @@
             <li><a href="stampanuova.php"><i class="fa fa-plus"></i> Nuovo stampa</a></li>
             <li><a href="stampalista.php"><i class="fa fa-list-alt"></i> Lista stampe</a></li>
             <li><a href="stampalistaanno.php"><i class="fa fa-list-alt"></i> Lista stampe per anno</a></li>
-            <li><a href="stampalistaopera.php"><i class="fa fa-list-alt"></i> Totale stampe per opera</a></li>
+            <!-- <li><a href="stampalistaopera.php"><i class="fa fa-list-alt"></i> Totale stampe per opera</a></li> -->
         </ul>
     </li>
     <li class="<?php echo ($menu=='Magazzini')?'active':''; ?> treeview">
