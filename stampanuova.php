@@ -1,4 +1,7 @@
-<?php include 'controllo.php'; ?>
+<?php
+include 'controllo.php';
+include 'php/utilita.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,14 +44,6 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
-
-
-
-
-      <?php
-      include 'php/utilita.php';
-      ?>
-
 
 
       <section class="content-header">
@@ -227,9 +222,7 @@
         $(function () {
 
              //Date picker
-            $('#datepicker1').datepicker({
-                autoclose: true
-            });
+            $('#datepicker1').datepicker("update", new Date());
 
         });
     </script>

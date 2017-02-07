@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a7bde4d-5f14-4267-a957-ffc0dc02a0ef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/movimentocancellasql.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/soggettocancellasql.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test3.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/soggettocerca.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/soggettocercaSQL.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/css/emilie.css" afterPath="$PROJECT_DIR$/dist/css/emilie.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentilista.php" afterPath="$PROJECT_DIR$/movimentilista.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentoPDF.php" afterPath="$PROJECT_DIR$/movimentoPDF.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentocancella.php" afterPath="$PROJECT_DIR$/movimentocancella.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/movimenti.php" afterPath="$PROJECT_DIR$/php/movimenti.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/soggetti.php" afterPath="$PROJECT_DIR$/php/soggetti.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/utilita.php" afterPath="$PROJECT_DIR$/php/utilita.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sidebarmenu.php" afterPath="$PROJECT_DIR$/sidebarmenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettilista.php" afterPath="$PROJECT_DIR$/soggettilista.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettocancella.php" afterPath="$PROJECT_DIR$/soggettocancella.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettomodifica.php" afterPath="$PROJECT_DIR$/soggettomodifica.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettonuovoSQL.php" afterPath="$PROJECT_DIR$/soggettonuovoSQL.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/libri.php" afterPath="$PROJECT_DIR$/php/libri.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/tipografia.php" afterPath="$PROJECT_DIR$/php/tipografia.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stampanuova.php" afterPath="$PROJECT_DIR$/stampanuova.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,7 +19,20 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="stampanuova.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stampanuova.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="624">
+              <caret line="224" column="63" lean-forward="false" selection-start-line="224" selection-start-column="63" selection-end-line="224" selection-end-column="63" />
+              <folding>
+                <marker date="1486461125807" expanded="true" signature="7016:7036" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -59,7 +58,6 @@
         <option value="$PROJECT_DIR$/soggettonuovo.php" />
         <option value="$PROJECT_DIR$/stampalistaanno.php" />
         <option value="$PROJECT_DIR$/stampalistaannoSQL.php" />
-        <option value="$PROJECT_DIR$/stampanuova.php" />
         <option value="$PROJECT_DIR$/magazzinolista.php" />
         <option value="$PROJECT_DIR$/magazzinosoggetto.php" />
         <option value="$PROJECT_DIR$/magazzinosoggettoseleziona.php" />
@@ -97,6 +95,9 @@
         <option value="$PROJECT_DIR$/movimentocancella.php" />
         <option value="$PROJECT_DIR$/php/movimenti.php" />
         <option value="$PROJECT_DIR$/movimentoPDF.php" />
+        <option value="$PROJECT_DIR$/php/libri.php" />
+        <option value="$PROJECT_DIR$/php/tipografia.php" />
+        <option value="$PROJECT_DIR$/stampanuova.php" />
       </list>
     </option>
   </component>
@@ -147,8 +148,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -177,6 +176,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -258,18 +259,19 @@
       <workItem from="1486285899482" duration="3152000" />
       <workItem from="1486303673498" duration="18617000" />
       <workItem from="1486369660369" duration="2205000" />
-      <workItem from="1486387350924" duration="17127000" />
+      <workItem from="1486387350924" duration="17725000" />
+      <workItem from="1486460666418" duration="471000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41101000" />
+    <option name="totallyTimeSpent" value="42170000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12604167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12604167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -299,22 +301,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/soggettocercaSQL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stampalistaanno.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stampalistaannoSQL.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -327,14 +313,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stampanuova.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -449,22 +427,6 @@
         <state relative-caret-position="462">
           <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/libri.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <marker date="1474036248972" expanded="true" signature="408:745" ph="SELECT libri... libri" />
-            <marker date="1474036248972" expanded="true" signature="1573:1934" ph="SELECT libri... libri" />
-            <marker date="1474036248972" expanded="true" signature="3009:3655" ph="SELECT libri... movimentidettaglio" />
-            <marker date="1474036248972" expanded="true" signature="5571:5577" ph="€" />
-            <marker date="1474036248972" expanded="true" signature="6226:6623" ph="SELECT libri... libri" />
-            <marker date="1474036248972" expanded="true" signature="6950:6956" ph="€" />
-            <marker date="1474036248972" expanded="true" signature="7900:7940" ph="SELECT * FRO... libri" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -595,10 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="28" />
-          <folding>
-            <marker date="1486325535710" expanded="true" signature="290:346" ph="INSERT INTO tentativilogin... " />
-            <marker date="1486325535710" expanded="true" signature="464:520" ph="INSERT INTO tentativilogin... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -606,7 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -624,7 +581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="778">
           <caret line="38" column="13" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,10 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1479767534587" expanded="true" signature="112904:112929" ph="..." />
-            <marker date="1479767534587" expanded="true" signature="416851:416859" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -663,20 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/soggetti.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="171" column="33" lean-forward="false" selection-start-line="171" selection-start-column="9" selection-end-line="171" selection-end-column="33" />
-          <folding>
-            <marker date="1486401666512" expanded="true" signature="385:488" ph="SELECT denom... soggetti" />
-            <marker date="1486401666512" expanded="true" signature="1380:1483" ph="SELECT denom... soggetti" />
-            <marker date="1486401666512" expanded="true" signature="4113:4162" ph="SELECT * FRO... soggetti" />
-            <marker date="1486401666512" expanded="true" signature="5360:5473" ph="SELECT sogge... soggetti" />
-            <marker date="1486401666512" expanded="true" signature="7015:7190" ph="SELECT sogge... soggetti" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/soggettomodificaSQL.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -689,7 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -777,9 +714,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/movimentonuovoSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1873">
+          <caret line="169" column="11" lean-forward="true" selection-start-line="169" selection-start-column="11" selection-end-line="169" selection-end-column="11" />
+          <folding>
+            <marker date="1486331596880" expanded="true" signature="2619:2732" ph="SELECT MAX(n... movimenti" />
+            <marker date="1486331596880" expanded="true" signature="3048:3069" ph="INSERT INTO movimenti... " />
+            <marker date="1486331596880" expanded="true" signature="3048:3366" ph="INSERT INTO movimenti... " />
+            <marker date="1486331596880" expanded="true" signature="3048:3390" ph="INSERT INTO movimenti... " />
+            <marker date="1486331596880" expanded="true" signature="3048:3443" ph="INSERT INTO movimenti... " />
+            <marker date="1486331596880" expanded="true" signature="3048:3444" ph="INSERT INTO movimenti... " />
+            <marker date="1486331596880" expanded="true" signature="3828:4223" ph="INSERT INTO movimenti... " />
+            <marker date="1486331596880" expanded="true" signature="4870:5006" ph="INSERT INTO movimentidettaglio... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movimentoPDF.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8882">
+          <caret line="484" column="38" lean-forward="true" selection-start-line="484" selection-start-column="38" selection-end-line="484" selection-end-column="38" />
+          <folding>
+            <marker date="1486419023971" expanded="true" signature="5097:5475" ph="SELECT libri... movimentidettaglio" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/tipografia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="91" lean-forward="false" selection-start-line="13" selection-start-column="91" selection-end-line="13" selection-end-column="91" />
+          <folding>
+            <marker date="1486460983616" expanded="true" signature="413:536" ph="SELECT idsog... soggetti" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/soggetti.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3762">
+          <caret line="171" column="33" lean-forward="false" selection-start-line="171" selection-start-column="9" selection-end-line="171" selection-end-column="33" />
+          <folding>
+            <marker date="1486401666512" expanded="true" signature="385:488" ph="SELECT denom... soggetti" />
+            <marker date="1486401666512" expanded="true" signature="1380:1483" ph="SELECT denom... soggetti" />
+            <marker date="1486401666512" expanded="true" signature="4113:4162" ph="SELECT * FRO... soggetti" />
+            <marker date="1486401666512" expanded="true" signature="5360:5473" ph="SELECT sogge... soggetti" />
+            <marker date="1486401666512" expanded="true" signature="7015:7190" ph="SELECT sogge... soggetti" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/stampe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/movimenti.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2049">
+        <state relative-caret-position="-3191">
           <caret line="310" column="0" lean-forward="true" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
           <folding>
             <marker date="1486417141962" expanded="true" signature="4241:4247" ph="€" />
@@ -806,29 +802,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/movimentonuovoSQL.php">
+    <entry file="file://$PROJECT_DIR$/php/libri.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1873">
-          <caret line="169" column="11" lean-forward="true" selection-start-line="169" selection-start-column="11" selection-end-line="169" selection-end-column="11" />
+        <state relative-caret-position="1804">
+          <caret line="160" column="27" lean-forward="true" selection-start-line="160" selection-start-column="27" selection-end-line="160" selection-end-column="27" />
           <folding>
-            <marker date="1486331596880" expanded="true" signature="2619:2732" ph="SELECT MAX(n... movimenti" />
-            <marker date="1486331596880" expanded="true" signature="3048:3069" ph="INSERT INTO movimenti... " />
-            <marker date="1486331596880" expanded="true" signature="3048:3366" ph="INSERT INTO movimenti... " />
-            <marker date="1486331596880" expanded="true" signature="3048:3390" ph="INSERT INTO movimenti... " />
-            <marker date="1486331596880" expanded="true" signature="3048:3443" ph="INSERT INTO movimenti... " />
-            <marker date="1486331596880" expanded="true" signature="3048:3444" ph="INSERT INTO movimenti... " />
-            <marker date="1486331596880" expanded="true" signature="3828:4223" ph="INSERT INTO movimenti... " />
-            <marker date="1486331596880" expanded="true" signature="4870:5006" ph="INSERT INTO movimentidettaglio... " />
+            <marker date="1486460929990" expanded="true" signature="408:745" ph="SELECT libri... libri" />
+            <marker date="1486460929990" expanded="true" signature="1550:1911" ph="SELECT libri... libri" />
+            <marker date="1486460929990" expanded="true" signature="2963:3609" ph="SELECT libri... movimentidettaglio" />
+            <marker date="1486460929990" expanded="true" signature="5502:5508" ph="€" />
+            <marker date="1486460929990" expanded="true" signature="6157:6554" ph="SELECT libri... libri" />
+            <marker date="1486460929990" expanded="true" signature="6881:6887" ph="€" />
+            <marker date="1486460929990" expanded="true" signature="7831:7871" ph="SELECT * FRO... libri" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/movimentoPDF.php">
+    <entry file="file://$PROJECT_DIR$/stampanuova.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8882">
-          <caret line="484" column="38" lean-forward="true" selection-start-line="484" selection-start-column="38" selection-end-line="484" selection-end-column="38" />
+        <state relative-caret-position="624">
+          <caret line="224" column="63" lean-forward="false" selection-start-line="224" selection-start-column="63" selection-end-line="224" selection-end-column="63" />
           <folding>
-            <marker date="1486419023971" expanded="true" signature="5097:5475" ph="SELECT libri... movimentidettaglio" />
+            <marker date="1486461125807" expanded="true" signature="7016:7036" ph="{...}" />
           </folding>
         </state>
       </provider>

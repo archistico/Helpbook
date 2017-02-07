@@ -11,7 +11,7 @@ function tipografiaSelect() {
         $result = $db->query('SELECT idsoggetto, fktipologia, denominazione FROM soggetti WHERE cancellato=0 AND fktipologia=6 ORDER BY denominazione ASC');
         foreach ($result as $row) {
             $row = get_object_vars($row);
-                print "<option value='" . $row['idsoggetto'] . "'>" . convertiStringaToHTML($row['denominazione']) . "</option>\n";
+                print "<option value='" . $row['idsoggetto'] . "'>" . $row['denominazione'] . "</option>\n";
         }
         // chiude il database
         $db = NULL;
