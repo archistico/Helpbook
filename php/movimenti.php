@@ -234,7 +234,21 @@ function movimentiListaTabella() {
         $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
         $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
 
-        $result = $db->query('SELECT movimenti.idmovimento, movimenti.numero, movimenti.anno, movimenti.movimentodata, movimenti.pagata, movimenti.chiuso, soggetti.denominazione, soggetti.comune, movimentitipologia.codice, movimentitipologia.movimentotipologia, movimenticausale.movimentocausale, pagamentitipologia.pagamentotipologia FROM movimenti INNER JOIN movimentitipologia ON movimenti.fktipologia=movimentitipologia.idmovimentotipologia INNER JOIN movimentiaspetto ON movimenti.fkaspetto=movimentiaspetto.idmovimentoaspetto INNER JOIN movimentitrasporto ON movimenti.fktrasporto=movimentitrasporto.idmovimentotrasporto INNER JOIN soggetti ON movimenti.fksoggetto=soggetti.idsoggetto INNER JOIN pagamentitipologia ON movimenti.fkpagamentotipologia=pagamentitipologia.idpagamentotipologia INNER JOIN movimenticausale ON movimenti.fkcausale=movimenticausale.idmovimentocausale WHERE movimenti.cancellato=0 ORDER BY movimenti.anno DESC, movimenti.fktipologia DESC, movimenti.numero DESC');
+        $sql = "SELECT movimenti.idmovimento, movimenti.numero, movimenti.anno, movimenti.movimentodata, 
+                movimenti.pagata, movimenti.chiuso, soggetti.denominazione, soggetti.comune, movimentitipologia.codice, 
+                movimentitipologia.movimentotipologia, movimenticausale.movimentocausale, pagamentitipologia.pagamentotipologia,
+                movimenti.spedizionecosto, movimenti.spedizionesconto
+                FROM movimenti 
+                INNER JOIN movimentitipologia ON movimenti.fktipologia=movimentitipologia.idmovimentotipologia 
+                INNER JOIN movimentiaspetto ON movimenti.fkaspetto=movimentiaspetto.idmovimentoaspetto 
+                INNER JOIN movimentitrasporto ON movimenti.fktrasporto=movimentitrasporto.idmovimentotrasporto 
+                INNER JOIN soggetti ON movimenti.fksoggetto=soggetti.idsoggetto 
+                INNER JOIN pagamentitipologia ON movimenti.fkpagamentotipologia=pagamentitipologia.idpagamentotipologia 
+                INNER JOIN movimenticausale ON movimenti.fkcausale=movimenticausale.idmovimentocausale 
+                WHERE movimenti.cancellato=0 
+                ORDER BY movimenti.anno DESC, movimenti.movimentodata DESC, movimenti.fktipologia DESC, movimenti.numero DESC";
+
+        $result = $db->query($sql);
         foreach ($result as $row) {
             $row = get_object_vars($row);
             print "<tr>\n";
@@ -303,10 +317,12 @@ function movimentiListaTabella() {
 
             }
 
+            $importoTotale = number_format(movimentoDettaglioImportoTotale($row['idmovimento']) + $row['spedizionecosto']*((100-$row['spedizionesconto'])/100), 2);
+
             if($row['chiuso']==1){
-                print "<td><s>&euro; " . movimentoDettaglioImportoTotale($row['idmovimento']) . "</s></td>\n";
+                print "<td><s>&euro; " . $importoTotale . "</s></td>\n";
             } else {
-                print "<td>&euro; " . movimentoDettaglioImportoTotale($row['idmovimento']) . "</td>\n";
+                print "<td>&euro; " . $importoTotale . "</td>\n";
             }
 
 
@@ -394,7 +410,7 @@ function movimentoDettaglioImportoTotale($idmovimento) {
         // chiude il database
         $db = NULL;
         // ritorna il valore
-        return number_format($totale, 2);
+        return $totale;
 
     } catch (PDOException $e) {
         throw new PDOException("Error  : " . $e->getMessage());
