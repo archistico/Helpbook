@@ -103,7 +103,7 @@ include 'php/stampe.php';
                             </div>
                             <div class='col-md-6'>
                                 <a class='btn btn-block btn-danger btn-lg'
-                                   href='stampacancellasql.php?idmovimento=<?php echo $idstampa; ?>'>Cancella stampa</a>
+                                   href='stampacancellasql.php?idstampa=<?php echo $idstampa; ?>'>Cancella stampa</a>
                             </div>
                         </div>
                         <?php

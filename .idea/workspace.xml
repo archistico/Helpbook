@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a7bde4d-5f14-4267-a957-ffc0dc02a0ef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stampacancella.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stampacancellasql.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/stampe.php" afterPath="$PROJECT_DIR$/php/stampe.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stampacancella.php" afterPath="$PROJECT_DIR$/stampacancella.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,33 +19,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="stampacancella.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/stampacancella.php">
+      <file leaf-file-name="stampacancellasql.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stampacancellasql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="97" column="41" lean-forward="true" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
-              <folding />
+            <state relative-caret-position="550">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <marker date="1486479844030" expanded="true" signature="863:900" ph="DELETE FROM " />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stampe.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/stampe.php">
+      <file leaf-file-name="stampacancella.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stampacancella.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="130" column="104" lean-forward="false" selection-start-line="130" selection-start-column="104" selection-end-line="130" selection-end-column="104" />
-              <folding>
-                <marker date="1486477596984" expanded="true" signature="1674:1709" ph="..." />
-                <marker date="1486477596984" expanded="true" signature="2047:2053" ph="€" />
-                <marker date="1486477596984" expanded="true" signature="2187:2193" ph="€" />
-                <marker date="1486477596984" expanded="true" signature="2273:2279" ph="€" />
-                <marker date="1486477596984" expanded="true" signature="2452:2458" ph="€" />
-                <marker date="1486477596984" expanded="true" signature="4727:4762" ph="..." />
-                <marker date="1486477596984" expanded="true" signature="4893:4899" ph="€" />
-                <marker date="1486477596984" expanded="true" signature="4974:4980" ph="€" />
-                <marker date="1486477596984" expanded="true" signature="5060:5066" ph="€" />
-                <marker date="1486477596984" expanded="true" signature="5214:5220" ph="€" />
-              </folding>
+            <state relative-caret-position="594">
+              <caret line="105" column="71" lean-forward="false" selection-start-line="105" selection-start-column="71" selection-end-line="105" selection-end-column="71" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,7 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/navbar.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/soggettocerca.php" />
         <option value="$PROJECT_DIR$/soggettocercaSQL.php" />
@@ -116,6 +106,7 @@
         <option value="$PROJECT_DIR$/stampanuova.php" />
         <option value="$PROJECT_DIR$/stampalista.php" />
         <option value="$PROJECT_DIR$/php/stampe.php" />
+        <option value="$PROJECT_DIR$/stampacancellasql.php" />
         <option value="$PROJECT_DIR$/stampacancella.php" />
       </list>
     </option>
@@ -279,12 +270,12 @@
       <workItem from="1486303673498" duration="18617000" />
       <workItem from="1486369660369" duration="2205000" />
       <workItem from="1486387350924" duration="17725000" />
-      <workItem from="1486460666418" duration="5219000" />
+      <workItem from="1486460666418" duration="6036000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46918000" />
+    <option name="totallyTimeSpent" value="47735000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -320,14 +311,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/magazzinosoggettoseleziona.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/movimentochiudi.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -543,16 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/soggettonuovoSQL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2332">
-          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding>
-            <marker date="1486400337353" expanded="true" signature="2252:2666" ph="INSERT INTO soggetti... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/css/emilie.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="778">
@@ -604,20 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/soggettocancellasql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <marker date="1486413091554" expanded="true" signature="808:981" ph="SELECT COUNT... movimenti" />
-            <marker date="1486413091554" expanded="true" signature="825:904" ph="SELECT COUNT... movimenti" />
-            <marker date="1486413091554" expanded="true" signature="825:943" ph="SELECT COUNT... movimenti" />
-            <marker date="1486413091554" expanded="true" signature="825:981" ph="SELECT COUNT... movimenti" />
-            <marker date="1486413091554" expanded="true" signature="1269:1310" ph="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -775,14 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stampalista.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="88" column="39" lean-forward="true" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/soggettilista.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1534">
@@ -840,10 +791,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/stampalista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="88" column="39" lean-forward="true" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soggettonuovoSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding>
+            <marker date="1486400337353" expanded="true" signature="2252:2666" ph="INSERT INTO soggetti... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soggettocancellasql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="40" />
+          <folding>
+            <marker date="1486413091554" expanded="true" signature="808:981" ph="SELECT COUNT... movimenti" />
+            <marker date="1486413091554" expanded="true" signature="825:904" ph="SELECT COUNT... movimenti" />
+            <marker date="1486413091554" expanded="true" signature="825:943" ph="SELECT COUNT... movimenti" />
+            <marker date="1486413091554" expanded="true" signature="825:981" ph="SELECT COUNT... movimenti" />
+            <marker date="1486413091554" expanded="true" signature="1269:1310" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stampacancellasql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <marker date="1486479844030" expanded="true" signature="863:900" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/stampacancella.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="97" column="41" lean-forward="true" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
+        <state relative-caret-position="594">
+          <caret line="105" column="71" lean-forward="false" selection-start-line="105" selection-start-column="71" selection-end-line="105" selection-end-column="71" />
           <folding />
         </state>
       </provider>
