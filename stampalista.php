@@ -84,8 +84,9 @@ include 'php/utilita.php';
                             <h3 class="box-title">Lista stampe</h3>
                         </div>
                         <!-- /.box-header -->
-                        <div class="box-body no-padding">
-                            <table class="table table-striped">
+                        <div class="box-body">
+                            <table id='stampetabella' class="table table-striped">
+                                <thead>
                                 <tr>
                                     <th style="width: 100px">Quantità</th>
                                     <th>Opera</th>
@@ -93,12 +94,19 @@ include 'php/utilita.php';
 
                                     <th style="width: 100px">Costo</th>
                                     <th>Tipografia</th>
+                                    <th>Spedizione</th>
+                                    <th>IVA</th>
+                                    <th>Costo unitario</th>
+                                    <th>X</th>
                                     <!-- <th style="width: 80px"></th> -->
                                 </tr>
+                                </thead>
+                                <tbody>
                                 <?php
                                 include 'php/stampe.php';
                                 stampeListaTabella();
                                 ?>
+                                </tbody>
                             </table>
                         </div>
                         <!-- /.box-body -->
@@ -124,4 +132,38 @@ include 'php/utilita.php';
 <!-- ./wrapper -->
 <?php include 'script.php'; ?>
 </body>
+
+<script>
+    $(function () {
+        $('#stampetabella').DataTable({
+            "iDisplayLength": 50,
+            "paging": true,
+            "lengthChange": true,
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Tutti"]],
+            "searching": true,
+            "ordering": false,
+            "order": [[ 2, 'asc' ]],
+            "info": true,
+            "autoWidth": true,
+            "language": {
+                "lengthMenu": "Mostra _MENU_ clienti per pagina",
+                "zeroRecords": "Nessun cliente",
+                "info": "Pagina _PAGE_ di _PAGES_",
+                "sSearch": "Cerca: ",
+                "infoEmpty": "Nessun cliente",
+                "infoFiltered": "(filtrati _MAX_ prodotti)"
+            },
+            "oPaginate": {
+                "sFirst": "Inizio",
+                "sPrevious": "Precedente",
+                "sNext": "Prossimo",
+                "sLast": "Fine"
+            },
+            "sLoadingRecords": "In caricamento...",
+            "sProcessing": "In caricamento..."
+        });
+
+    });
+</script>
+
 </html>

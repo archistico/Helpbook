@@ -77,7 +77,7 @@
 
             <div class="box">
               <div class="box-header">
-                <h3 class="box-title">Lista stampe per l'anno: <?php echo $anno; ?></h3>
+                <h3 class="box-title">Somma lista stampe per l'anno per titolo: <?php echo $anno; ?></h3>
               </div>
               <!-- /.box-header -->
               <div class="box-body no-padding">

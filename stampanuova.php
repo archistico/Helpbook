@@ -169,7 +169,7 @@ include 'php/utilita.php';
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>IVA</label>
+                    <label>IVA (EURO)</label>
                     <input type="number" min="0" max="999999" step="0.001" class="form-control" placeholder="IVA" value="0" name='stampaiva' required>
                   </div>
                 </div>
