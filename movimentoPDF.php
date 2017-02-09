@@ -64,6 +64,7 @@
         public $tipologia;
         public $causale;
         public $dataemissione;
+        public $riferimento;
         public $note;
         public $aspetto;
         public $trasporto;
@@ -79,12 +80,13 @@
 
         public $chiuso;
 
-        public function __construct($cliente,$numero,$tipologia,$causale,$dataemissione,$note,$aspetto,$trasporto,$pagato,$pagamentotipologia,$pagamentotermine,$pagamentoeffettuato,$libri,$spesespedizione,$scontospedizione,$chiuso){
+        public function __construct($cliente,$numero,$tipologia,$causale,$dataemissione,$riferimento,$note,$aspetto,$trasporto,$pagato,$pagamentotipologia,$pagamentotermine,$pagamentoeffettuato,$libri,$spesespedizione,$scontospedizione,$chiuso){
             $this->cliente = $cliente;
             $this->numero = $numero;
             $this->tipologia = $tipologia;
             $this->causale = $causale;
             $this->dataemissione = $dataemissione;
+            $this->riferimento = $riferimento;
             $this->note = $note;
             $this->aspetto = $aspetto;
             $this->trasporto = $trasporto;
@@ -129,7 +131,7 @@
 
     list(   $mov_denominazione, $mov_indirizzo, $mov_cap, $mov_comune, $mov_provincia, $mov_telefono, $mov_email, $mov_piva, $mov_cf,
         $mov_codice, $mov_anno, $mov_numero,
-        $mov_tipologia, $mov_causale, $mov_dataemissione, $mov_riferimento,
+        $mov_tipologia, $mov_causale, $mov_dataemissione, $mov_riferimento, $mov_note,
         $mov_aspetto, $mov_trasporto,
         $mov_spedizione, $mov_spedizionesconto,
         $mov_pagato, $mov_pagamentotipologia, $mov_datapagamento, $mov_dataentro, $mov_chiuso) = movimentoDettagli($idmovimento);
@@ -182,7 +184,7 @@
 
     $cliente = new MovimentoSoggetto($mov_denominazione, $mov_indirizzo, $mov_cap, $mov_comune, $mov_provincia, $mov_telefono, $mov_email, $mov_piva, $mov_cf);
 
-    $fat = new Movimento($cliente,$mov_anno."-".$mov_codice."-".$mov_numero,strtoupper($mov_tipologia),strtoupper($mov_causale),$mov_dataemissione_formattata,$mov_riferimento,strtoupper($mov_aspetto),strtoupper($mov_trasporto),$mov_pagato,strtoupper($mov_pagamentotipologia),$mov_dataentro_formattata,$mov_datapagamento_formattata,$lista,$mov_spedizione,$mov_spedizionesconto,$mov_chiuso);
+    $fat = new Movimento($cliente,$mov_anno."-".$mov_codice."-".$mov_numero,strtoupper($mov_tipologia),strtoupper($mov_causale),$mov_dataemissione_formattata,$mov_riferimento,$mov_note, strtoupper($mov_aspetto),strtoupper($mov_trasporto),$mov_pagato,strtoupper($mov_pagamentotipologia),$mov_dataentro_formattata,$mov_datapagamento_formattata,$lista,$mov_spedizione,$mov_spedizionesconto,$mov_chiuso);
 
     $mx = 10;
     $my = 10;
@@ -224,7 +226,7 @@
         $pdf->SetXY(28+$mx,$clienteY+7+5+$my);$pdf->Cell(115,5,(!empty($fat->cliente->telefono)?"tel: ".$fat->cliente->telefono." " : "").(!empty($fat->cliente->email)?"email: ".$fat->cliente->email : ""),1,0,'L');$pdf->ln();
         $pdf->SetXY(28+$mx,$clienteY+7+5+5+$my);$pdf->Cell(115,5,(!empty($fat->cliente->piva)?"PIVA: ".$fat->cliente->piva." " : "").(!empty($fat->cliente->cf)?"CF: ".$fat->cliente->cf : ""),1,0,'L');$pdf->ln();
         $pdf->SetXY(28+$mx,$clienteY+7+5+5+5+$my);$pdf->Cell(115,5,$fat->note,1,0,'L');$pdf->ln();
-        $pdf->SetXY(28+$mx,$clienteY+7+5+5+5+5+$my);$pdf->Cell(115,5,"",1,0,'L');$pdf->ln();
+        $pdf->SetXY(28+$mx,$clienteY+7+5+5+5+5+$my);$pdf->Cell(115,5,$fat->riferimento,1,0,'L');$pdf->ln();
         // Dati fattura
         $pdf->SetFont('Arial','B',12);
         $pdf->SetXY(143+$mx,$clienteY+$my);$pdf->Cell(47,7,$fat->dataemissione,1,0,'C');$pdf->ln();

@@ -428,7 +428,7 @@ function movimentoDettagli($idmovimento) {
 
         $result = $db->query('SELECT soggetti.denominazione, soggetti.indirizzo, soggetti.cap, soggetti.comune, soggetti.provincia, soggetti.telefono, soggetti.email, soggetti.piva, soggetti.codicefiscale, '
             . 'movimentitipologia.movimentotipologia, movimentitipologia.codice, '
-            . 'movimenti.anno, movimenti.numero, movimenti.movimentodata, movimenti.pagamentoentro, movimenti.pagata, movimenti.datapagamento, movimenti.spedizionecosto, movimenti.spedizionesconto, movimenti.riferimento, movimenti.chiuso, '
+            . 'movimenti.anno, movimenti.numero, movimenti.movimentodata, movimenti.pagamentoentro, movimenti.pagata, movimenti.datapagamento, movimenti.spedizionecosto, movimenti.spedizionesconto, movimenti.riferimento, movimenti.chiuso, movimenti.note, '
             . 'movimenticausale.movimentocausale, '
             . 'movimentiaspetto.movimentoaspetto, '
             . 'movimentitrasporto.movimentotrasporto, '
@@ -464,6 +464,7 @@ function movimentoDettagli($idmovimento) {
             $mov_causale = $row['movimentocausale'];
             $mov_dataemissione = $row['movimentodata'];
             $mov_riferimento = $row['riferimento'];
+            $mov_note = $row['note'];
             $mov_aspetto = $row['movimentoaspetto'];
             $mov_trasporto = $row['movimentotrasporto'];
             $mov_spedizione = $row['spedizionecosto'];
@@ -479,7 +480,7 @@ function movimentoDettagli($idmovimento) {
 
         return array($mov_denominazione, $mov_indirizzo, $mov_cap, $mov_comune, $mov_provincia, $mov_telefono, $mov_email, $mov_piva, $mov_cf,
             $mov_codice, $mov_anno, $mov_numero,
-            $mov_tipologia, $mov_causale, $mov_dataemissione, $mov_riferimento,
+            $mov_tipologia, $mov_causale, $mov_dataemissione, $mov_riferimento, $mov_note,
             $mov_aspetto, $mov_trasporto,
             $mov_spedizione, $mov_spedizionesconto,
             $mov_pagato, $mov_pagamentotipologia, $mov_datapagamento, $mov_dataentro, $mov_chiuso);
