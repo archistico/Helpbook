@@ -382,12 +382,12 @@
                                     <table id="tabellaDettagli" class="table table-bordered table-hover order-list">
                                         <thead>
                                         <tr>
-                                            <td>#</td>
+                                            <td class="min2">#</td>
+                                            <td class="min5">Quantit&agrave;</td>
                                             <td>Opera</td>
-                                            <td>Quantit&agrave;</td>
-                                            <td>Prezzo</td>
-                                            <td>Sconto</td>
-                                            <td>Subtotale</td>
+                                            <td class="min10">Prezzo</td>
+                                            <td class="min10">Sconto</td>
+                                            <td class="min10">Subtotale</td>
                                             <td></td>
                                         </tr>
                                         </thead>
@@ -523,8 +523,8 @@
             var cols = "";
 
             cols += '<td><span class="text-grigio">'+ counter + '</span></td>';
+            cols += '<td><span type="text" name="quantita' + counter + '">' + quantita.toFixed(0) + '</span></td>';
             cols += '<td><span name="librotesto">' + librotesto + '</span></td>';
-            cols += '<td><span type="text" name="quantita' + counter + '">' + quantita.toFixed(3) + '</span></td>';
             cols += '<td><span type="text" name="prezzo' + counter + '">&euro; ' + prezzo.toFixed(2) + '</span></td>';
             cols += '<td><span type="text" name="sconto' + counter + '">' + sconto + ' &#37;</span></td>';
             cols += '<td><span type="text" name="subtotale' + counter + '"><strong>&euro; ' + ((quantita*prezzo)*(1-(sconto/100))).toFixed(2) + '</strong></span></td>';

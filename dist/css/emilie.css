@@ -29,7 +29,7 @@ hr.visualizzafattura {
 }
 
 .text-grigio {
-    color: #AAA;
+    color: #EEE;
 }
 
 .icone-unite .inlinea {
@@ -39,4 +39,24 @@ hr.visualizzafattura {
 a.disattivato {
     pointer-events: none;
     cursor: default;
+}
+
+td.riempi {
+    width: auto;
+    border: 1px solid #eee;
+}
+
+td.min2 {
+    width: 2%;
+    white-space: nowrap;
+}
+
+td.min5 {
+    width: 5%;
+    white-space: nowrap;
+}
+
+td.min10 {
+    width: 10%;
+    white-space: nowrap;
 }
