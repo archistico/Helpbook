@@ -19,6 +19,15 @@ function html2db($stringa) {
     return utf8_decode($stringa);
 }
 
-?>
+function tronca($string,$length=15,$append="&hellip;") {
+    $string = trim($string);
+    if(strlen($string) > $length) {
+        //$string = wordwrap($string, $length, "-", true);
+        //$string = explode("\n", $string, 2);
+        //$string = $string[0] . $append;
+        $string = substr($string, 0, $length) . $append;
+    }
+    return $string;
+}
 
 

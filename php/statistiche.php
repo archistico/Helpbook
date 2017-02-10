@@ -126,14 +126,11 @@ function TotaleLibriVenduti() {
         $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
         $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
 
-        $sql = "SELECT libri.prezzo, libritipologia.librotipologia, 
-                        movimenti.anno, movimentitipologia.codice, movimentidettaglio.quantita, movimentidettaglio.sconto 
+        $sql = "SELECT movimentitipologia.codice, movimentidettaglio.quantita 
                         FROM movimentidettaglio 
                         INNER JOIN movimenti ON movimentidettaglio.fkmovimento = movimenti.idmovimento 
-                        INNER JOIN libri ON libri.idlibro = movimentidettaglio.fklibro 
-                        INNER JOIN libritipologia ON libri.fktipologia = libritipologia.idlibrotipologia 
                         INNER JOIN movimentitipologia ON movimenti.fktipologia = movimentitipologia.idmovimentotipologia 
-                        WHERE movimentidettaglio.cancellato = 0 AND libri.cancellato = 0 AND movimenti.cancellato = 0;";
+                        WHERE movimentidettaglio.cancellato = 0 AND movimenti.cancellato = 0;";
 
         $risultato = 0;
 
@@ -141,7 +138,9 @@ function TotaleLibriVenduti() {
         foreach ($result as $row) {
             $row = get_object_vars($row);
 
-
+            if($row['codice']=='FA' || $row['codice']=='FD' || $row['codice']=='FI' || $row['codice']=='RI'){
+                $risultato += $row['quantita'];
+            }
         }
 
         // chiude il database
@@ -163,29 +162,52 @@ function TitoloLibroPiuVenduto() {
         $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
         $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
 
-        $sql = "SELECT libri.prezzo, libritipologia.librotipologia, 
-                        movimenti.anno, movimentitipologia.codice, movimentidettaglio.quantita, movimentidettaglio.sconto 
-                        FROM movimentidettaglio 
-                        INNER JOIN movimenti ON movimentidettaglio.fkmovimento = movimenti.idmovimento 
-                        INNER JOIN libri ON libri.idlibro = movimentidettaglio.fklibro 
-                        INNER JOIN libritipologia ON libri.fktipologia = libritipologia.idlibrotipologia 
-                        INNER JOIN movimentitipologia ON movimenti.fktipologia = movimentitipologia.idmovimentotipologia 
-                        WHERE movimentidettaglio.cancellato = 0 AND libri.cancellato = 0 AND movimenti.cancellato = 0;";
+        class LibroConteggio
+        {
+            public $titolo;
+            public $titolotipo;
+            public $venduti;
+        }
 
-        $risultato = "";
+        $conteggio = array();
+        $sql = 'SELECT libri.titolo, libri.prezzo, libritipologia.librotipologia, 
+                movimentitipologia.codice, movimentidettaglio.quantita, movimentidettaglio.sconto 
+                FROM movimentidettaglio 
+                INNER JOIN movimenti ON movimentidettaglio.fkmovimento = movimenti.idmovimento 
+                INNER JOIN libri ON libri.idlibro = movimentidettaglio.fklibro 
+                INNER JOIN libritipologia ON libri.fktipologia = libritipologia.idlibrotipologia 
+                INNER JOIN movimentitipologia ON movimenti.fktipologia = movimentitipologia.idmovimentotipologia 
+                WHERE movimentidettaglio.cancellato = 0 AND libri.cancellato = 0 AND movimenti.cancellato = 0 
+                ORDER BY libri.titolo ASC, libritipologia.librotipologia ASC;';
 
         $result = $db->query($sql);
         foreach ($result as $row) {
             $row = get_object_vars($row);
 
-
+            if(!isset($conteggio[$row['titolo'].$row['librotipologia']]))
+            {
+                $conteggio[$row['titolo'].$row['librotipologia']] = new LibroConteggio();
+                $conteggio[$row['titolo'].$row['librotipologia']]->titolo = $row['titolo'];
+                $conteggio[$row['titolo'].$row['librotipologia']]->venduti += 0;
+                $conteggio[$row['titolo'].$row['librotipologia']]->titolotipo = $row['librotipologia'];
+            }
+            if($row['codice']=='FA' || $row['codice']=='FD' || $row['codice']=='FI' || $row['codice']=='RI'){
+                $conteggio[$row['titolo'].$row['librotipologia']]->venduti += $row['quantita'];
+            }
         }
 
         // chiude il database
         $db = NULL;
 
-        // invia il risultato
-        return $risultato;
+        usort($conteggio, function($a, $b)
+        {
+            if ($a->venduti == $b->venduti) {
+                return 0;
+            }
+            return ($a->venduti > $b->venduti) ? -1 : 1;
+        });
+
+        return tronca($conteggio[0]->titolo ." (".$conteggio[0]->titolotipo.")",20);
 
     } catch (PDOException $e) {
         throw new PDOException("Error  : " . $e->getMessage());
@@ -200,29 +222,51 @@ function ClienteAffezionato() {
         $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
         $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
 
-        $sql = "SELECT libri.prezzo, libritipologia.librotipologia, 
-                        movimenti.anno, movimentitipologia.codice, movimentidettaglio.quantita, movimentidettaglio.sconto 
-                        FROM movimentidettaglio 
-                        INNER JOIN movimenti ON movimentidettaglio.fkmovimento = movimenti.idmovimento 
-                        INNER JOIN libri ON libri.idlibro = movimentidettaglio.fklibro 
-                        INNER JOIN libritipologia ON libri.fktipologia = libritipologia.idlibrotipologia 
-                        INNER JOIN movimentitipologia ON movimenti.fktipologia = movimentitipologia.idmovimentotipologia 
-                        WHERE movimentidettaglio.cancellato = 0 AND libri.cancellato = 0 AND movimenti.cancellato = 0;";
+        class ClienteConteggio
+        {
+            public $denominazione;
+            public $venduti;
+        }
 
-        $risultato = "";
+        $conteggio = array();
+        $sql = 'SELECT soggetti.denominazione,  
+                movimentitipologia.codice, movimentidettaglio.quantita
+                FROM movimentidettaglio 
+                INNER JOIN movimenti ON movimentidettaglio.fkmovimento = movimenti.idmovimento 
+                INNER JOIN soggetti ON movimenti.fksoggetto = soggetti.idsoggetto  
+                INNER JOIN movimentitipologia ON movimenti.fktipologia = movimentitipologia.idmovimentotipologia 
+                WHERE movimentidettaglio.cancellato = 0 AND movimenti.cancellato = 0;';
 
         $result = $db->query($sql);
         foreach ($result as $row) {
             $row = get_object_vars($row);
 
-
+            if(!isset($conteggio[$row['denominazione']]))
+            {
+                $conteggio[$row['denominazione']] = new ClienteConteggio();
+                $conteggio[$row['denominazione']]->denominazione = $row['denominazione'];
+                $conteggio[$row['denominazione']]->venduti += 0;
+            }
+            if($row['codice']=='FA' || $row['codice']=='FD' || $row['codice']=='FI' || $row['codice']=='RI'){
+                $conteggio[$row['denominazione']]->venduti += $row['quantita'];
+            }
         }
 
         // chiude il database
         $db = NULL;
 
-        // invia il risultato
-        return $risultato;
+        usort($conteggio, function($a, $b)
+        {
+            if ($a->venduti == $b->venduti) {
+                return 0;
+            }
+            return ($a->venduti > $b->venduti) ? -1 : 1;
+        });
+
+        //var_dump($conteggio);
+        //die;
+
+        return tronca($conteggio[0]->denominazione,20);
 
     } catch (PDOException $e) {
         throw new PDOException("Error  : " . $e->getMessage());
