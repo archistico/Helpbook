@@ -226,7 +226,22 @@ function movimentiListaSoggettoTabella($id) {
     }
 }
 
+/* -------------------------------------- LISTA TABELLA MOVIMENTI -------------------------------------*/
+
 function movimentiListaTabella() {
+
+    print "<thead><tr>";
+    print "<th>PDF</th>
+           <th>Codice</th>
+           <th>Data</th>
+           <th class='hidden-xs hidden-sm'>Causale</th>
+           <th>Cliente</th>
+           <th>Importo</th>
+           <th>Pagato</th>
+           <th>X</th>";
+    print "</tr></thead>";
+    print "<tbody>";
+
     try {
         include 'config.php';
         $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
@@ -294,9 +309,9 @@ function movimentiListaTabella() {
             //print "<td>" . $row['movimentotipologia'] . "</td>\n";
 
             if($row['chiuso']==1){
-                print "<td><s>" . $row['movimentocausale'] . "</s></td>\n";
+                print "<td class='hidden-xs hidden-sm'><s>" . $row['movimentocausale'] . "</s></td>\n";
             } else {
-                print "<td>" . $row['movimentocausale'] . "</td>\n";
+                print "<td class='hidden-xs hidden-sm'>" . $row['movimentocausale'] . "</td>\n";
             }
 
 
@@ -325,14 +340,19 @@ function movimentiListaTabella() {
                 print "<td>&euro; " . $importoTotale . "</td>\n";
             }
 
-
+            print "<td>";
+            print "<div class='col-lg-12 input-group'>";
+            print "<a class='btn btn-xs btn-success' href='movimentopagato.php?idmovimento=".$row['idmovimento']."' role='button'><i class = 'fa fa-euro'></i>";
             if($row['pagata']) {
-                print "<td><i class = 'fa fa-fw fa-circle fa-lg' style = 'color:green'></i></td>\n";
+                print "<i class = 'fa fa-fw fa-check fa-lg' style = 'color:white; margin-left: 5px'></i>";
             } else {
-                print "<td><i class = 'fa fa-fw fa-circle fa-lg' style = 'color:red'></i></td>\n";
+                print "<i class = 'fa fa-fw fa-square fa-lg' style = 'color:red; margin-left: 5px'></i>";
             }
+            print "</a>";
+            print "</div>";
+            print "</td>\n";
 
-            //
+            //print "<td><a class='btn btn-xs btn-warning' style='width: 30px;margin-right: 3px; margin-bottom: 3px' href='movimentomodifica.php?idmovimento=".$row['idmovimento']."' role='button'><i class = 'fa fa-remove'></i></a></td>\n";
 
             print "<td><a class='btn btn-xs btn-danger' style='width: 30px;margin-right: 3px; margin-bottom: 3px' href='movimentocancella.php?idmovimento=".$row['idmovimento']."' role='button'><i class = 'fa fa-remove'></i></a></td>\n";
             print "</tr>\n";
@@ -342,7 +362,11 @@ function movimentiListaTabella() {
     } catch (PDOException $e) {
         throw new PDOException("Error  : " . $e->getMessage());
     }
+
+    print "</tbody>";
 }
+
+/* -------------------------------------- FINE LISTA TABELLA MOVIMENTI -------------------------------------*/
 
 function movimentoDettaglioImportoTotaleScontoIva($idmovimento) {
     try {

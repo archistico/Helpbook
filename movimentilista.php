@@ -87,24 +87,10 @@ include 'php/utilita.php';
                         <!-- /.box-header -->
                         <div class="box-body no-padding">
                             <table class="table table-striped">
-                                <thead>
-                                <tr>
-                                    <th>PDF</th>
-                                    <th>Codice</th>
-                                    <th>Data</th>
-                                    <th>Causale</th>
-                                    <th>Cliente</th>
-                                    <th>Importo</th>
-                                    <th>Pagata</th>
-                                    <th>X</th>
-                                </tr>
-                                </thead>
-                                <tbody>
                                 <?php
                                 include 'php/movimenti.php';
                                 movimentiListaTabella();
                                 ?>
-                                </tbody>
                             </table>
                         </div>
                         <!-- /.box-body -->

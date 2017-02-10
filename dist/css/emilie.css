@@ -160,3 +160,7 @@ td.min50 {
 .label-info.label-arrow:before {
     border-right-color:#5bc0de;
 }
+
+.sullalinea{
+    display:block;
+}
