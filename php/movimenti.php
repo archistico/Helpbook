@@ -556,7 +556,8 @@ function movimentiListaTabellaHome() {
                 INNER JOIN pagamentitipologia ON movimenti.fkpagamentotipologia=pagamentitipologia.idpagamentotipologia 
                 INNER JOIN movimenticausale ON movimenti.fkcausale=movimenticausale.idmovimentocausale 
                 WHERE movimenti.cancellato=0 
-                ORDER BY movimenti.anno DESC, movimenti.movimentodata DESC, movimenti.fktipologia DESC, movimenti.numero DESC";
+                ORDER BY movimenti.anno DESC, movimenti.movimentodata DESC, movimenti.fktipologia DESC, movimenti.numero DESC
+                LIMIT 10";
 
         $result = $db->query($sql);
         foreach ($result as $row) {
