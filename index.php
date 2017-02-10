@@ -64,7 +64,7 @@ include 'php/utilita.php';
                     <div class="small-box bg-aqua">
                         <div class="inner">
                             <h3><?php echo number_format(IncassoTotale(), 2, ',', ' '); ?> &euro;</h3>
-                            <p>Incasso totale</p>
+                            <p>Fatturato totale</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-bag"></i>
@@ -148,11 +148,43 @@ include 'php/utilita.php';
                 <div class="col-md-6">
                     <div class="box box-success">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Incassi</h3>
+                            <h3 class="box-title">Dati vendita</h3>
                         </div>
                         <div class="box-body">
-                            <h2>Incasso totale: <?php echo number_format(IncassoTotale(), 2, ',', ' '); ?> &euro;
-                            </h2>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Tipologia</th>
+                                    <th>Importo</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Fatturato totale</td>
+                                    <td><?php echo number_format(IncassoTotale(), 2, ',', ' '); ?> &euro;</td>
+                                </tr>
+                                <tr>
+                                    <td>Pagato</td>
+                                    <td><?php echo number_format(0, 2, ',', ' '); ?> &euro; <div class="label label-danger label-arrow label-arrow-left"> da implementare</div></td>
+                                </tr>
+                                <tr>
+                                    <td>Da pagare</td>
+                                    <td><?php echo number_format(0, 2, ',', ' '); ?> &euro; <div class="label label-danger label-arrow label-arrow-left"> da implementare</div></td>
+                                </tr>
+                                <tr>
+                                    <td>Valore distribuito</td>
+                                    <td><?php echo number_format(0, 2, ',', ' '); ?> &euro; <div class="label label-danger label-arrow label-arrow-left"> da implementare</div></td>
+                                </tr>
+                                <tr>
+                                    <td>Valore magazzino</td>
+                                    <td><?php echo number_format(0, 2, ',', ' '); ?> &euro; <div class="label label-danger label-arrow label-arrow-left"> da implementare</div></td>
+                                </tr>
+                                <tr>
+                                    <td>Valore stampato</td>
+                                    <td><?php echo number_format(0, 2, ',', ' '); ?> &euro; <div class="label label-danger label-arrow label-arrow-left"> da implementare</div></td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <!-- /.box-body -->
                     </div>
