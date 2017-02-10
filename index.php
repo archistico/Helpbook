@@ -1,5 +1,7 @@
 <?php
 include 'controllo.php';
+include 'php/statistiche.php';
+include 'php/utilita.php';
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -42,10 +44,6 @@ include 'controllo.php';
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
 
-        <?php
-        include 'php/utilita.php';
-        ?>
-
         <section class="content-header">
             <h1>
                 Dashboard
@@ -65,9 +63,8 @@ include 'controllo.php';
                     <!-- small box -->
                     <div class="small-box bg-aqua">
                         <div class="inner">
-                            <h3>XXX</h3>
-
-                            <p>Libri venduti nel mese</p>
+                            <h3><?php echo number_format(IncassoTotale(), 2, ',', ' '); ?> &euro;</h3>
+                            <p>Incasso totale</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-bag"></i>
@@ -80,8 +77,7 @@ include 'controllo.php';
                     <!-- small box -->
                     <div class="small-box bg-green">
                         <div class="inner">
-                            <h3>XXX</h3>
-
+                            <h3><?php echo TitoloLibroPiuVenduto(); ?>&nbsp;</h3>
                             <p>Libro più venduto</p>
                         </div>
                         <div class="icon">
@@ -95,8 +91,7 @@ include 'controllo.php';
                     <!-- small box -->
                     <div class="small-box bg-maroon">
                         <div class="inner">
-                            <h3>XXX</h3>
-
+                            <h3><?php echo ClienteAffezionato(); ?>&nbsp;</h3>
                             <p>Cliente più affezionato</p>
                         </div>
                         <div class="icon">
@@ -110,8 +105,7 @@ include 'controllo.php';
                     <!-- small box -->
                     <div class="small-box bg-teal">
                         <div class="inner">
-                            <h3>XXX</h3>
-
+                            <h3><?php echo TotaleLibriVenduti(); ?></h3>
                             <p>Libri totali venduti</p>
                         </div>
                         <div class="icon">
@@ -152,15 +146,13 @@ include 'controllo.php';
                 </div>
                 <!-- /.col (LEFT) -->
                 <div class="col-md-6">
-                    <!-- BAR CHART -->
                     <div class="box box-success">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Vendite mensili</h3>
+                            <h3 class="box-title">Incassi</h3>
                         </div>
                         <div class="box-body">
-                            <div class="chart">
-                                <canvas id="VenditeMensiliChart" style="height:250px"></canvas>
-                            </div>
+                            <h2>Incasso totale: <?php echo number_format(IncassoTotale(), 2, ',', ' '); ?> &euro;
+                            </h2>
                         </div>
                         <!-- /.box-body -->
                     </div>
@@ -281,7 +273,6 @@ include 'controllo.php';
         //--------------
 
         <?php
-        include 'php/statistiche.php';
         VenditeSuddiviseAnni();
         ?>
 

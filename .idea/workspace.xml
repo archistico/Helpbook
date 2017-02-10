@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a7bde4d-5f14-4267-a957-ffc0dc02a0ef" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/report.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/movimenti.php" afterPath="$PROJECT_DIR$/php/movimenti.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/statistiche.php" afterPath="$PROJECT_DIR$/php/statistiche.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,13 +20,48 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="movimentoPDF.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/movimentoPDF.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="475" column="92" lean-forward="true" selection-start-line="475" selection-start-column="92" selection-end-line="475" selection-end-column="105" />
+              <folding>
+                <marker date="1486657142977" expanded="true" signature="5197:5575" ph="SELECT libri... movimentidettaglio" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6314">
-              <caret line="287" column="23" lean-forward="true" selection-start-line="287" selection-start-column="23" selection-end-line="287" selection-end-column="23" />
+            <state relative-caret-position="-264">
+              <caret line="108" column="55" lean-forward="true" selection-start-line="108" selection-start-column="55" selection-end-line="108" selection-end-column="55" />
               <folding>
-                <marker date="1486722227344" expanded="true" signature="10958:11001" ph="..." />
+                <element signature="e#2268#2274#0#HTML" expanded="true" />
+                <element signature="e#2958#2964#0#HTML" expanded="true" />
+                <element signature="e#3656#3662#0#HTML" expanded="true" />
+                <element signature="e#5999#6005#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1486723946499" expanded="true" signature="10999:11042" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statistiche.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/statistiche.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3030">
+              <caret line="201" column="0" lean-forward="true" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+              <folding>
+                <marker date="1486723874166" expanded="true" signature="638:1253" ph="SELECT libri... movimentidettaglio" />
+                <marker date="1486723874166" expanded="true" signature="3444:4206" ph="SELECT libri... movimentidettaglio" />
+                <marker date="1486723874166" expanded="true" signature="5361:6123" ph="SELECT libri... movimentidettaglio" />
+                <marker date="1486723874166" expanded="true" signature="6891:7653" ph="SELECT libri... movimentidettaglio" />
+                <marker date="1486723874166" expanded="true" signature="8419:9181" ph="SELECT libri... movimentidettaglio" />
               </folding>
             </state>
           </provider>
@@ -48,7 +83,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/soggettocercaSQL.php" />
         <option value="$PROJECT_DIR$/soggettomodificaseleziona.php" />
         <option value="$PROJECT_DIR$/soggettomodificaSQL.php" />
         <option value="$PROJECT_DIR$/soggettonuovo.php" />
@@ -97,8 +131,9 @@
         <option value="$PROJECT_DIR$/movimentonuovo.php" />
         <option value="$PROJECT_DIR$/dist/css/emilie.css" />
         <option value="$PROJECT_DIR$/php/movimenti.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/footer.php" />
+        <option value="$PROJECT_DIR$/php/statistiche.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -263,18 +298,18 @@
       <workItem from="1486387350924" duration="17725000" />
       <workItem from="1486460666418" duration="8374000" />
       <workItem from="1486568453866" duration="2152000" />
-      <workItem from="1486720058390" duration="2258000" />
+      <workItem from="1486720058390" duration="3902000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54483000" />
+    <option name="totallyTimeSpent" value="56127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13385417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13385417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -304,30 +339,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/movimentilistasoggetto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/movimentilistanonpagati.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/operamodifica.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/operamodificaseleziona.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -758,16 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/movimentoPDF.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="486" column="38" lean-forward="false" selection-start-line="486" selection-start-column="38" selection-end-line="486" selection-end-column="38" />
-          <folding>
-            <marker date="1486657142977" expanded="true" signature="5197:5575" ph="SELECT libri... movimentidettaglio" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/movimentilista.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -784,10 +785,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/magazzini.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movimentoPDF.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="475" column="92" lean-forward="true" selection-start-line="475" selection-start-column="92" selection-end-line="475" selection-end-column="105" />
+          <folding>
+            <marker date="1486657142977" expanded="true" signature="5197:5575" ph="SELECT libri... movimentidettaglio" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/movimenti.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="559" column="24" lean-forward="false" selection-start-line="559" selection-start-column="24" selection-end-line="559" selection-end-column="24" />
+        <state relative-caret-position="192">
+          <caret line="630" column="162" lean-forward="true" selection-start-line="630" selection-start-column="162" selection-end-line="630" selection-end-column="162" />
           <folding>
             <marker date="1486721972839" expanded="true" signature="4241:4247" ph="€" />
             <marker date="1486721972839" expanded="true" signature="4370:4376" ph="€" />
@@ -819,20 +854,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/footer.php">
+    <entry file="file://$PROJECT_DIR$/php/statistiche.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="3030">
+          <caret line="201" column="0" lean-forward="true" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+          <folding>
+            <marker date="1486723874166" expanded="true" signature="638:1253" ph="SELECT libri... movimentidettaglio" />
+            <marker date="1486723874166" expanded="true" signature="3444:4206" ph="SELECT libri... movimentidettaglio" />
+            <marker date="1486723874166" expanded="true" signature="5361:6123" ph="SELECT libri... movimentidettaglio" />
+            <marker date="1486723874166" expanded="true" signature="6891:7653" ph="SELECT libri... movimentidettaglio" />
+            <marker date="1486723874166" expanded="true" signature="8419:9181" ph="SELECT libri... movimentidettaglio" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6314">
-          <caret line="287" column="23" lean-forward="true" selection-start-line="287" selection-start-column="23" selection-end-line="287" selection-end-column="23" />
+        <state relative-caret-position="-264">
+          <caret line="108" column="55" lean-forward="true" selection-start-line="108" selection-start-column="55" selection-end-line="108" selection-end-column="55" />
           <folding>
-            <marker date="1486722227344" expanded="true" signature="10958:11001" ph="..." />
+            <element signature="e#2268#2274#0#HTML" expanded="true" />
+            <element signature="e#2958#2964#0#HTML" expanded="true" />
+            <element signature="e#3656#3662#0#HTML" expanded="true" />
+            <element signature="e#5999#6005#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#2;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1486723946499" expanded="true" signature="10999:11042" ph="..." />
           </folding>
         </state>
       </provider>

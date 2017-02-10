@@ -70,3 +70,161 @@ function VenditeSuddiviseAnni() {
         throw new PDOException("Error  : " . $e->getMessage());
     }
 }
+
+
+function IncassoTotale() {
+    try {
+        include 'config.php';
+        $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+        $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
+
+        $sql = "SELECT libri.prezzo, libritipologia.librotipologia, 
+                        movimenti.anno, movimentitipologia.codice, movimentidettaglio.quantita, movimentidettaglio.sconto 
+                        FROM movimentidettaglio 
+                        INNER JOIN movimenti ON movimentidettaglio.fkmovimento = movimenti.idmovimento 
+                        INNER JOIN libri ON libri.idlibro = movimentidettaglio.fklibro 
+                        INNER JOIN libritipologia ON libri.fktipologia = libritipologia.idlibrotipologia 
+                        INNER JOIN movimentitipologia ON movimenti.fktipologia = movimentitipologia.idmovimentotipologia 
+                        WHERE movimentidettaglio.cancellato = 0 AND libri.cancellato = 0 AND movimenti.cancellato = 0;";
+
+        $incasso = 0;
+
+        $result = $db->query($sql);
+        foreach ($result as $row) {
+            $row = get_object_vars($row);
+
+            if ($row['codice'] == 'FA' || $row['codice'] == 'FD' || $row['codice'] == 'FI' || $row['codice'] == 'RI') {
+                $prezzo = $row['prezzo'];
+                $quantita = $row['quantita'];
+                $sconto = 1 - $row['sconto'] / 100;
+
+                $totale = $prezzo * $quantita * $sconto;
+                $totale = round($totale * 100) / 100;
+
+                $incasso += $totale;
+            }
+        }
+
+        // chiude il database
+        $db = NULL;
+
+        return $incasso;
+
+    } catch (PDOException $e) {
+        throw new PDOException("Error  : " . $e->getMessage());
+    }
+}
+
+
+function TotaleLibriVenduti() {
+    try {
+        include 'config.php';
+        $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+        $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
+
+        $sql = "SELECT libri.prezzo, libritipologia.librotipologia, 
+                        movimenti.anno, movimentitipologia.codice, movimentidettaglio.quantita, movimentidettaglio.sconto 
+                        FROM movimentidettaglio 
+                        INNER JOIN movimenti ON movimentidettaglio.fkmovimento = movimenti.idmovimento 
+                        INNER JOIN libri ON libri.idlibro = movimentidettaglio.fklibro 
+                        INNER JOIN libritipologia ON libri.fktipologia = libritipologia.idlibrotipologia 
+                        INNER JOIN movimentitipologia ON movimenti.fktipologia = movimentitipologia.idmovimentotipologia 
+                        WHERE movimentidettaglio.cancellato = 0 AND libri.cancellato = 0 AND movimenti.cancellato = 0;";
+
+        $risultato = 0;
+
+        $result = $db->query($sql);
+        foreach ($result as $row) {
+            $row = get_object_vars($row);
+
+
+        }
+
+        // chiude il database
+        $db = NULL;
+
+        // invia il risultato
+        return $risultato;
+
+    } catch (PDOException $e) {
+        throw new PDOException("Error  : " . $e->getMessage());
+    }
+}
+
+function TitoloLibroPiuVenduto() {
+    try {
+        include 'config.php';
+        $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+        $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
+
+        $sql = "SELECT libri.prezzo, libritipologia.librotipologia, 
+                        movimenti.anno, movimentitipologia.codice, movimentidettaglio.quantita, movimentidettaglio.sconto 
+                        FROM movimentidettaglio 
+                        INNER JOIN movimenti ON movimentidettaglio.fkmovimento = movimenti.idmovimento 
+                        INNER JOIN libri ON libri.idlibro = movimentidettaglio.fklibro 
+                        INNER JOIN libritipologia ON libri.fktipologia = libritipologia.idlibrotipologia 
+                        INNER JOIN movimentitipologia ON movimenti.fktipologia = movimentitipologia.idmovimentotipologia 
+                        WHERE movimentidettaglio.cancellato = 0 AND libri.cancellato = 0 AND movimenti.cancellato = 0;";
+
+        $risultato = "";
+
+        $result = $db->query($sql);
+        foreach ($result as $row) {
+            $row = get_object_vars($row);
+
+
+        }
+
+        // chiude il database
+        $db = NULL;
+
+        // invia il risultato
+        return $risultato;
+
+    } catch (PDOException $e) {
+        throw new PDOException("Error  : " . $e->getMessage());
+    }
+}
+
+function ClienteAffezionato() {
+    try {
+        include 'config.php';
+        $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+        $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
+
+        $sql = "SELECT libri.prezzo, libritipologia.librotipologia, 
+                        movimenti.anno, movimentitipologia.codice, movimentidettaglio.quantita, movimentidettaglio.sconto 
+                        FROM movimentidettaglio 
+                        INNER JOIN movimenti ON movimentidettaglio.fkmovimento = movimenti.idmovimento 
+                        INNER JOIN libri ON libri.idlibro = movimentidettaglio.fklibro 
+                        INNER JOIN libritipologia ON libri.fktipologia = libritipologia.idlibrotipologia 
+                        INNER JOIN movimentitipologia ON movimenti.fktipologia = movimentitipologia.idmovimentotipologia 
+                        WHERE movimentidettaglio.cancellato = 0 AND libri.cancellato = 0 AND movimenti.cancellato = 0;";
+
+        $risultato = "";
+
+        $result = $db->query($sql);
+        foreach ($result as $row) {
+            $row = get_object_vars($row);
+
+
+        }
+
+        // chiude il database
+        $db = NULL;
+
+        // invia il risultato
+        return $risultato;
+
+    } catch (PDOException $e) {
+        throw new PDOException("Error  : " . $e->getMessage());
+    }
+}
