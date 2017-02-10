@@ -533,3 +533,123 @@ function movimentoNomeByID($idmovimento) {
         throw new PDOException("Error  : " . $e->getMessage());
     }
 }
+
+/* -------------------------------------- LISTA TABELLA HOME -------------------------------------*/
+
+function movimentiListaTabellaHome() {
+    try {
+        include 'config.php';
+        $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+        $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
+
+        $sql = "SELECT movimenti.idmovimento, movimenti.numero, movimenti.anno, movimenti.movimentodata, 
+                movimenti.pagata, movimenti.chiuso, soggetti.denominazione, soggetti.comune, movimentitipologia.codice, 
+                movimentitipologia.movimentotipologia, movimenticausale.movimentocausale, pagamentitipologia.pagamentotipologia,
+                movimenti.spedizionecosto, movimenti.spedizionesconto
+                FROM movimenti 
+                INNER JOIN movimentitipologia ON movimenti.fktipologia=movimentitipologia.idmovimentotipologia 
+                INNER JOIN movimentiaspetto ON movimenti.fkaspetto=movimentiaspetto.idmovimentoaspetto 
+                INNER JOIN movimentitrasporto ON movimenti.fktrasporto=movimentitrasporto.idmovimentotrasporto 
+                INNER JOIN soggetti ON movimenti.fksoggetto=soggetti.idsoggetto 
+                INNER JOIN pagamentitipologia ON movimenti.fkpagamentotipologia=pagamentitipologia.idpagamentotipologia 
+                INNER JOIN movimenticausale ON movimenti.fkcausale=movimenticausale.idmovimentocausale 
+                WHERE movimenti.cancellato=0 
+                ORDER BY movimenti.anno DESC, movimenti.movimentodata DESC, movimenti.fktipologia DESC, movimenti.numero DESC";
+
+        $result = $db->query($sql);
+        foreach ($result as $row) {
+            $row = get_object_vars($row);
+            print "<tr>\n";
+            $num_padded = sprintf("%03d", $row['numero']);
+
+            print "<td>";
+            print "<a class='btn btn-xs btn-success min2' href='movimentoPDF.php?idmovimento=".$row['idmovimento']."' role='button' style='width: 30px;margin-right: 3px; margin-bottom: 3px' target='_blank'><i class = 'fa fa-file-pdf-o'></i></a>";
+            print "</td>";
+
+            print "<td>";
+
+            switch ($row['codice']) {
+                case 'DT':
+                    print "<span class='badge bg-orange'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
+                    break;
+                case 'FA':
+                    print "<span class='badge bg-teal'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
+                    break;
+                case 'FD':
+                    print "<span class='badge bg-blue'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
+                    break;
+                case 'FI':
+                    print "<span class='badge bg-navy'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
+                    break;
+                case 'RI':
+                    print "<span class='badge bg-green'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
+                    break;
+                default:
+                    print "<span class='badge bg-red'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
+                    break;
+            }
+
+            print "</td>";
+
+            $movimentodata = DateTime::createFromFormat('Y-m-d', $row['movimentodata']);
+            if($row['chiuso']==1){
+                print "<td class='hidden-xs'><s>" . $movimentodata->format('d/m/Y') . "</s></td>\n";
+            } else {
+                print "<td class='hidden-xs'>" . $movimentodata->format('d/m/Y') . "</td>\n";
+            }
+
+
+            //print "<td>" . $row['movimentotipologia'] . "</td>\n";
+
+            if($row['chiuso']==1){
+                print "<td class='hidden-xs'><s>" . $row['movimentocausale'] . "</s></td>\n";
+            } else {
+                print "<td class='hidden-xs'>" . $row['movimentocausale'] . "</td>\n";
+            }
+
+
+
+            if($row['comune']) {
+                if($row['chiuso']==1){
+                    print "<td><s>" . $row['denominazione'] . " (". $row['comune'] .")</s></td>\n";
+                } else {
+                    print "<td>" . $row['denominazione'] . " (". $row['comune'] .")</td>\n";
+                }
+
+            } else {
+                if($row['chiuso']==1){
+                    print "<td><s>" . $row['denominazione'] . "</s></td>\n";
+                } else {
+                    print "<td>" . $row['denominazione'] . "</td>\n";
+                }
+
+            }
+
+            $importoTotale = number_format(movimentoDettaglioImportoTotale($row['idmovimento']) + $row['spedizionecosto']*((100-$row['spedizionesconto'])/100), 2);
+
+            if($row['chiuso']==1){
+                print "<td><s>&euro; " . $importoTotale . "</s></td>\n";
+            } else {
+                print "<td>&euro; " . $importoTotale . "</td>\n";
+            }
+
+
+            if($row['pagata']) {
+                print "<td><i class = 'fa fa-fw fa-circle fa-lg' style = 'color:green'></i></td>\n";
+            } else {
+                print "<td><i class = 'fa fa-fw fa-circle fa-lg' style = 'color:red'></i></td>\n";
+            }
+
+
+            print "</tr>\n";
+        }
+        // chiude il database
+        $db = NULL;
+    } catch (PDOException $e) {
+        throw new PDOException("Error  : " . $e->getMessage());
+    }
+}
+
+/* -------------------------------------- FINE LISTA TABELLA HOME -------------------------------------*/
