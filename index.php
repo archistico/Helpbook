@@ -162,15 +162,25 @@ include 'php/utilita.php';
                                 <tbody>
                                 <tr>
                                     <td>Fatturato totale</td>
-                                    <td><?php echo number_format(IncassoTotale(), 2, ',', ' '); ?> &euro;</td>
+                                    <td>
+                                        <?php
+                                        $IncassoTotale = IncassoTotale();
+                                        echo number_format($IncassoTotale, 2, ',', ' ');
+                                        ?>
+                                        &euro;</td>
                                 </tr>
                                 <tr>
                                     <td>Pagato</td>
-                                    <td><?php echo number_format(0, 2, ',', ' '); ?> &euro; <div class="label label-danger label-arrow label-arrow-left"> da implementare</div></td>
+                                    <td>
+                                        <?php
+                                        $incassoPagatoTotale = IncassoPagatoTotale();
+                                        echo number_format($incassoPagatoTotale, 2, ',', ' ');
+                                        ?>
+                                        &euro;</td>
                                 </tr>
                                 <tr>
                                     <td>Da pagare</td>
-                                    <td><?php echo number_format(0, 2, ',', ' '); ?> &euro; <div class="label label-danger label-arrow label-arrow-left"> da implementare</div></td>
+                                    <td><?php echo number_format($IncassoTotale - $incassoPagatoTotale, 2, ',', ' '); ?> &euro;</td>
                                 </tr>
                                 <tr>
                                     <td>Valore distribuito</td>
