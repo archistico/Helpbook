@@ -184,7 +184,7 @@ include 'php/utilita.php';
                                 </tr>
                                 <tr>
                                     <td>Valore distribuito</td>
-                                    <td><?php echo number_format(0, 2, ',', ' '); ?> &euro; <div class="label label-danger label-arrow label-arrow-left"> da implementare</div></td>
+                                    <td><?php echo number_format(ValoreDistribuito(), 2, ',', ' '); ?> &euro;</td>
                                 </tr>
                                 <tr>
                                     <td>Valore magazzino</td>

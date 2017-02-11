@@ -99,7 +99,7 @@ function libriPiuVendutiTabella() {
                 } else {
                     print "<td>" . $row->contodeposito . "</td>";
                 }
-                print "<td>&euro; " . number_format($row->montantevenduto, 2) . "</td>";
+                print "<td>&euro; " . number_format($row->montantevenduto, 2, ',', ' ') . "</td>";
                 print "</tr>";
             }
         // chiude il database
@@ -130,7 +130,7 @@ function libriListaTabella() {
             print "<tr>\n";
             print "<td>".$row['casaeditrice']."</td>\n";
             print "<td>".$row['titolo']."</td>\n";
-            print "<td>&euro; ".number_format($row['prezzo'], 2)."</td>\n";
+            print "<td>&euro; ".number_format($row['prezzo'], 2, ',', ' ')."</td>\n";
             print "<td>".$row['isbn']."</td>\n";
             print "<td>".$row['librotipologia']."</td>\n";
             //print "<td><a class='btn btn-xs btn-info' href='movimentovisualizza.php?idmovimento=".$row['idmovimento']."' role='button' style='margin-right: 5px'><i class = 'fa fa-eye'></i></a></td>\n";

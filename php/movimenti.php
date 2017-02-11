@@ -90,9 +90,9 @@ function movimentiListaSoggettoTabella($id) {
             */
 
             if($row['chiuso']==1){
-                print "<td><s>&euro; " . movimentoDettaglioImportoTotale($row['idmovimento']) . "</s></td>\n";
+                print "<td><s>&euro; " . movimentoDettaglioImportoTotale($row['idmovimento'], ',', ' ') . "</s></td>\n";
             } else {
-                print "<td>&euro; " . movimentoDettaglioImportoTotale($row['idmovimento']) . "</td>\n";
+                print "<td>&euro; " . movimentoDettaglioImportoTotale($row['idmovimento'], ',', ' ') . "</td>\n";
             }
 
 
@@ -220,7 +220,7 @@ function movimentiListaTabella() {
 
             }
 
-            $importoTotale = number_format(movimentoDettaglioImportoTotale($row['idmovimento'])+$row['spedizionecosto']*((100-$row['spedizionesconto'])/100), 2);
+            $importoTotale = number_format(movimentoDettaglioImportoTotale($row['idmovimento'])+$row['spedizionecosto']*((100-$row['spedizionesconto'])/100), 2, ',', ' ');
 
             if($row['chiuso']==1){
                 print "<td><s>&euro; " . $importoTotale . "</s></td>\n";
@@ -289,7 +289,7 @@ function movimentoDettaglioImportoTotaleScontoIva($idmovimento) {
         // chiude il database
         $db = NULL;
         // ritorna il valore
-        return array(number_format($totale, 2), number_format($totalesconto, 2), number_format($totaleiva, 2));
+        return array(number_format($totale, 2, ',', ' '), number_format($totalesconto, 2, ',', ' '), number_format($totaleiva, 2, ',', ' '));
 
     } catch (PDOException $e) {
         throw new PDOException("Error  : " . $e->getMessage());
@@ -570,7 +570,7 @@ function movimentiListaTabellaHome() {
             }
 
             $importoTotale = movimentoDettaglioImportoTotale($row['idmovimento']) + $row['spedizionecosto']*((100-$row['spedizionesconto'])/100);
-            $importoTotale = number_format($importoTotale, 2);
+            $importoTotale = number_format($importoTotale, 2, ',', ' ');
 
             if($row['chiuso']==1){
                 print "<td><s>&euro; " . $importoTotale . "</s></td>\n";
