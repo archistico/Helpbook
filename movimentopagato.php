@@ -69,52 +69,63 @@ include 'php/movimenti.php';
                 </div>
 
                 <div class='box-body'>
-
-                    <div class='row'>
-                        <div class='col-md-12'>
-
-                            <?php
-
-                            $errors = array();
-
-                            if (empty($_GET['idmovimento'])) {
-                                $errors['idmovimento'] = 'idmovimento non passato';
-                            } else {
-                                $idmovimento = $_GET['idmovimento'];
-                            }
-
-                            if (empty($errors)) {
-                                $pagato = movimentoPagatoByID($idmovimento);
-                                echo "<h2>Il movimento <strong>" . pulisciDB(movimentoNomeByID($idmovimento)) . "</strong></h2>";
-                                if($pagato) {
-                                    echo "<h3>La data di pagamento verr&agrave; cancellata</h3>";
-                                } else {
-                                    echo "<h3>Selezionare la data di pagamento</h3>";
-                                }
-                            } else {
-                                echo "<div class='alert alert-danger alert-dismissible'><h4><i class='icon fa fa-ban'></i> ATTENZIONE!</h4>Ci sono degli errori</div>";
-                            }
-                            ?>
-
-                        </div>
-                    </div>
-
-                    <?php
-                    if (empty($errors)) {
-                        ?>
+                    <form role='form' name='myForm' action='movimentopagatoSQL.php' method='get'>
                         <div class='row'>
-                            <div class='col-md-6'>
-                                <a class='btn btn-block btn-default btn-lg' href='movimentilista.php'>Annulla</a>
-                            </div>
-                            <div class='col-md-6'>
-                                <a class='btn btn-block btn-danger btn-lg'
-                                   href='movimentopagatosql.php?idmovimento=<?php echo $idmovimento; ?>'>Cambia -> Pagamento <?php  echo ($pagato)?"":"non"; ?> effettuato</a>
+                            <div class='col-md-12'>
+
+                                <?php
+
+                                $errors = array();
+
+                                if (empty($_GET['idmovimento'])) {
+                                    $errors['idmovimento'] = 'idmovimento non passato';
+                                } else {
+                                    $idmovimento = $_GET['idmovimento'];
+                                }
+
+                                if (empty($errors)) {
+                                    $pagato = movimentoPagatoByID($idmovimento);
+                                    echo "<h2>Il movimento <strong>" . pulisciDB(movimentoNomeByID($idmovimento)) . "</strong></h2>";
+                                    if($pagato) {
+                                        echo "<h3>La data di pagamento verr&agrave; cancellata</h3>";
+                                    } else {
+                                        echo "<div class='col-md-6'>
+                                            <div class='form-group'>
+                                            <label>Data di effettivo pagamento</label>
+                                            <div class='input-group date'><div class='input-group-addon'>
+                                            <i class='fa fa-calendar'></i>
+                                            </div>
+                                            <input type='text' class='form-control pull-right' id='datepicker3'  name='dataPagamento'>
+                                            </div></div></div>";
+                                    }
+                                } else {
+                                    echo "<div class='alert alert-danger alert-dismissible'><h4><i class='icon fa fa-ban'></i> ATTENZIONE!</h4>Ci sono degli errori</div>";
+                                }
+                                ?>
+
                             </div>
                         </div>
+
+
                         <?php
-                    }
-                    ?>
+                        if (empty($errors)) {
+                            ?>
+                            <div class='row'>
+                                <div class='col-md-6'>
+                                    <a class='btn btn-block btn-default btn-lg' href='movimentilista.php'>Annulla</a>
+                                </div>
+                                <div class='col-md-6'>
+                                    <button type="submit" class="btn btn-block btn-warning btn-lg">Cambia -> <?php  echo ($pagato)?"Non pagato":"Pagato"; ?></button>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                        ?>
+                        <input type="hidden" name="idmovimento" value="<?php  echo $idmovimento; ?>"/>
+                        <input type="hidden" name="pagato" value="<?php  echo ($pagato)?0:1; ?>"/>
+                    </form>
                 </div>
+
             </div>
 
         </section>
@@ -128,4 +139,18 @@ include 'php/movimenti.php';
 <?php include 'script.php'; ?>
 
 </body>
+
+<script>
+    $(function () {
+        //Date picker
+        $('#datepicker3').datepicker({
+            todayHighlight : true,
+            autoclose: true
+        });
+    });
+    $(function () {
+        //Date picker
+        $('#datepicker3').datepicker("update", new Date());
+    });
+</script>
 </html>
