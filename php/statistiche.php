@@ -395,3 +395,78 @@ function ValoreDistribuito() {
 
     return $valore;
 }
+
+// ------------------------------------------
+
+function ValoreStampato() {
+    try {
+        include 'config.php';
+        $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+        $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
+
+        $sql = "SELECT libri.prezzo, stampe.* 
+                        FROM stampe 
+                        INNER JOIN libri ON libri.idlibro = stampe.fklibro 
+                        WHERE libri.cancellato = 0 AND stampe.cancellato = 0;";
+
+        $valore = 0;
+
+        $result = $db->query($sql);
+        foreach ($result as $row) {
+            $row = get_object_vars($row);
+
+            $prezzo = $row['prezzo'];
+            $quantita = $row['stampaquantita'];
+
+            $totale = $prezzo * $quantita;
+            $totale = round($totale * 100) / 100;
+
+            $valore += $totale;
+        }
+
+        // chiude il database
+        $db = NULL;
+
+    } catch (PDOException $e) {
+        throw new PDOException("Error  : " . $e->getMessage());
+    }
+
+    return $valore;
+}
+
+// -----------------
+
+function CostoStampato() {
+    try {
+        include 'config.php';
+        $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+        $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
+
+        $sql = "SELECT stampe.stampacosto  
+                FROM stampe 
+                WHERE stampe.cancellato = 0;";
+
+        $valore = 0;
+
+        $result = $db->query($sql);
+        foreach ($result as $row) {
+            $row = get_object_vars($row);
+
+            $totale = round($row['stampacosto'] * 100) / 100;
+
+            $valore += $totale;
+        }
+
+        // chiude il database
+        $db = NULL;
+
+    } catch (PDOException $e) {
+        throw new PDOException("Error  : " . $e->getMessage());
+    }
+
+    return $valore;
+}
