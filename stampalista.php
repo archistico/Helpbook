@@ -88,15 +88,16 @@ include 'php/utilita.php';
                             <table id='stampetabella' class="table table-striped">
                                 <thead>
                                 <tr>
-                                    <th style="width: 100px">Quantità</th>
+                                    <th>Quantità</th>
                                     <th>Opera</th>
-                                    <th style="width: 100px">Data</th>
+                                    <th>Data</th>
 
-                                    <th style="width: 100px">Costo</th>
+                                    <th>Costo</th>
                                     <th>Tipografia</th>
                                     <th>Spedizione</th>
-                                    <th>IVA</th>
-                                    <th>Costo unitario</th>
+                                    <th class="hidden-xs hidden-sm">IVA</th>
+                                    <th class="hidden-xs hidden-sm">Costo unitario</th>
+                                    <th class="hidden-xs hidden-sm">Documento</th>
                                     <th>X</th>
                                     <!-- <th style="width: 80px"></th> -->
                                 </tr>

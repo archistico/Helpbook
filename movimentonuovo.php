@@ -179,7 +179,9 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Spese di spedizione</label>
-                                    <input type="number" min="0" max="1000" step="0.01" class="form-control" placeholder="Spese spedizione" value="0" name='spedizione' required>
+                                    <div lang="en-US">
+                                        <input type="number" min="0" max="1000" step="0.01" class="form-control" placeholder="Spese spedizione" value="0" name='spedizione' required>
+                                    </div>
                                 </div>
                             </div>
                             <!-- /.col -->
@@ -187,7 +189,9 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Sconto spedizione (%)</label>
-                                    <input type="number" min="0" max="100" step="0.01" class="form-control" placeholder="Sconto spedizione" value='0' name='spedizionesconto' required>
+                                    <div lang="en-US">
+                                        <input type="number" min="0" max="100" step="0.01" class="form-control" placeholder="Sconto spedizione" value='0' name='spedizionesconto' required>
+                                    </div>
                                 </div>
                             </div>
                             <!-- /.col -->

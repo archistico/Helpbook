@@ -10,7 +10,7 @@ function stampeListaTabella() {
 
         /*$sql = "SELECT SUM(stampe.stampaquantita) AS totalequantita, SUM(stampe.stampacosto) AS totalecosto, "
             ."SUM(stampe.stampaspedizione) AS totalespedizione, SUM(stampe.stampaiva) AS totaleiva, "
-            ."libri.titolo, casaeditrice.casaeditrice "
+            ."libri.titolo, casaeditrice.casaeditrice, stampe.stampadocumento "
             ."FROM stampe "
             ."INNER JOIN libri ON libri.idlibro=stampe.fklibro "
             ."INNER JOIN casaeditrice ON libri.fkcasaeditrice=casaeditrice.idcasaeditrice "
@@ -42,9 +42,10 @@ function stampeListaTabella() {
             print "<td>".$row['denominazione']."</td>\n";
 
             print "<td>&euro; ".number_format($row['stampaspedizione'], 2)."</td>\n";
-            print "<td>&euro; ".number_format($row['stampaiva'], 2)."</td>\n";
+            print "<td class='hidden-xs hidden-sm'>&euro; ".number_format($row['stampaiva'], 2)."</td>\n";
             $costounitario = ($row['stampacosto']+$row['stampaspedizione'])/$row['stampaquantita'];
-            print "<td>&euro; ".number_format($costounitario, 2)."</td>\n";
+            print "<td class='hidden-xs hidden-sm'>&euro; ".number_format($costounitario, 2)."</td>\n";
+            print "<td class='hidden-xs hidden-sm'>".$row['stampadocumento']."</td>\n";
             print "<td>";
             print "<a class='btn btn-xs btn-danger' href='stampacancella.php?idstampa=".$row['idstampa']."' role='button' style='width: 30px;margin-bottom: 3px'><i class = 'fa fa-remove'></i></a>";
             print "</td>";

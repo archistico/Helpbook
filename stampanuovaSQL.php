@@ -28,25 +28,25 @@ if (empty($_GET['stampadata'])) {
     $stampadata = DateTime::createFromFormat('d/m/Y', $_GET['stampadata']);
 }
 
-if (empty($_GET['stampaquantita'])) {
+if (empty($_GET['stampaquantita']) && strlen($_GET['stampaquantita'])==0) {
     $errors['stampaquantita'] = 'stampa quantita non passato';
 } else {
     $stampaquantita = $_GET['stampaquantita'];
 }
 
-if (empty($_GET['stampacosto'])) {
+if (empty($_GET['stampacosto']) && strlen($_GET['stampacosto'])==0) {
     $errors['stampacosto'] = 'stampa costo non passato';
 } else {
     $stampacosto = $_GET['stampacosto'];
 }
 
-if (empty($_GET['stampaspedizione'])) {
+if (empty($_GET['stampaspedizione']) && strlen($_GET['stampaspedizione'])==0) {
     $errors['stampaspedizione'] = 'stampa spedizione non passato';
 } else {
     $stampaspedizione = $_GET['stampaspedizione'];
 }
 
-if (empty($_GET['stampaiva'])) {
+if (empty($_GET['stampaiva']) && strlen($_GET['stampaiva'])==0) {
     $errors['stampaiva'] = 'stampa iva non passato';
 } else {
     $stampaiva = $_GET['stampaiva'];
