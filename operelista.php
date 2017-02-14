@@ -72,14 +72,6 @@
                                 <!-- /.box-header -->
                                 <div class="box-body no-padding">
                                     <table class="table table-striped">
-                                        <tr>
-                                            <th>Casa editrice</th>
-                                            <th>Titolo</th>
-                                            <th>Prezzo</th>
-                                            <th style="width: 130px">ISBN</th>
-                                            <th>Tipo</th>
-                                            <!-- <th style="width: 80px"></th> -->
-                                        </tr>
                                         <?php
                                         include 'php/libri.php';
                                         libriListaTabella();

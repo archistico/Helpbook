@@ -110,6 +110,18 @@ function libriPiuVendutiTabella() {
 }
 
 function libriListaTabella() {
+
+    echo "<thead><tr>";
+    echo "<th>Casa editrice</th>";
+    echo "<th>Titolo</th>";
+    echo "<th>Prezzo</th>";
+    echo "<th class='hidden-xs'>ISBN</th>";
+    echo "<th>Tipo</th>";
+    echo "<th>X</th>";
+
+    echo "</tr></thead>";
+    echo "<tbody>";
+
     try {
         include 'config.php';
         $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
@@ -131,8 +143,11 @@ function libriListaTabella() {
             print "<td>".$row['casaeditrice']."</td>\n";
             print "<td>".$row['titolo']."</td>\n";
             print "<td>&euro; ".number_format($row['prezzo'], 2, ',', ' ')."</td>\n";
-            print "<td>".$row['isbn']."</td>\n";
+            print "<td class='hidden-xs'>".$row['isbn']."</td>\n";
             print "<td>".$row['librotipologia']."</td>\n";
+            print "<td>";
+            print "<a class='btn btn-xs btn-danger' href='operacancella.php?idlibro=".$row['idlibro']."' role='button' style='width: 30px;margin-bottom: 3px'><i class = 'fa fa-remove'></i></a>";
+            print "</td>";
             //print "<td><a class='btn btn-xs btn-info' href='movimentovisualizza.php?idmovimento=".$row['idmovimento']."' role='button' style='margin-right: 5px'><i class = 'fa fa-eye'></i></a></td>\n";
             print "</tr>\n";
         }
@@ -141,6 +156,8 @@ function libriListaTabella() {
     } catch (PDOException $e) {
         throw new PDOException("Error  : " . $e->getMessage());
     }
+
+    echo "</tbody>";
 }
 
 function librocaricamodifica($idlibro) {
