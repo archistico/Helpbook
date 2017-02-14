@@ -112,6 +112,7 @@ function libriPiuVendutiTabella() {
 function libriListaTabella() {
 
     echo "<thead><tr>";
+    echo "<th>#</th>";
     echo "<th>Casa editrice</th>";
     echo "<th>Titolo</th>";
     echo "<th>Prezzo</th>";
@@ -140,6 +141,9 @@ function libriListaTabella() {
         foreach ($result as $row) {
             $row = get_object_vars($row);
             print "<tr>\n";
+            print "<td>";
+            print "<a class='btn btn-xs btn-warning' href='operamodifica.php?idlibro=".$row['idlibro']."' role='button' style='width: 30px; margin-right: 3px; margin-bottom: 3px'><i class = 'fa fa-pencil'></i></a>";
+            print "</td>";
             print "<td>".$row['casaeditrice']."</td>\n";
             print "<td>".$row['titolo']."</td>\n";
             print "<td>&euro; ".number_format($row['prezzo'], 2, ',', ' ')."</td>\n";
@@ -189,4 +193,36 @@ function librocaricamodifica($idlibro) {
   } catch (PDOException $e) {
     throw new PDOException("Error  : " . $e->getMessage());
   }
+}
+
+function operaByID($idlibro) {
+    try {
+        include 'config.php';
+        $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+        $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
+
+        $sql = "SELECT libri.*, casaeditrice.casaeditrice, libritipologia.librotipologia  
+                FROM libri 
+                INNER JOIN casaeditrice ON casaeditrice.idcasaeditrice = libri.fkcasaeditrice 
+                INNER JOIN libritipologia ON libritipologia.idlibrotipologia = libri.fktipologia 
+                WHERE libri.idlibro=".$idlibro;
+
+        $result = $db->query($sql);
+        foreach ($result as $row) {
+            $row = get_object_vars($row);
+
+            $casaeditrice = $row['casaeditrice'];
+            $titolo = $row['titolo'];
+            $tipologia = $row['librotipologia'];
+        }
+        // chiude il database
+        $db = NULL;
+
+        return $casaeditrice." - ".$titolo." (".$tipologia.")";
+
+    } catch (PDOException $e) {
+        throw new PDOException("Error  : " . $e->getMessage());
+    }
 }

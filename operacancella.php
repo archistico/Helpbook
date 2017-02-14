@@ -77,15 +77,15 @@ include 'php/libri.php';
 
                             $errors = array();
 
-                            if (empty($_GET['fksoggetto'])) {
-                                $errors['fksoggetto'] = 'fksoggetto non passato';
+                            if (empty($_GET['idlibro'])) {
+                                $errors['idlibro'] = 'idlibro non passato';
                             } else {
-                                $fksoggetto = $_GET['fksoggetto'];
+                                $idlibro = $_GET['idlibro'];
                             }
 
                             if (empty($errors)) {
-                                echo "<p>Il cliente verrà cancellato solo se non ha movimenti associati</p>";
-                                echo "<h1>" . pulisciDB(soggettoDenominazioneID($fksoggetto)) . "</h1>";
+                                echo "<p>L'opera verrà cancellata solo se non ha movimenti associati</p>";
+                                echo "<h1>" . pulisciDB(operaByID($idlibro)) . "</h1>";
                             } else {
                                 echo "<div class='alert alert-danger alert-dismissible'><h4><i class='icon fa fa-ban'></i> ATTENZIONE!</h4>Ci sono degli errori</div>";
                             }
@@ -99,11 +99,11 @@ include 'php/libri.php';
                         ?>
                         <div class='row'>
                             <div class='col-md-6'>
-                                <a class='btn btn-block btn-default btn-lg' href='soggettilista.php'>Annulla</a>
+                                <a class='btn btn-block btn-default btn-lg' href='operelista.php'>Annulla</a>
                             </div>
                             <div class='col-md-6'>
                                 <a class='btn btn-block btn-danger btn-lg'
-                                   href='soggettocancellasql.php?fksoggetto=<?php echo $fksoggetto; ?>'>Cancella cliente</a>
+                                   href='operacancellasql.php?idlibro=<?php echo $idlibro; ?>'>Cancella opera</a>
                             </div>
                         </div>
                         <?php

@@ -126,7 +126,7 @@
                   <div class="form-group">
                     <label>Titolo</label>
                     <input type="hidden" name="idlibro" value="<?php echo $idlibro; ?>">
-                    <input type="text" class="form-control" placeholder="Titolo" name='titolo' value='<?php echo convertiApostrofi($titolo); ?>' required>
+                    <input type="text" class="form-control" placeholder="Titolo" name='titolo' value='<?php echo pulisciDB($titolo); ?>' required>
                   </div>
                 </div>
                 <!-- /.col -->
@@ -134,7 +134,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Sottotitolo <em>(opzionale)</em></label>
-                    <input type="text" class="form-control" placeholder="Sottotitolo" name='sottotitolo' value='<?php echo convertiApostrofi($sottotitolo); ?>'>
+                    <input type="text" class="form-control" placeholder="Sottotitolo" name='sottotitolo' value='<?php echo pulisciDB($sottotitolo); ?>'>
                   </div>
                 </div>
                 <!-- /.col -->
