@@ -126,6 +126,7 @@ function movimentiListaTabella() {
            <th>Cliente</th>
            <th>Importo</th>
            <th>Pagato</th>
+           <th>Modifica</th>
            <th>X</th>";
     print "</tr></thead>";
     print "<tbody>";
@@ -240,6 +241,10 @@ function movimentiListaTabella() {
             print "</a>";
             print "</div>";
             print "</td>\n";
+
+            print "<td>";
+            print "<a class='btn btn-xs btn-warning' href='movimentomodifica.php?idmovimento=".$row['idmovimento']."' role='button' style='width: 30px; margin-bottom: 3px'><i class = 'fa fa-pencil'></i></a>";
+            print "</td>";
 
             //print "<td><a class='btn btn-xs btn-warning' style='width: 30px;margin-right: 3px; margin-bottom: 3px' href='movimentomodifica.php?idmovimento=".$row['idmovimento']."' role='button'><i class = 'fa fa-remove'></i></a></td>\n";
 

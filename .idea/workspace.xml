@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a7bde4d-5f14-4267-a957-ffc0dc02a0ef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/info.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operamodifica.php" afterPath="$PROJECT_DIR$/operamodifica.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operamodificaSQL.php" afterPath="$PROJECT_DIR$/operamodificaSQL.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/stampe.php" afterPath="$PROJECT_DIR$/php/stampe.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stampalista.php" afterPath="$PROJECT_DIR$/stampalista.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/movimenti.php" afterPath="$PROJECT_DIR$/php/movimenti.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +22,18 @@
     <favorites_list name="hb" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="stampe.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/stampe.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="31" column="54" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -78,7 +83,6 @@
         <option value="$PROJECT_DIR$/movimentilista.php" />
         <option value="$PROJECT_DIR$/dist/css/emilie.css" />
         <option value="$PROJECT_DIR$/test.php" />
-        <option value="$PROJECT_DIR$/php/movimenti.php" />
         <option value="$PROJECT_DIR$/movimentopagato.php" />
         <option value="$PROJECT_DIR$/movimentopagatoSQL.php" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -91,10 +95,11 @@
         <option value="$PROJECT_DIR$/operacancella.php" />
         <option value="$PROJECT_DIR$/operelista.php" />
         <option value="$PROJECT_DIR$/php/libri.php" />
-        <option value="$PROJECT_DIR$/php/stampe.php" />
         <option value="$PROJECT_DIR$/stampalista.php" />
         <option value="$PROJECT_DIR$/operamodificaSQL.php" />
         <option value="$PROJECT_DIR$/operamodifica.php" />
+        <option value="$PROJECT_DIR$/php/movimenti.php" />
+        <option value="$PROJECT_DIR$/php/stampe.php" />
       </list>
     </option>
   </component>
@@ -264,18 +269,18 @@
       <workItem from="1486999665514" duration="7431000" />
       <workItem from="1487062633380" duration="9248000" />
       <workItem from="1487104957262" duration="3975000" />
-      <workItem from="1487164386135" duration="1058000" />
+      <workItem from="1487164386135" duration="2175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103368000" />
+    <option name="totallyTimeSpent" value="104485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16398244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16398244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -612,14 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/utilita.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/operelista.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -628,53 +625,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/movimenti.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="572" column="70" selection-start-line="572" selection-start-column="60" selection-end-line="572" selection-end-column="70" />
-          <folding>
-            <marker date="1486822573078" expanded="true" signature="4252:4258" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="4391:4397" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="4595:4606" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="4711:4720" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="4909:4926" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="5077:5094" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="6301:7548" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="10739:10745" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="10830:10836" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="10907:11144" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="11231:11260" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="11360:11366" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="11360:11387" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="11560:11609" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="11798:11847" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="12843:13067" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="14380:14604" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="23221:24468" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="23221:24493" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="24633:24685" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="24721:24752" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="25022:25051" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="27752:27758" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="27843:27849" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="28005:28016" placeholder="..." />
-            <marker date="1486822573078" expanded="true" signature="28127:28136" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stampalista.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1124">
           <caret line="92" column="49" selection-start-line="92" selection-start-column="49" selection-end-line="92" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/stampe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -717,6 +671,57 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="157" column="36" selection-start-line="157" selection-start-column="18" selection-end-line="157" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/movimenti.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="245" column="112" selection-start-line="245" selection-start-column="112" selection-end-line="245" selection-end-column="112" />
+          <folding>
+            <marker date="1487171620991" expanded="true" signature="4252:4258" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="4391:4397" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="4595:4606" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="4711:4720" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="4909:4926" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="5077:5094" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="6330:7577" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="10768:10774" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="10859:10865" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="10936:11173" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="11260:11289" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="11389:11395" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="11389:11416" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="11852:11901" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="12090:12139" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="13135:13359" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="14672:14896" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="23513:24760" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="23513:24785" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="24925:24977" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="25013:25044" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="25314:25343" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="28044:28050" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="28135:28141" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="28297:28308" placeholder="..." />
+            <marker date="1487171620991" expanded="true" signature="28419:28428" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/utilita.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/stampe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="31" column="54" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
           <folding />
         </state>
       </provider>
