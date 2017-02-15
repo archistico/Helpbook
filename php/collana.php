@@ -11,7 +11,7 @@ function collanaSelect() {
         $result = $db->query('SELECT idcollana, collana FROM collane WHERE cancellato=0 ORDER BY collana ASC');
         foreach ($result as $row) {
             $row = get_object_vars($row);
-                print "<option value='" . $row['idcollana'] . "'>" . convertiStringaToHTML($row['collana']) . "</option>\n";
+                print "<option value='" . $row['idcollana'] . "'>" . $row['collana'] . "</option>\n";
         }
         // chiude il database
         $db = NULL;
@@ -31,7 +31,7 @@ function collanaSelectID($fkcollana) {
         $result = $db->query('SELECT idcollana, collana FROM collane WHERE cancellato=0 ORDER BY collana ASC');
         foreach ($result as $row) {
             $row = get_object_vars($row);
-                print "<option value='" . $row['idcollana'] . "'".($row['idcollana']==$fkcollana?" selected='selected'":"").">" . convertiStringaToHTML($row['collana']) . "</option>\n";
+                print "<option value='" . $row['idcollana'] . "'".($row['idcollana']==$fkcollana?" selected='selected'":"").">" . $row['collana'] . "</option>\n";
         }
         // chiude il database
         $db = NULL;

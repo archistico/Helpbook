@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9a7bde4d-5f14-4267-a957-ffc0dc02a0ef" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/movimenti.php" afterPath="$PROJECT_DIR$/php/movimenti.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/operanuovaSQL.php" afterPath="$PROJECT_DIR$/operanuovaSQL.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/collana.php" afterPath="$PROJECT_DIR$/php/collana.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soggettonuovoSQL.php" afterPath="$PROJECT_DIR$/soggettonuovoSQL.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +24,20 @@
     <favorites_list name="hb" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="operanuovaSQL.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/operanuovaSQL.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="44" column="56" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
+              <folding>
+                <marker date="1487196144470" expanded="true" signature="1718:2012" placeholder="INSERT INTO libri... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -38,7 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/magazzinolista.php" />
         <option value="$PROJECT_DIR$/magazzinosoggetto.php" />
         <option value="$PROJECT_DIR$/magazzinosoggettoseleziona.php" />
         <option value="$PROJECT_DIR$/movimentilistanonpagati.php" />
@@ -47,13 +61,11 @@
         <option value="$PROJECT_DIR$/movimentochiudi.php" />
         <option value="$PROJECT_DIR$/movimentovisualizza.php" />
         <option value="$PROJECT_DIR$/operamodificaseleziona.php" />
-        <option value="$PROJECT_DIR$/operanuovaSQL.php" />
         <option value="$PROJECT_DIR$/php/operejson.php" />
         <option value="$PROJECT_DIR$/php/librijson.php" />
         <option value="$PROJECT_DIR$/test/test.php" />
         <option value="$PROJECT_DIR$/movimentonuovoSQL.php" />
         <option value="$PROJECT_DIR$/test/test2.php" />
-        <option value="$PROJECT_DIR$/soggettonuovoSQL.php" />
         <option value="$PROJECT_DIR$/php/soggetti.php" />
         <option value="$PROJECT_DIR$/soggettomodifica.php" />
         <option value="$PROJECT_DIR$/test/test3.php" />
@@ -89,6 +101,9 @@
         <option value="$PROJECT_DIR$/stampalista.php" />
         <option value="$PROJECT_DIR$/php/stampe.php" />
         <option value="$PROJECT_DIR$/php/movimenti.php" />
+        <option value="$PROJECT_DIR$/php/collana.php" />
+        <option value="$PROJECT_DIR$/soggettonuovoSQL.php" />
+        <option value="$PROJECT_DIR$/operanuovaSQL.php" />
       </list>
     </option>
   </component>
@@ -151,8 +166,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -187,6 +200,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,33 +274,34 @@
       <workItem from="1487062633380" duration="9248000" />
       <workItem from="1487104957262" duration="3975000" />
       <workItem from="1487164386135" duration="4845000" />
+      <workItem from="1487195427954" duration="1303000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107155000" />
+    <option name="totallyTimeSpent" value="108458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16398244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18740849" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,13 +323,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/test2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/datatables/jquery.dataTables.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -496,13 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/operanuovaSQL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-756">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/soggettomodificaSQL.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-525">
@@ -603,7 +605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="65" column="33" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -611,17 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1827">
           <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/soggettonuovoSQL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="124" selection-end-column="2" />
-          <folding>
-            <marker date="1486400337353" expanded="true" signature="2252:2666" placeholder="INSERT INTO soggetti... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -629,15 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/operamodifica.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="175" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -645,15 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="157" column="36" selection-start-line="157" selection-start-column="18" selection-end-line="157" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/utilita.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -661,7 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
           <caret line="111" column="54" selection-start-line="111" selection-start-column="54" selection-end-line="111" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -669,7 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="90" column="42" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -677,12 +647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-          <folding>
-            <marker date="1487172522558" expanded="true" signature="1069:1104" placeholder="..." />
-            <marker date="1487172522558" expanded="true" signature="2184:2215" placeholder="..." />
-            <marker date="1487172522558" expanded="true" signature="3717:3752" placeholder="..." />
-            <marker date="1487172522558" expanded="true" signature="4832:4863" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -690,34 +654,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="180" column="53" selection-start-line="180" selection-start-column="53" selection-end-line="180" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/collana.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" column="145" selection-start-line="33" selection-start-column="145" selection-end-line="33" selection-end-column="145" />
           <folding>
-            <marker date="1487179978551" expanded="true" signature="4252:4258" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="4391:4397" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="4595:4606" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="4711:4720" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="4909:4926" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="5077:5094" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="6330:7577" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="10767:10773" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="10858:10864" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="10935:11054" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="11314:11343" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="11620:11626" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="11620:11647" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="11925:11941" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="12377:12426" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="12615:12664" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="13660:13884" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="15197:15421" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="24038:25285" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="24038:25310" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="25450:25502" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="25538:25569" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="25839:25868" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="28569:28575" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="28660:28666" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="28822:28833" placeholder="..." />
-            <marker date="1487179978551" expanded="true" signature="28944:28953" placeholder="..." />
+            <marker date="1487195612225" expanded="true" signature="410:488" placeholder="SELECT idcol... collane" />
+            <marker date="1487195612225" expanded="true" signature="1252:1330" placeholder="SELECT idcol... collane" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/operamodifica.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3486">
+          <caret line="166" column="22" selection-start-line="166" selection-start-column="22" selection-end-line="166" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/utilita.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soggettonuovoSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="123" column="2" selection-start-line="113" selection-start-column="0" selection-end-line="123" selection-end-column="2" />
+          <folding>
+            <marker date="1487195998105" expanded="true" signature="2181:2595" placeholder="INSERT INTO soggetti... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/operanuovaSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="44" column="56" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
+          <folding>
+            <marker date="1487196144470" expanded="true" signature="1718:2012" placeholder="INSERT INTO libri... " />
           </folding>
         </state>
       </provider>

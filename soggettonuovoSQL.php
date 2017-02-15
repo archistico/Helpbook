@@ -4,7 +4,6 @@ include 'controllo.php';
 include 'php/config.php';
 include 'php/utilita.php';
 
-// TODO: Controllare le stringhe per eventuale apostrofi e convertirli
 
 // RECUPERO DATI E AGGIUNGO
 define('CHARSET', 'UTF-8');
