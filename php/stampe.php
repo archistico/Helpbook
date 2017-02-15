@@ -13,7 +13,8 @@ function stampeListaTabella() {
             .'INNER JOIN libri ON libri.idlibro=stampe.fklibro '
             .'INNER JOIN casaeditrice ON libri.fkcasaeditrice=casaeditrice.idcasaeditrice '
             .'INNER JOIN soggetti ON soggetti.idsoggetto=stampe.fktipografia '
-            .'WHERE stampe.cancellato=0 ORDER BY stampe.stampadata ASC, casaeditrice.casaeditrice ASC, libri.titolo ASC';
+            .'WHERE stampe.cancellato=0 '
+            .'ORDER BY stampe.stampadata DESC, casaeditrice.casaeditrice ASC, libri.titolo ASC';
 
         // TODO: sistemare i prezzi sul database
 
@@ -22,14 +23,15 @@ function stampeListaTabella() {
             $row = get_object_vars($row);
             print "<tr>\n";
             print "<td>".$row['stampaquantita']."</td>\n";
-            print "<td>".$row['casaeditrice']." - ".$row['titolo']."</td>\n";
+            $libroDenominazione = $row['casaeditrice']." - ".$row['titolo'];
+            print "<td>".tronca($libroDenominazione, 50)."</td>\n";
 
             $stampa_data_dt = DateTime::createFromFormat('Y-m-d', $row['stampadata']);
             $stampa_data_str = $stampa_data_dt->format('d/m/Y');
 
             print "<td>".$stampa_data_str."</td>\n";
             print "<td>&euro; ".number_format($row['stampacosto'], 2, ',', ' ')."</td>\n";
-            print "<td>".$row['denominazione']."</td>\n";
+            print "<td>".tronca($row['denominazione'],16)."</td>\n";
 
             print "<td>&euro; ".number_format($row['stampaspedizione'], 2, ',', ' ')."</td>\n";
             print "<td class='hidden-xs hidden-sm'>&euro; ".number_format($row['stampaiva'], 2, ',', ' ')."</td>\n";
@@ -71,14 +73,15 @@ function stampeListaAnnoTabella($anno) {
             $row = get_object_vars($row);
             print "<tr>\n";
             print "<td>".$row['stampaquantita']."</td>\n";
-            print "<td>".$row['casaeditrice']." - ".$row['titolo']."</td>\n";
+            $libroDenominazione = $row['casaeditrice']." - ".$row['titolo'];
+            print "<td>".tronca($libroDenominazione, 44)."</td>\n";
 
             $stampa_data_dt = DateTime::createFromFormat('Y-m-d', $row['stampadata']);
             $stampa_data_str = $stampa_data_dt->format('d/m/Y');
 
             print "<td>".$stampa_data_str."</td>\n";
             print "<td>&euro; ".number_format($row['stampacosto'], 2, ',', ' ')."</td>\n";
-            print "<td>".$row['denominazione']."</td>\n";
+            print "<td>".tronca($row['denominazione'],16)."</td>\n";
 
             print "<td>&euro; ".number_format($row['stampaspedizione'], 2, ',', ' ')."</td>\n";
             print "<td class='hidden-xs hidden-sm'>&euro; ".number_format($row['stampaiva'], 2, ',', ' ')."</td>\n";
