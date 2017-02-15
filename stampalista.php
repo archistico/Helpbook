@@ -91,7 +91,6 @@ include 'php/utilita.php';
                                     <th>Quantità</th>
                                     <th>Opera</th>
                                     <th>Data</th>
-
                                     <th>Costo</th>
                                     <th>Tipografia</th>
                                     <th>Spedizione</th>

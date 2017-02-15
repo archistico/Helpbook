@@ -1,5 +1,6 @@
 <?php
 include 'controllo.php';
+include 'php/config.php';
 include 'php/utilita.php';
 
 // RECUPERO DATI E AGGIUNGO
@@ -66,7 +67,6 @@ if (!isset($_GET['pagine'])) {
 
 if (empty($errors)) {
     try {
-        include 'php/config.php';
 
         $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
@@ -86,7 +86,6 @@ if (empty($errors)) {
 
         $db->exec($sql);
 
-
         // chiude il database
         $db = NULL;
     } catch (PDOException $e) {
@@ -94,4 +93,13 @@ if (empty($errors)) {
     }
 }
 
+// Mando il messaggio del risultato e redirigo
 
+session_start();
+if (!empty($errors)) {
+    $_SESSION['sqlerrori'] = implode(", ", $errors);
+} else {
+    $_SESSION['sqlok'] = "OPERAZIONE OK";
+}
+
+header('Location: ./operelista.php');

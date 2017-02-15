@@ -28,13 +28,13 @@ function stampeListaTabella() {
             $stampa_data_str = $stampa_data_dt->format('d/m/Y');
 
             print "<td>".$stampa_data_str."</td>\n";
-            print "<td>&euro; ".number_format($row['stampacosto'], 2)."</td>\n";
+            print "<td>&euro; ".number_format($row['stampacosto'], 2, ',', ' ')."</td>\n";
             print "<td>".$row['denominazione']."</td>\n";
 
-            print "<td>&euro; ".number_format($row['stampaspedizione'], 2)."</td>\n";
-            print "<td class='hidden-xs hidden-sm'>&euro; ".number_format($row['stampaiva'], 2)."</td>\n";
+            print "<td>&euro; ".number_format($row['stampaspedizione'], 2, ',', ' ')."</td>\n";
+            print "<td class='hidden-xs hidden-sm'>&euro; ".number_format($row['stampaiva'], 2, ',', ' ')."</td>\n";
             $costounitario = ($row['stampacosto']+$row['stampaspedizione'])/$row['stampaquantita'];
-            print "<td class='hidden-xs hidden-sm'>&euro; ".number_format($costounitario, 2)."</td>\n";
+            print "<td class='hidden-xs hidden-sm'>&euro; ".number_format($costounitario, 2, ',', ' ')."</td>\n";
             print "<td class='hidden-xs hidden-sm'>".$row['stampadocumento']."</td>\n";
             print "<td>";
             print "<a class='btn btn-xs btn-danger' href='stampacancella.php?idstampa=".$row['idstampa']."' role='button' style='width: 30px;margin-bottom: 3px'><i class = 'fa fa-remove'></i></a>";
@@ -77,13 +77,13 @@ function stampeListaAnnoTabella($anno) {
             $stampa_data_str = $stampa_data_dt->format('d/m/Y');
 
             print "<td>".$stampa_data_str."</td>\n";
-            print "<td>&euro; ".number_format($row['stampacosto'], 2)."</td>\n";
+            print "<td>&euro; ".number_format($row['stampacosto'], 2, ',', ' ')."</td>\n";
             print "<td>".$row['denominazione']."</td>\n";
 
-            print "<td>&euro; ".number_format($row['stampaspedizione'], 2)."</td>\n";
-            print "<td class='hidden-xs hidden-sm'>&euro; ".number_format($row['stampaiva'], 2)."</td>\n";
+            print "<td>&euro; ".number_format($row['stampaspedizione'], 2, ',', ' ')."</td>\n";
+            print "<td class='hidden-xs hidden-sm'>&euro; ".number_format($row['stampaiva'], 2, ',', ' ')."</td>\n";
             $costounitario = ($row['stampacosto']+$row['stampaspedizione'])/$row['stampaquantita'];
-            print "<td class='hidden-xs hidden-sm'>&euro; ".number_format($costounitario, 2)."</td>\n";
+            print "<td class='hidden-xs hidden-sm'>&euro; ".number_format($costounitario, 2, ',', ' ')."</td>\n";
             print "<td class='hidden-xs hidden-sm'>".$row['stampadocumento']."</td>\n";
             print "<td>";
             print "<a class='btn btn-xs btn-danger' href='stampacancella.php?idstampa=".$row['idstampa']."' role='button' style='width: 30px;margin-bottom: 3px'><i class = 'fa fa-remove'></i></a>";
