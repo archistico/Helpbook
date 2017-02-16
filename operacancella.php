@@ -103,7 +103,7 @@ include 'php/libri.php';
                             </div>
                             <div class='col-md-6'>
                                 <a class='btn btn-block btn-danger btn-lg'
-                                   href='operacancellasql.php?idlibro=<?php echo $idlibro; ?>'>Cancella opera</a>
+                                   href='operacancellaSQL.php?idlibro=<?php echo $idlibro; ?>'>Cancella opera</a>
                             </div>
                         </div>
                         <?php
