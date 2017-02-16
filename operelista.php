@@ -84,8 +84,8 @@ include 'php/utilita.php';
                                     <h3 class="box-title">Lista opere</h3>
                                 </div>
                                 <!-- /.box-header -->
-                                <div class="box-body no-padding">
-                                    <table class="table table-striped">
+                                <div class="box-body">
+                                    <table class="table table-striped" id="operetabella">
                                         <?php
                                         include 'php/libri.php';
                                         libriListaTabella();
@@ -115,4 +115,36 @@ include 'php/utilita.php';
         <!-- ./wrapper -->
         <?php include 'script.php'; ?>
     </body>
+    <script>
+        $(function () {
+            $('#operetabella').DataTable({
+                "iDisplayLength": 50,
+                "paging": true,
+                "lengthChange": true,
+                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Tutti"]],
+                "searching": true,
+                "ordering": false,
+                "order": [[ 1, 'asc' ]],
+                "info": true,
+                "autoWidth": true,
+                "language": {
+                    "lengthMenu": "Mostra _MENU_ clienti per pagina",
+                    "zeroRecords": "Nessun cliente",
+                    "info": "Pagina _PAGE_ di _PAGES_",
+                    "sSearch": "Cerca: ",
+                    "infoEmpty": "Nessun cliente",
+                    "infoFiltered": "(filtrati _MAX_ prodotti)"
+                },
+                "oPaginate": {
+                    "sFirst": "Inizio",
+                    "sPrevious": "Precedente",
+                    "sNext": "Prossimo",
+                    "sLast": "Fine"
+                },
+                "sLoadingRecords": "In caricamento...",
+                "sProcessing": "In caricamento..."
+            });
+
+        });
+    </script>
 </html>

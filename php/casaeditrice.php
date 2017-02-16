@@ -11,7 +11,7 @@ function casaeditriceSelect() {
         $result = $db->query('SELECT idcasaeditrice, casaeditrice FROM casaeditrice ORDER BY casaeditrice ASC');
         foreach ($result as $row) {
             $row = get_object_vars($row);
-                print "<option value='" . $row['idcasaeditrice'] . "'>" . convertiStringaToHTML($row['casaeditrice']) . "</option>\n";
+                print "<option value='" . $row['idcasaeditrice'] . "' ".($row['idcasaeditrice']==1?" selected='selected'":"")." >" . convertiStringaToHTML($row['casaeditrice']) . "</option>\n";
         }
         // chiude il database
         $db = NULL;

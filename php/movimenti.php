@@ -529,16 +529,16 @@ function movimentiListaTabellaHome() {
                     print "<span class='badge bg-orange'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
                     break;
                 case 'FA':
-                    print "<span class='badge bg-teal'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
+                    print "<span class='badge bg-navy'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
                     break;
                 case 'FD':
-                    print "<span class='badge bg-blue'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
+                    print "<span class='badge bg-navy'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
                     break;
                 case 'FI':
                     print "<span class='badge bg-navy'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
                     break;
                 case 'RI':
-                    print "<span class='badge bg-green'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
+                    print "<span class='badge bg-blue'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
                     break;
                 default:
                     print "<span class='badge bg-red'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";

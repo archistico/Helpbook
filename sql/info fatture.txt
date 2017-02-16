@@ -1,0 +1,51 @@
+La Fattura Differita
+
+La Fattura Differita è un documento fiscale emesso in un momento diverso da quello dell’effettuazione della prestazione, oppure diverso dalla consegna della merce.
+
+Di norma la Fattura Differita viene utilizzata per la fatturazione a fine mese di merce consegnata con DDT nel corso del mese solare. Questo permette di avere una sola fattura a fronte di molte spedizioni/consegne di merce per il cliente. Si adotta questo sistema quando i propri clienti hanno una frequenza di ordini evasi nel mese abbastanza elevata. Un ottimo esempio può essere un produttore di pane che ogni giorno consegna alle rivendite sue clienti il quantitativo di pane ordinato. Ogni giorno verrà emesso il solo DDT (documento più semplice e senza implicazioni di registrazione nel libro giornale), mentre a fine mese verrà emessa una Fattura Differita riepilogativa del mese appena concluso. 
+
+Fattura Immediata
+
+La fattura immediata, come indica il nome stesso, deve essere emessa e consegnata o spedita al cliente, anche a mezzo di sistemi elettronici, entro lo stesso giorno di effettuazione della vendita o prestazione del servizio. Da ciò si evince che la fattura immediata non ha carattere accompagnatorio, per cui i beni/servizi venduti devono poter essere consegnati senza alcun documento. La fattura immediata rappresenta la regola generale ed è il documento di normale uso quando non c’è obbligo di documento di accompagnamento merce.
+
+La fattura per regola viene considerata emessa all’atto della sua consegna o spedizione all’altra parte; non esiste obbligo di verificare la ricezione.
+
+Fattura Accompagnatoria
+
+La fattura accompagnatoria è un documento che possiamo definire ibrido in quanto ha contemporaneamente le caratteristiche e gli obblighi di un DDT e di una Fattura Immediata. Viene emessa quando vi è una cessione di beni che devono essere trasferiti presso il cliente e non può essere utilizzata per fatturare esclusivamente una prestazione di servizi (in quest’ultimo caso è obbligatorio l’uso della fattura immediata).
+
+DDT
+
+Il DDT certifica un trasferimento di merci dal cedente (venditore) al cessionario (acquirente). La consegna avviene presso la sede indicata dal cessionario quale luogo di consegna. Il trasporto può essere effettuato sia dal mittente che dal destinatario, oppure utilizzando un trasportatore che si assume l’incarico della consegna.
+
+Il Documento di Trasporto deve essere emesso prima della consegna diretta o dell’affidamento dei beni al trasportatore, e deve contenere l’indicazione alcuni elementi obbligatori. In alternativa può essere inviato al destinatario (via fax, via email o altro) entro il giorno stesso dell’invio della merce.
+
+Trasporto di merci non destinate alla vendita
+
+Nel caso in cui si effettuino trasporti di merci non destinate alla vendita (conto lavorazione, riparazione, comodato d’uso, ecc.) è necessario un documento di trasporto con apposita causale che dimostri, ad un eventuale contestazione dell’amministrazione, che non si tratta di una vendita simulata ma di una movimentazione di merce legata ad altri fattori e che la merce in oggetto rimane di proprietà del mittente del trasporto. Diversamente l’amministrazione, sulla base dell’ art. 53 del decreto IVA, può applicare la presunzione di cessione (o acquisto nel caso di merci in ingresso) ed ipotizzare una cessione senza fattura con le relative conseguenze sanzionatorie.
+
+Causale DDT 	Descrizione
+Vendita 	utilizzata per trasporto di merce ai fini della cessione ad un cliente. Per i DDT con questa causale deve essere emessa fattura entro il 15 del mese successivo alla data di effettuazione del trasporto.
+Conto visione 	in questo caso i beni vengono inviati al cliente per essere visionati e poi essere restituiti; nel caso non vengano restituiti è necessario emettere fattura, che comunque va emessa nel termine di un anno dall’emissione del DDT.
+Conto deposito 	i beni sono inviati presso altra destinazione (magazzino, negozio ecc.) al fine di essere tenuti in deposito per successive disponibilità.
+Conto vendita 	i beni sono inviati ad un cliente senza cessione immediata; il cliente tenterà di vendere questi prodotti i quali verranno fatturati solo dopo la loro effettiva vendita. Entro un anno i prodotti dovranno essere o resi o interamente fatturati.
+Tentata vendita 	la caratteristica di questa particolare forma commerciale è di effettuare la vendita direttamente presso la sede del cliente con contestuale consegna dei beni. A tal fine, il venditore carica sul proprio mezzo un determinato quantitativo e varietà di beni e poi inizia il giro dei clienti cui consegna immediatamente la merce che riesce a vendere.
+Prestito d’uso 	con il prestito i beni vengono inviati al fornitore per poter essere utilizzati durante le lavorazioni; in questo caso la consegna non è seguita da fattura.
+Conto lavorazione 	la merce viene inviata al fornitore per essere lavorata, rimanendo di proprietà dell’azienda; al termine della lavorazione viene riconsegnata la merce lavorata o semi-lavorata oppure viene consegnato un prodotto finito risultato della lavorazione di più beni.
+Omaggio 	quando si invia merce in omaggio è obbligatorio emettere la fattura unicamente per la rivalsa dell’IVA quando previsto dalla normativa
+Riparazione / Riparazione in garanzia 	per questo specifico caso è necessario indicare se si tratta di riparazione in garanzia oppure no perché, nel caso l’operazione non sia coperta da Garanzia, dovrà poi essere emessa fattura per l’intervento di riparazione.
+Reso per accredito 	in questo caso la merce resa viene trattenuta e contestualmente si emetterà una nota di credito
+Reso per sostituzione 	in questo caso sarà spedito del materiale in sostituzione di quello reso; ci sarà quindi un DDT di consegna dei prodotti in sostituzione come chiusura del reso.
+
+Il Documento di Trasporto deve accompagnare i beni durante il trasporto, oppure essere spedito (anche via fax o altro mezzo) entro il giorno stesso dell’inizio del trasporto al cessionario. I DDT relativi ai trasporti con fatturazione differita devono essere conservati fino alla scadenza dei termini per l’accertamento.
+
+Documento di trasporto e tentata vendita
+
+Nel caso di trasporto di merci per la tentata vendita ci sono due comportamenti diversi da tenere a seconda che per la vendita si emetta fattura immediata o fattura differita:
+
+Fatturazione immediata. Si emette un Documento di Trasporto contenente tutti i beni trasportati per la tentata vendita e si emette, al momento delle singole consegne, la relativa fattura consegnandone una copia all’acquirente.
+Fatturazione differita. Si emette un Documento di Trasporto contenente tutti i beni trasportati per la tentata vendita e si emette, al momento delle singole consegne, un’apposita nota di consegna (o ‘scheda clienti’) secondo lo schema richiesto dalla gestione, ma contenente gli elementi obbligatori del DDT (di fatto può essere un DDT con numerazione indipendente).
+
+Documento di trasporto e i beni in conto lavorazione, riparazione e deposito
+
+Nel caso di consegna di beni a terzi (ovvero da parte di terzi) in conto lavorazione, deposito, comodato ovvero in dipendenza di contratti estimatori o contratti d’opera, appalto, trasporto, mandato, commissione o altra motivazione che non configura il trasferimento di proprietà, il DDT costituisce una delle prove valide per vincere la presunzione di cessione (ovvero di acquisto nel caso di ricezione merci). Per adempiere correttamente al suo scopo il DDT deve contenere la causale del trasporto e deve essere conservato da entrambe le parti.
