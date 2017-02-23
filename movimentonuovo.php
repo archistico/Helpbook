@@ -252,7 +252,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Cliente</label>
+                                    <label>Metodo di pagamento</label>
                                     <select class="form-control select2" style="width: 100%;"  name='modalita' required>
                                         <?php
                                         include 'php/pagamentitipologia.php';

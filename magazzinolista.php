@@ -10,311 +10,357 @@
   <?php include 'link.php'; ?>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-  <div class="wrapper">
+<div class="wrapper">
 
-    <header class="main-header">
-      <!-- Logo -->
-      <a href="index.php" class="logo">
-        <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>H</b>B</span>
-        <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>HELP</b>BOOK</span>
-      </a>
-      <!-- Header Navbar: style can be found in header.less -->
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index.php" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>H</b>B</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>HELP</b>BOOK</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <?php
+    $menu = "Magazzini";
+    include 'navbar.php';
+    ?>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <?php
+      include 'sidebarmenu.php';
+      ?>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+
+
+
+
+    <section class="content-header">
+      <h1>
+        MAGAZZINO
+        <small>PER TITOLO</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Magazzino</a></li>
+        <li class="active">Titolo</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Main row -->
+      <div class="row">
+
         <?php
-        $menu = "Magazzini";
-        include 'navbar.php';
+        include 'php/utilita.php';
+        include 'php/soggetti.php';
+
+        // RECUPERO DATI E AGGIUNGO
+        define('CHARSET', 'UTF-8');
+        define('REPLACE_FLAGS', ENT_COMPAT | ENT_XHTML);
+
+        $fksoggetto = 118;
+
         ?>
-    </header>
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar">
-      <!-- sidebar: style can be found in sidebar.less -->
-      <section class="sidebar">
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-        <?php
-        include 'sidebarmenu.php';
-        ?>
-      </section>
-      <!-- /.sidebar -->
-    </aside>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
+        <div class="col-md-12">
 
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Lista per titolo: <?php echo "Due non è il doppio di uno"; ?></h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
 
+                <?php
 
+                class Magazzino {
+                  public $data;
+                  public $entrata;
+                  public $uscita;
+                  public $documento;
+                  public $tipologia;
+                  public $causale;
+                  public $sorgente;
+                  public $destinazione;
 
-      <section class="content-header">
-        <h1>
-          MAGAZZINO
-          <small>CASA EDITRICE</small>
-        </h1>
-        <ol class="breadcrumb">
-          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li><a href="#">Magazzino</a></li>
-          <li class="active">Casa editrice</li>
-        </ol>
-      </section>
+                  function __construct($data, $entrata, $uscita, $documento, $tipologia, $causale, $sorgente, $destinazione) {
+                    $this->data = $data;
+                    $this->entrata = $entrata;
+                    $this->uscita = $uscita;
+                    $this->documento = $documento;
+                    $this->tipologia = $tipologia;
+                    $this->causale = $causale;
+                    $this->sorgente = $sorgente;
+                    $this->destinazione = $destinazione;
+                  }
+                }
 
-      <!-- Main content -->
-      <section class="content">
+                try {
+                  include 'php/config.php';
+                  $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+                  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+                  $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+                  $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
 
-        <!-- Main row -->
-        <div class="row">
+                  $totali = array();
 
-          <?php
-          include 'php/utilita.php';
-          include 'php/soggetti.php';
+                  $sql=  "SELECT stampe.stampadata, stampe.stampaquantita, stampe.stampadocumento, casaeditrice.casaeditrice, libri.titolo, soggetti.denominazione 
+                          FROM stampe
+                          INNER JOIN libri ON libri.idlibro = stampe.fklibro
+                          INNER JOIN casaeditrice ON casaeditrice.idcasaeditrice = libri.fkcasaeditrice
+                          INNER JOIN soggetti ON soggetti.idsoggetto = stampe.fktipografia
+                          WHERE libri.idlibro = 1;";
+                  $result = $db->query($sql);
 
-          // RECUPERO DATI E AGGIUNGO
-          define('CHARSET', 'UTF-8');
-          define('REPLACE_FLAGS', ENT_COMPAT | ENT_XHTML);
+                  $listaMag = array();
 
-          $fksoggetto = 118;
+                  foreach ($result as $row) {
+                    $row = get_object_vars($row);
 
-          class Movimento{
-            public $entrata;
-            public $uscita;
-            public $titolo;
-            public $idlibro;
-            public $documento;
-            public $tipologia;
-            public $causale;
-            public $data;
-            public $provenienza;
-            public $idprovenienza;
+                    $data = null;
+                    $entrata = 0;
+                    $uscita = 0;
+                    $documento = '';
+                    $tipologia = '';
+                    $causale = '';
+                    $destinazione = '';
+                    $sorgente = '';
 
-            public function __construct($entrata, $uscita, $titolo, $idlibro, $documento, $tipologia, $causale, $data, $provenienza, $idprovenienza){
-              $this->entrata = $entrata;
-              $this->uscita = $uscita;
-              $this->titolo = $titolo;
-              $this->idlibro = $idlibro;
-              $this->documento = $documento;
-              $this->tipologia = $tipologia;
-              $this->causale = $causale;
-              $this->data = DateTime::createFromFormat('Y-m-d', $data);
-              $this->idprovenienza = $idprovenienza;
-              $this->provenienza = $provenienza;
-            }
+                    //$titolo = $row['casaeditrice'] . " - ". $row['titolo'];
+                    $data = DateTime::createFromFormat('Y-m-d', $row['stampadata']);
+                    $entrata = $row['stampaquantita'];
+                    $tipologia = 'Stampa';
+                    $sorgente = $row['denominazione'];
+                    $documento = $row['stampadocumento'];
 
-            public function getData(){
-              return date_format($this->data, 'd/m/Y');
-            }
+                    $listaMag[] = new Magazzino($data, $entrata, $uscita, $documento, $tipologia, $causale, $sorgente, $destinazione);
 
-            public function visualizza(){
-              return "<tr><td>{$this->entrata}</td><td>{$this->uscita}</td><td>{$this->titolo}</td><td>{$this->documento}</td><td>{$this->tipologia}</td><td>{$this->causale}</td><td>{$this->getData()}</td><td>{$this->provenienza}</td></tr>";
-            }
-          }
+                  }
+                  // chiude il database
+                  $db = NULL;
 
-          $movimenti = array();
+                } catch (PDOException $e) {
+                  throw new PDOException("Error  : " . $e->getMessage());
+                }
 
-          $movimenti[] = new Movimento(5,0,"primo",1,"doc1","stampa","","2016-12-01",0,0);
-          $movimenti[] = new Movimento(0,2,"primo",1,"doc2","ddt","omaggio","2016-12-02",0,0);
-          $movimenti[] = new Movimento(3,0,"secondo",2,"doc3","stampa","","2015-12-31",0,0);
-
-          usort($movimenti, function($a, $b) {
-            $ad = $a->data;
-            $bd = $b->data;
-
-            if ($ad == $bd) {
-              return 0;
-            }
-
-            return $ad < $bd ? -1 : 1;
-          });
+                // -----------------------------------------
+                // FINE CARICAMENTO STAMPE
 
 
+                try {
+                  include 'php/config.php';
+                  $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+                  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+                  $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+                  $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
 
-          ?>
+                  $sql= "SELECT movimenti.movimentodata, movimentidettaglio.quantita, 
+                        casaeditrice.casaeditrice, libri.titolo, 
+                        movimenti.anno, movimentitipologia.codice, movimenti.numero, 
+                        movimenticausale.movimentocausale,
+                        movimenti.fksoggetto, movimenti.fkmagazzino, 
+                        (SELECT denominazione FROM soggetti WHERE soggetti.idsoggetto = movimenti.fkmagazzino) As sorgente,
+                        (SELECT denominazione FROM soggetti WHERE soggetti.idsoggetto = movimenti.fksoggetto) As destinazione
+                        FROM movimentidettaglio 
+                        INNER JOIN libri ON movimentidettaglio.fklibro = libri.idlibro 
+                        INNER JOIN libritipologia ON libri.fktipologia = libritipologia.idlibrotipologia 
+                        INNER JOIN movimenti ON movimenti.idmovimento = movimentidettaglio.fkmovimento 
+                        INNER JOIN movimenticausale ON movimenti.fkcausale = movimenticausale.idmovimentocausale 
+                        INNER JOIN movimentitipologia ON movimenti.fktipologia = movimentitipologia.idmovimentotipologia
+                        INNER JOIN casaeditrice ON libri.fkcasaeditrice = casaeditrice.idcasaeditrice 
+                        INNER JOIN soggetti ON movimenti.fksoggetto = soggetti.idsoggetto
+                        WHERE 
+                        libritipologia.librotipologia = 'Carta' AND 
+                        movimenti.chiuso = 0 AND 
+                        movimenti.cancellato = 0 AND 
+                        libri.idlibro = 1 
+                        ORDER BY movimenti.movimentodata ASC, movimenti.idmovimento ASC, casaeditrice.casaeditrice ASC, libri.titolo ASC;";
+                  // movimenti.fkmagazzino = 118 AND
+                  $result = $db->query($sql);
 
-          <div class="col-md-12">
+                  foreach ($result as $row) {
+                    $row = get_object_vars($row);
 
-            <div class="box">
-              <div class="box-header">
-                <h3 class="box-title">Lista movimento magazzino: <?php echo soggettoDenominazioneID($fksoggetto); ?></h3>
-              </div>
-              <!-- /.box-header -->
-              <div class="box-body no-padding">
-                <table class="table table-striped">
-                  <tr>
-                    <th style="width: 60px">Entrate</th>
-                    <th style="width: 60px">Uscite</th>
-                    <th>Titolo</th>
-                    <th style="width: 110px">Documento</th>
-                    <th style="width: 150px">Tipologia</th>
-                    <th style="width: 150px">Causale</th>
-                    <th style="width: 100px">Data</th>
-                    <th style="width: 150px">Provenienza</th>
-                  </tr>
+                    $data = null;
+                    $entrata = 0;
+                    $uscita = 0;
+                    $documento = '';
+                    $tipologia = '';
+                    $causale = '';
+                    $destinazione = '';
+                    $sorgente = '';
 
-
-
-
-                  <?php
-                  try {
-                    include 'php/config.php';
-                    $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
-                    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-                    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-                    $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
-
-                    $totali = array();
-
-                    $sql= 'SELECT movimentidettaglio.quantita, casaeditrice.casaeditrice, libri.titolo, movimenti.anno, movimentitipologia.codice, movimenti.numero, movimenti.movimentodata, movimentitipologia.movimentotipologia, movimenticausale.movimentocausale, movimenti.fksoggetto, movimenti.fkmagazzino '
-                    .'FROM movimentidettaglio '
-                    .'INNER JOIN libri ON movimentidettaglio.fklibro = libri.idlibro '
-                    .'INNER JOIN libritipologia ON libri.fktipologia = libritipologia.idlibrotipologia '
-                    .'INNER JOIN movimenti ON movimenti.idmovimento = movimentidettaglio.fkmovimento '
-                    .'INNER JOIN movimentitipologia ON movimentitipologia.idmovimentotipologia = movimenti.fktipologia '
-                    .'INNER JOIN movimenticausale ON movimenti.fkcausale = movimenticausale.idmovimentocausale '
-                    .'INNER JOIN casaeditrice ON libri.fkcasaeditrice = casaeditrice.idcasaeditrice '
-                    .'WHERE movimenti.fksoggetto = '.$fksoggetto.' AND libritipologia.librotipologia = "Carta" AND movimenti.chiuso = 0 AND movimenti.cancellato = 0 '
-                    .'ORDER BY movimenti.movimentodata ASC, movimenti.idmovimento ASC, casaeditrice.casaeditrice ASC, libri.titolo ASC';
-
-                    $result = $db->query($sql);
-
-                    foreach ($result as $row) {
-                      $row = get_object_vars($row);
-                      print "<tr>\n";
-
-                      $libro = $row['casaeditrice'] . " - ". $row['titolo'];
-
-                      // SE DDT
-                      if($row['codice']=="DT") {
-                        switch ($row['movimentocausale']) {
-                          case 'Conto deposito':
-                          case 'Conto vendita':
-                          print "<td style = 'text-align: center;'>" . $row['quantita'] . "</td>\n";
-                          print "<td></td>\n";
-                          $totali[$libro]+=$row['quantita'];
+                    // SE DDT
+                    if($row['codice']=="DT") {
+                      switch ($row['movimentocausale']) {
+                        case 'Conto deposito':
+                        case 'Conto vendita':
+                        case 'Distr. reso':
+                        case 'Omaggio':
+                          $uscita = $row['quantita'];
                           break;
-                          case 'Reso':
-                          print "<td></td>\n";
-                          print "<td style = 'text-align: center;'>".$row['quantita']."</td>\n";
-                          $totali[$libro]-=$row['quantita'];
+                        case 'Reso':
+                        case 'Distr. deposito':
+                          $entrata = $row['quantita'];
                           break;
-                          default:
-                          print "<td style = 'text-align: center;'>ATTENZIONE</td>\n";
-                          print "<td style = 'text-align: center;'>ATTENZIONE</td>\n";
+                        default:
+                          // Tentata vendita non calcola nulla
                           break;
-                        }
                       }
+                    }
 
-                      // SE FATTURA O RICEVUTA
-                      if($row['codice']=="FI" || $row['codice']=="FD" || $row['codice']=="FA" || $row['codice']=="RI") {
-                        switch ($row['movimentocausale']) {
-                          case 'Vendita':
-                          // SE LA VENDITA PRENDE I LIBRI DAL PROPRIO MAGAZZINO ALLORA LI TOGLO ALTRIMENTI NO
-                          if($row['fksoggetto']==$row['fkmagazzino']) {
-                            print "<td></td>\n";
-                            print "<td style = 'text-align: center;'>".$row['quantita']."</td>\n";
-                            $totali[$libro]-=$row['quantita'];
-                          } else {
-                            print "<td style = 'text-align: center;'>-</td>\n";
-                            print "<td style = 'text-align: center;'>-</td>\n";
+                    // SE FATTURA O RICEVUTA
+                    if($row['codice']=="FI" || $row['codice']=="FD" || $row['codice']=="FA" || $row['codice']=="RI") {
+                      switch ($row['movimentocausale']) {
+                        case 'Vendita':
+                          // DEVO COMUNQUE CONTROLLARE DA DOVE PARTONO E DOVE VANNO CON VERIFICA ID
+                          // PER SAPERE SE I LIBRI SONO STATI VENDUTI QUELLI CHE AVEVANO GIA IN GIACENZA O MENO
+
+                          if($row['fksoggetto']!=$row['fkmagazzino']) {
+                            $uscita = $row['quantita'];
                           }
                           break;
-                          default:
-                          print "<td style = 'text-align: center;'>-</td>\n";
-                          print "<td style = 'text-align: center;'>-</td>\n";
-                          break;
-                        }
-                      }
-
-                      print "<td>" . $libro. "</td>\n";
-
-                      $num_padded = sprintf("%03d", $row['numero']);
-
-                      switch ($row['codice']) {
-                        case 'DT':
-                        print "<td><span class='badge bg-orange'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</td></span>\n";
-                        break;
-                        case 'FA':
-                        print "<td><span class='badge bg-teal'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</td></span>\n";
-                        break;
-                        case 'FD':
-                        print "<td><span class='badge bg-blue'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</td></span>\n";
-                        break;
-                        case 'FI':
-                        print "<td><span class='badge bg-navy'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</td></span>\n";
-                        break;
-                        case 'RI':
-                        print "<td><span class='badge bg-green'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</td></span>\n";
-                        break;
                         default:
-                        print "<td><span class='badge bg-red'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</td></span>\n";
-                        break;
+                          break;
                       }
-
-                      print "<td>" . $row['movimentotipologia'] . "</td>\n";
-                      print "<td>" . $row['movimentocausale'] . "</td>\n";
-                      $movimentodata = DateTime::createFromFormat('Y-m-d', $row['movimentodata']);
-                      print "<td>" . $movimentodata->format('d/m/Y') . "</td>\n";
-                      print "<td>" . substr( soggettoDenominazioneID($row['fkmagazzino']), 0, 20 ) . "</td>\n";
-
-                      print "</tr>\n";
                     }
-                    // chiude il database
-                    $db = NULL;
 
-                  } catch (PDOException $e) {
-                    throw new PDOException("Error  : " . $e->getMessage());
+                    //$titolo = $row['casaeditrice'] . " - ". $row['titolo'];
+                    $data = DateTime::createFromFormat('Y-m-d', $row['movimentodata']);
+
+                    $tipologia = $row['codice'];
+                    $causale = $row['movimentocausale'];
+                    $sorgente = $row['sorgente'];
+                    $destinazione = $row['destinazione'];
+
+                    $num_padded = sprintf("%03d", $row['numero']);
+                    $documento = $row['anno'] . "-" . $row['codice'] . "-" . $num_padded;
+
+                    $listaMag[] = new Magazzino($data, $entrata, $uscita, $documento, $tipologia, $causale, $sorgente, $destinazione);
+
+                    /*
+
+                    $row['movimentotipologia']
+                    $row['movimentocausale']
+                    $movimentodata = DateTime::createFromFormat('Y-m-d', $row['movimentodata']);
+                    $movimentodata->format('d/m/Y')
+                    $row['fkmagazzino']
+                    */
                   }
+                  // chiude il database
+                  $db = NULL;
 
-                  foreach($movimenti as $m){
-                    print($m->visualizza());
-                  }
-                  ?>
+                } catch (PDOException $e) {
+                  throw new PDOException("Error  : " . $e->getMessage());
+                }
 
-                </table>
-              </div>
-              <!-- /.box-body -->
+                /*
+
+                echo "<pre>";
+                var_dump($listaMag);
+                echo "</pre>";
+                die();
+
+                */
+
+                ?>
+              <table class="table table-striped">
+                <thead>
+                  <th>Data</th>
+                  <th>Entrate</th>
+                  <th>Uscite</th>
+                  <th>Documento</th>
+                  <th>Tipologia</th>
+                  <th>Causale</th>
+                  <th>Magazzino</th>
+                  <th>Destinazione</th>
+                </thead>
+                <tbody>
+                <?php
+                $rimanente = 0;
+
+                function sortFunction( $a, $b ) {
+                  return $a->data->format('U') - $b->data->format('U');
+                }
+                usort($listaMag, "sortFunction");
+/*
+                echo "<pre>";
+                var_dump($listaMag);
+                echo "</pre>";
+                die();
+*/
+                foreach ($listaMag as $mov) {
+                  echo "<tr>";
+
+                  echo "<td>".$mov->data->format('d/m/Y')."</td>";
+                  echo "<td>$mov->entrata</td>";
+                  echo "<td>$mov->uscita</td>";
+                  echo "<td>$mov->documento</td>";
+                  echo "<td>$mov->tipologia</td>";
+                  echo "<td>$mov->causale</td>";
+                  echo "<td>$mov->sorgente</td>";
+                  echo "<td>$mov->destinazione</td>";
+
+                  $rimanente += $mov->entrata;
+                  $rimanente -= $mov->uscita;
+
+                  echo "</tr>";
+                }
+                ?>
+                </tbody>
+              </table>
             </div>
-            <!-- /.box -->
+            <!-- /.box-body -->
           </div>
-
-
-
-          <div class="col-md-12">
-
-            <div class="box">
-              <div class="box-header">
-                <h3 class="box-title">RIMANENZE</h3>
-              </div>
-              <!-- /.box-header -->
-              <div class="box-body no-padding">
-                <table class="table table-striped">
-                  <tr>
-                    <th style="width: 60px">Quantità</th>
-                    <th>Titolo</th>
-                  </tr>
-                  <?php
-                  foreach ($totali as $key => $value) {
-                    if($value!=0){
-                      echo "<tr><td style = 'text-align: center;'>{$value}</td><td>{$key}</td>";
-                    }
-                  }
-                  ?>
-                </table>
-              </div>
-              <!-- /.box-body -->
-            </div>
-            <!-- /.box -->
-          </div>
-
-
+          <!-- /.box -->
         </div>
-        <!-- /.row (main row) -->
 
 
-      </section>
-      <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
-    <?php include 'footer.php'; ?>
+
+        <div class="col-md-12">
+
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">RIMANENZE</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <h1>
+                <?php
+                echo $rimanente;
+                ?>
+              </h1>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+
+
+      </div>
+      <!-- /.row (main row) -->
+
+
+    </section>
+    <!-- /.content -->
   </div>
-  <!-- ./wrapper -->
-  <?php include 'script.php'; ?>
+  <!-- /.content-wrapper -->
+  <?php include 'footer.php'; ?>
+</div>
+<!-- ./wrapper -->
+<?php include 'script.php'; ?>
 </body>
 </html>
