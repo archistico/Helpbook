@@ -21,11 +21,11 @@
 
     <form action="process_login.php" method="post" name="login_form">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Email" name="email">
+        <input type="text" class="form-control" placeholder="Email" name="email" id="email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" name="p" id="password">
+        <input type="password" class="form-control" placeholder="Password" name="p" id="password"  onkeydown="if (event.keyCode == 13) { formhash(this.form, this.form.password); this.form.submit(); return false; }">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -59,6 +59,5 @@
 <!-- /.login-box -->
 
 <?php include 'script.php'; ?>
-
 </body>
 </html>

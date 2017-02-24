@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9a7bde4d-5f14-4267-a957-ffc0dc02a0ef" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/magazzinolista.php" afterPath="$PROJECT_DIR$/magazzinolista.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentonuovo.php" afterPath="$PROJECT_DIR$/movimentonuovo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +22,18 @@
     <favorites_list name="hb" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="27" column="178" selection-start-line="27" selection-start-column="178" selection-end-line="27" selection-end-column="178" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -39,7 +49,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/movimentilistasoggetto.php" />
         <option value="$PROJECT_DIR$/movimentilistasoggettoSQL.php" />
         <option value="$PROJECT_DIR$/movimentochiudi.php" />
         <option value="$PROJECT_DIR$/movimentovisualizza.php" />
@@ -90,6 +99,7 @@
         <option value="$PROJECT_DIR$/php/casaeditrice.php" />
         <option value="$PROJECT_DIR$/movimentonuovo.php" />
         <option value="$PROJECT_DIR$/magazzinolista.php" />
+        <option value="$PROJECT_DIR$/login.php" />
       </list>
     </option>
   </component>
@@ -153,6 +163,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -173,7 +184,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -250,17 +260,18 @@
       <workItem from="1487237840681" duration="2312000" />
       <workItem from="1487257154394" duration="3029000" />
       <workItem from="1487860635123" duration="10412000" />
+      <workItem from="1487952506572" duration="1601000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124211000" />
+    <option name="totallyTimeSpent" value="125812000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18667643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18667643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -298,13 +309,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/test3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/movimentocancellasql.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -548,7 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="21" column="16" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -585,22 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="534">
           <caret line="544" column="26" selection-start-line="544" selection-start-column="26" selection-end-line="544" selection-end-column="26" />
-          <folding>
-            <marker date="1487239616325" expanded="true" signature="4595:4606" placeholder="..." />
-            <marker date="1487239616325" expanded="true" signature="4711:4720" placeholder="..." />
-            <marker date="1487239616325" expanded="true" signature="4909:4926" placeholder="..." />
-            <marker date="1487239616325" expanded="true" signature="5077:5094" placeholder="..." />
-            <marker date="1487239616325" expanded="true" signature="6330:7577" placeholder="SELECT movim... movimenti" />
-            <marker date="1487239616325" expanded="true" signature="11314:11343" placeholder="..." />
-            <marker date="1487239616325" expanded="true" signature="11620:11647" placeholder="..." />
-            <marker date="1487239616325" expanded="true" signature="11925:11941" placeholder="..." />
-            <marker date="1487239616325" expanded="true" signature="12615:12664" placeholder="..." />
-            <marker date="1487239616325" expanded="true" signature="13660:13884" placeholder="SELECT libri... movimentidettaglio" />
-            <marker date="1487239616325" expanded="true" signature="15197:15421" placeholder="SELECT libri... movimentidettaglio" />
-            <marker date="1487239616325" expanded="true" signature="24038:25310" placeholder="SELECT movim... movimenti" />
-            <marker date="1487239616325" expanded="true" signature="28821:28832" placeholder="..." />
-            <marker date="1487239616325" expanded="true" signature="28943:28952" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -608,14 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2095">
           <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
-          <folding>
-            <marker date="1487111917386" expanded="true" signature="408:745" placeholder="SELECT libri... libri" />
-            <marker date="1487111917386" expanded="true" signature="1550:1911" placeholder="SELECT libri... libri" />
-            <marker date="1487111917386" expanded="true" signature="2963:3609" placeholder="SELECT libri... movimentidettaglio" />
-            <marker date="1487111917386" expanded="true" signature="6447:6844" placeholder="SELECT libri... libri" />
-            <marker date="1487111917386" expanded="true" signature="8688:8728" placeholder="SELECT * FRO... libri" />
-            <marker date="1487111917386" expanded="true" signature="9753:10085" placeholder="SELECT libri... libri" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -623,7 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
           <caret line="86" column="52" selection-start-line="86" selection-start-column="52" selection-end-line="86" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -631,7 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="80" column="26" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -639,10 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="13" column="98" selection-start-line="13" selection-start-column="98" selection-end-line="13" selection-end-column="98" />
-          <folding>
-            <marker date="1487263203416" expanded="true" signature="415:494" placeholder="SELECT idcas... casaeditrice" />
-            <marker date="1487263203416" expanded="true" signature="1334:1413" placeholder="SELECT idcas... casaeditrice" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -650,7 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
           <caret line="254" column="62" selection-start-line="254" selection-start-column="62" selection-end-line="254" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -658,18 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="167" column="27" selection-start-line="160" selection-start-column="26" selection-end-line="167" selection-end-column="27" />
-          <folding>
-            <marker date="1486306153164" expanded="true" signature="5565:5584" placeholder="..." />
-            <marker date="1486306153164" expanded="true" signature="5893:5912" placeholder="..." />
-            <marker date="1486306153164" expanded="true" signature="6119:6138" placeholder="..." />
-            <marker date="1486306153164" expanded="true" signature="6206:6225" placeholder="..." />
-            <marker date="1486306153164" expanded="true" signature="6880:6899" placeholder="..." />
-            <marker date="1486306153164" expanded="true" signature="7077:7096" placeholder="..." />
-            <marker date="1486306153164" expanded="true" signature="7157:7176" placeholder="..." />
-            <marker date="1486306153164" expanded="true" signature="7331:7350" placeholder="..." />
-            <marker date="1486306153164" expanded="true" signature="7409:7428" placeholder="..." />
-            <marker date="1486306153164" expanded="true" signature="10488:10507" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -677,7 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="564">
           <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -685,15 +644,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
           <caret line="295" column="57" selection-start-line="295" selection-start-column="57" selection-end-line="295" selection-end-column="57" />
-          <folding>
-            <marker date="1487876095728" expanded="true" signature="3749:4246" placeholder="SELECT stamp... stampe" />
-            <marker date="1487876095728" expanded="true" signature="6003:7754" placeholder="SELECT movim... movimentidettaglio" />
-            <marker date="1487876095728" expanded="true" signature="6371:6455" placeholder="SELECT denom... soggetti" />
-            <marker date="1487876095728" expanded="true" signature="6495:6578" placeholder="SELECT denom... soggetti" />
-            <marker date="1487876095728" expanded="true" signature="12035:12129" placeholder="..." />
-            <marker date="1487876095728" expanded="true" signature="12035:12152" placeholder="..." />
-            <marker date="1487876095728" expanded="true" signature="13037:13076" placeholder="..." />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="27" column="178" selection-start-line="27" selection-start-column="178" selection-end-line="27" selection-end-column="178" />
+          <folding />
         </state>
       </provider>
     </entry>
