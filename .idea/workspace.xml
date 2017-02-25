@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a7bde4d-5f14-4267-a957-ffc0dc02a0ef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/movimentomodifica.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/hb.iml" afterPath="$PROJECT_DIR$/.idea/hb.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/movimenti.php" afterPath="$PROJECT_DIR$/php/movimenti.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/movimentiaspetto.php" afterPath="$PROJECT_DIR$/php/movimentiaspetto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/movimenticausale.php" afterPath="$PROJECT_DIR$/php/movimenticausale.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/movimentitipologia.php" afterPath="$PROJECT_DIR$/php/movimentitipologia.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/movimentitrasporto.php" afterPath="$PROJECT_DIR$/php/movimentitrasporto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/pagamentitipologia.php" afterPath="$PROJECT_DIR$/php/pagamentitipologia.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movimentomodifica.php" afterPath="$PROJECT_DIR$/movimentomodifica.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,13 +24,16 @@
       <file leaf-file-name="movimentomodifica.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/movimentomodifica.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="324" column="42" lean-forward="true" selection-start-line="324" selection-start-column="42" selection-end-line="324" selection-end-column="42" />
+            <state relative-caret-position="954">
+              <caret line="663" column="0" lean-forward="true" selection-start-line="663" selection-start-column="0" selection-end-line="663" selection-end-column="0" />
               <folding>
-                <marker date="1488034366282" expanded="true" signature="22378:22384" ph="€" />
-                <marker date="1488034366282" expanded="true" signature="23664:23670" ph="€" />
-                <marker date="1488034366282" expanded="true" signature="23798:23803" ph="..." />
-                <marker date="1488034366282" expanded="true" signature="23901:23907" ph="€" />
+                <marker date="1488037449334" expanded="true" signature="22378:22384" ph="€" />
+                <marker date="1488037449334" expanded="true" signature="23695:23701" ph="€" />
+                <marker date="1488037449334" expanded="true" signature="23829:23834" ph="..." />
+                <marker date="1488037449334" expanded="true" signature="23932:23938" ph="€" />
+                <marker date="1488037449334" expanded="true" signature="27001:27007" ph="€" />
+                <marker date="1488037449334" expanded="true" signature="27175:27180" ph="..." />
+                <marker date="1488037449334" expanded="true" signature="27288:27294" ph="€" />
               </folding>
             </state>
           </provider>
@@ -298,12 +292,12 @@
       <workItem from="1487257154394" duration="3029000" />
       <workItem from="1487860635123" duration="10412000" />
       <workItem from="1487952506572" duration="1601000" />
-      <workItem from="1488013366032" duration="8855000" />
+      <workItem from="1488013366032" duration="11494000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134667000" />
+    <option name="totallyTimeSpent" value="137306000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -746,13 +740,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/movimentomodifica.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="324" column="42" lean-forward="true" selection-start-line="324" selection-start-column="42" selection-end-line="324" selection-end-column="42" />
+        <state relative-caret-position="954">
+          <caret line="663" column="0" lean-forward="true" selection-start-line="663" selection-start-column="0" selection-end-line="663" selection-end-column="0" />
           <folding>
-            <marker date="1488034366282" expanded="true" signature="22378:22384" ph="€" />
-            <marker date="1488034366282" expanded="true" signature="23664:23670" ph="€" />
-            <marker date="1488034366282" expanded="true" signature="23798:23803" ph="..." />
-            <marker date="1488034366282" expanded="true" signature="23901:23907" ph="€" />
+            <marker date="1488037449334" expanded="true" signature="22378:22384" ph="€" />
+            <marker date="1488037449334" expanded="true" signature="23695:23701" ph="€" />
+            <marker date="1488037449334" expanded="true" signature="23829:23834" ph="..." />
+            <marker date="1488037449334" expanded="true" signature="23932:23938" ph="€" />
+            <marker date="1488037449334" expanded="true" signature="27001:27007" ph="€" />
+            <marker date="1488037449334" expanded="true" signature="27175:27180" ph="..." />
+            <marker date="1488037449334" expanded="true" signature="27288:27294" ph="€" />
           </folding>
         </state>
       </provider>

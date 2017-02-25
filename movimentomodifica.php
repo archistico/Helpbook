@@ -531,6 +531,8 @@ include 'php/utilita.php';
                 }
                 $('#lista').append(option);
                 $(".select2").select2();
+
+                CaricaDati();
             }
         });
 
@@ -624,6 +626,65 @@ include 'php/utilita.php';
                 return dbLibri[c].prezzo;
             }
         }
+    }
+
+    // cerca titolo
+    function cercaTitolo(id) {
+        for (c = 0; c <= dbLibri.length -1; c++) {
+            if(dbLibri[c].libroid == id) {
+                return dbLibri[c].titolo;
+            }
+        }
+    }
+
+    // Carica i dati dal db
+    function CaricaDati() {
+        // carica i dati già presenti
+
+
+        // PER OGNI LIBRO IN MOVIMENTO DETTAGLI
+        counter++;
+
+        var libroid = 1;
+        var quantita = 15;
+        var prezzo = 15;
+        var sconto = 30;
+
+        var jslibro = {
+            "id": counter,
+            "libroid": libroid,
+            "librotesto": cercaTitolo(libroid),
+            "quantita": quantita,
+            "prezzo": prezzo,
+            "sconto": sconto
+        };
+
+        jslista.push(jslibro);
+        // FINE CARICA PER OGNI LIBRO
+
+        // --------------
+
+        for (index = 0; index <= jslista.length -1; index++) {
+            var newRow = $("<tr>");
+            var cols = "";
+
+            cols += '<td><span class="text-grigio">'+ jslista[index].id + '</span></td>';
+            cols += '<td><span type="text" name="quantita' + jslista[index].id + '">' + (jslista[index].quantita).toFixed(0) + '</span></td>';
+            cols += '<td><span name="librotesto">' + jslista[index].librotesto + '</span></td>';
+            cols += '<td><span type="text" name="prezzo' + jslista[index].id + '">&euro; ' + jslista[index].prezzo.toFixed(2) + '</span></td>';
+            cols += '<td><span type="text" name="sconto' + jslista[index].id + '">' + jslista[index].sconto + ' &#37;</span></td>';
+            cols += '<td><span type="text" name="subtotale' + jslista[index].id + '"><strong>&euro; ' + ((jslista[index].quantita*jslista[index].prezzo)*(1-(jslista[index].sconto/100))).toFixed(2) + '</strong></span></td>';
+            cols += '<td><input type="button" class="ibtnDel btn btn-default btn-block" value="X"></td>';
+            newRow.append(cols);
+
+            $("table.order-list").append(newRow);
+        }
+
+        // --------------
+        visualizzaLista();
+
+        // Ricalcola il totale
+        calculateGrandTotal();
     }
 
     // visualizza lista prodotti
