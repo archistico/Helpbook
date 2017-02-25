@@ -486,8 +486,9 @@ function movimentoPagatoByID($idmovimento) {
         throw new PDOException("Error  : " . $e->getMessage());
     }
 }
-
-/* -------------------------------------- LISTA TABELLA HOME -------------------------------------*/
+/* -------------------------------------------------------------------------------------------------*/
+/* -------------------------------------- LISTA TABELLA HOME ---------------------------------------*/
+/* -------------------------------------------------------------------------------------------------*/
 
 function movimentiListaTabellaHome() {
     try {
@@ -608,3 +609,57 @@ function movimentiListaTabellaHome() {
 }
 
 /* -------------------------------------- FINE LISTA TABELLA HOME -------------------------------------*/
+
+/* -------------------------------------------------------------------------------------------------*/
+/* -------------------------------------- CARICA MODIFICA ------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------*/
+
+function movimentocaricamodifica($idmovimento) {
+    try {
+        include 'config.php';
+        $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+        $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
+
+        $sql = "SELECT *
+                FROM movimenti 
+                WHERE movimenti.cancellato=0 AND movimenti.idmovimento=".$idmovimento;
+
+        $result = $db->query($sql);
+        foreach ($result as $row) {
+            $row = get_object_vars($row);
+
+            $fktipologia = $row['fktipologia'];
+            $fkcausale = $row['fkcausale'];
+            $numero = $row['numero'];
+            $anno = $row['anno'];
+            $riferimento = $row['riferimento'];
+            $fksoggetto = $row['fksoggetto'];
+            $movimentodata = $row['movimentodata'];
+            $pagamentoentro = $row['pagamentoentro'];
+            $pagata = $row['pagata'];
+            $fkpagamentotipologia = $row['fkpagamentotipologia'];
+            $datapagamento = $row['datapagamento'];
+            $spedizionecosto = $row['spedizionecosto'];
+            $spedizionesconto = $row['spedizionesconto'];
+            $fkaspetto = $row['fkaspetto'];
+            $fktrasporto = $row['fktrasporto'];
+            $fkmagazzino = $row['fkmagazzino'];
+            $note = $row['note'];
+
+        }
+        // chiude il database
+        $db = NULL;
+
+        return array($fktipologia, $fkcausale, $numero, $anno, $riferimento, $fksoggetto, $movimentodata, $pagamentoentro, $pagata,
+            $fkpagamentotipologia, $datapagamento, $spedizionecosto, $spedizionesconto, $fkaspetto, $fktrasporto, $fkmagazzino, $note);
+
+    } catch (PDOException $e) {
+        throw new PDOException("Error  : " . $e->getMessage());
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------*/
+/* -------------------------------------- FINE CARICA MODIFICA -------------------------------------*/
+/* -------------------------------------------------------------------------------------------------*/
