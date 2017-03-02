@@ -453,6 +453,7 @@ include 'php/utilita.php';
 
                 <input type="hidden" name="opere" value="" id="opere" />
                 <input type="hidden" name="importo" value="0" id="importo" />
+                <input type="hidden" name="idmovimento" value="<?php echo $idmovimento; ?>" />
 
 
                 <div class="form-group row m-t-md">
@@ -639,52 +640,61 @@ include 'php/utilita.php';
 
     // Carica i dati dal db
     function CaricaDati() {
-        // carica i dati già presenti
 
 
-        // PER OGNI LIBRO IN MOVIMENTO DETTAGLI
-        counter++;
+        // Carica dettagli
+        $.ajax({
+            dataType: "json",
+            url: 'php/movimentodettagliojson.php?idmovimento=<?php echo $idmovimento; ?>',
+            success: function (data) {
+                for (var key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        var item = data[key];
+                        // PER OGNI LIBRO IN MOVIMENTO DETTAGLI
+                        counter++;
 
-        var libroid = 1;
-        var quantita = 15;
-        var prezzo = 15;
-        var sconto = 30;
+                        var jslibro = {
+                            "id": counter,
+                            "libroid": parseInt(item.fklibro),
+                            "librotesto": cercaTitolo(item.fklibro),
+                            "quantita": parseInt(item.quantita),
+                            "prezzo": parseFloat(item.prezzo),
+                            "sconto": parseFloat(item.sconto)
+                        };
 
-        var jslibro = {
-            "id": counter,
-            "libroid": libroid,
-            "librotesto": cercaTitolo(libroid),
-            "quantita": quantita,
-            "prezzo": prezzo,
-            "sconto": sconto
-        };
+                        jslista.push(jslibro);
+                        // FINE CARICA PER OGNI LIBRO
+                    }
+                }
 
-        jslista.push(jslibro);
-        // FINE CARICA PER OGNI LIBRO
+                // --------------
 
-        // --------------
+                for (index = 0; index <= jslista.length -1; index++) {
+                    var newRow = $("<tr>");
+                    var cols = "";
 
-        for (index = 0; index <= jslista.length -1; index++) {
-            var newRow = $("<tr>");
-            var cols = "";
+                    cols += '<td><span class="text-grigio">'+ jslista[index].id + '</span></td>';
+                    cols += '<td><span type="text" name="quantita' + jslista[index].id + '">' + (jslista[index].quantita).toFixed(0) + '</span></td>';
+                    cols += '<td><span name="librotesto">' + jslista[index].librotesto + '</span></td>';
+                    cols += '<td><span type="text" name="prezzo' + jslista[index].id + '">&euro; ' + jslista[index].prezzo.toFixed(2) + '</span></td>';
+                    cols += '<td><span type="text" name="sconto' + jslista[index].id + '">' + jslista[index].sconto + ' &#37;</span></td>';
+                    cols += '<td><span type="text" name="subtotale' + jslista[index].id + '"><strong>&euro; ' + ((jslista[index].quantita*jslista[index].prezzo)*(1-(jslista[index].sconto/100))).toFixed(2) + '</strong></span></td>';
+                    cols += '<td><input type="button" class="ibtnDel btn btn-default btn-block" value="X"></td>';
+                    newRow.append(cols);
 
-            cols += '<td><span class="text-grigio">'+ jslista[index].id + '</span></td>';
-            cols += '<td><span type="text" name="quantita' + jslista[index].id + '">' + (jslista[index].quantita).toFixed(0) + '</span></td>';
-            cols += '<td><span name="librotesto">' + jslista[index].librotesto + '</span></td>';
-            cols += '<td><span type="text" name="prezzo' + jslista[index].id + '">&euro; ' + jslista[index].prezzo.toFixed(2) + '</span></td>';
-            cols += '<td><span type="text" name="sconto' + jslista[index].id + '">' + jslista[index].sconto + ' &#37;</span></td>';
-            cols += '<td><span type="text" name="subtotale' + jslista[index].id + '"><strong>&euro; ' + ((jslista[index].quantita*jslista[index].prezzo)*(1-(jslista[index].sconto/100))).toFixed(2) + '</strong></span></td>';
-            cols += '<td><input type="button" class="ibtnDel btn btn-default btn-block" value="X"></td>';
-            newRow.append(cols);
+                    $("table.order-list").append(newRow);
+                }
 
-            $("table.order-list").append(newRow);
-        }
+                // --------------
+                visualizzaLista();
 
-        // --------------
-        visualizzaLista();
+                // Ricalcola il totale
+                calculateGrandTotal();
+            }
+        });
 
-        // Ricalcola il totale
-        calculateGrandTotal();
+
+
     }
 
     // visualizza lista prodotti
