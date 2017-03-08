@@ -133,3 +133,41 @@ function stampeDettagliByID($id) {
 
     return $risultato;
 }
+
+/*
+
+SELECT SUM(stampaquantita) as totale, SUM(stampacosto) as costo, libri.titolo FROM stampe INNER JOIN libri ON libri.idlibro = stampe.fklibro GROUP BY fklibro ORDER BY libri.titolo
+
+ */
+
+function stampeTabellaTotale() {
+    try {
+        include 'config.php';
+        $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+        $db->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES UTF8');
+
+        $sql = "SELECT SUM(stampaquantita) as totale, SUM(stampacosto) as costo, 
+                libri.titolo 
+                FROM stampe 
+                INNER JOIN libri ON libri.idlibro = stampe.fklibro 
+                GROUP BY fklibro 
+                ORDER BY libri.titolo ASC
+                ";
+
+        $result = $db->query($sql);
+        foreach ($result as $row) {
+            $row = get_object_vars($row);
+            print "<tr>";
+            print "<td>".$row['totale']."</td>\n";
+            print "<td>".tronca($row['titolo'],42)."</td>\n";
+            print "<td>&euro; ".number_format($row['costo'], 2, ',', ' ')."</td>\n";
+            print "</tr>";
+        }
+        // chiude il database
+        $db = NULL;
+    } catch (PDOException $e) {
+        throw new PDOException("Error  : " . $e->getMessage());
+    }
+}

@@ -47,6 +47,9 @@ function movimentiListaSoggettoTabella($id) {
                 case 'RI':
                     print "<span class='badge bg-green'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
                     break;
+                case 'PR':
+                    print "<span class='badge bg-gray'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
+                    break;
                 default:
                     print "<span class='badge bg-red'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
                     break;
@@ -96,11 +99,24 @@ function movimentiListaSoggettoTabella($id) {
             }
 
 
-            if($row['pagata']) {
-                print "<td><i class = 'fa fa-fw fa-circle' style = 'color:green'></i></td>\n";
+            print "<td>";
+            print "<div class='col-lg-12 input-group'>";
+
+            if(($row['codice']!=='DT') && ($row['codice']!=='PR')){
+                if($row['pagata']) {
+                    print "<a class='btn btn-xs btn-success' href='movimentopagato.php?idmovimento=".$row['idmovimento']."' role='button'><i class = 'fa fa-euro'></i>";
+                    print "<i class = 'fa fa-fw fa-check fa-lg' style = 'color:white; margin-left: 5px'></i>";
+                } else {
+                    print "<a class='btn btn-xs btn-success' href='movimentopagato.php?idmovimento=".$row['idmovimento']."' role='button'><i class = 'fa fa-euro'></i>";
+                    print "<i class = 'fa fa-fw fa-square fa-lg' style = 'color:red; margin-left: 5px'></i>";
+                }
             } else {
-                print "<td><i class = 'fa fa-fw fa-circle' style = 'color:red'></i></td>\n";
+                //print "<a class='btn btn-xs btn-success' href='movimentopagato.php?idmovimento=".$row['idmovimento']."' role='button'><i class = 'fa fa-euro'></i>";
+                print "<i class = 'fa fa-fw fa-minus' style = 'margin-left: 5px'></i>";
             }
+            print "</a>";
+            print "</div>";
+            print "</td>\n";
 
             //
 
@@ -180,6 +196,9 @@ function movimentiListaTabella() {
                 case 'RI':
                     print "<span class='badge bg-blue'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
                     break;
+                case 'PR':
+                    print "<span class='badge bg-gray'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
+                    break;
                 default:
                     print "<span class='badge bg-red'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
                     break;
@@ -233,7 +252,7 @@ function movimentiListaTabella() {
             print "<td>";
             print "<div class='col-lg-12 input-group'>";
 
-            if($row['codice']!='DT'){
+            if(($row['codice']!=='DT') && ($row['codice']!=='PR')){
                 if($row['pagata']) {
                     print "<a class='btn btn-xs btn-success' href='movimentopagato.php?idmovimento=".$row['idmovimento']."' role='button'><i class = 'fa fa-euro'></i>";
                     print "<i class = 'fa fa-fw fa-check fa-lg' style = 'color:white; margin-left: 5px'></i>";
@@ -541,6 +560,9 @@ function movimentiListaTabellaHome() {
                 case 'RI':
                     print "<span class='badge bg-blue'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
                     break;
+                case 'PR':
+                    print "<span class='badge bg-gray'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
+                    break;
                 default:
                     print "<span class='badge bg-red'>" . $row['anno'] . "-" . $row['codice'] . "-" . $num_padded . "</span>\n";
                     break;
@@ -591,11 +613,14 @@ function movimentiListaTabellaHome() {
                 print "<td>&euro; " . $importoTotale . "</td>\n";
             }
 
-
-            if($row['pagata']) {
-                print "<td><i class = 'fa fa-fw fa-circle fa-lg' style = 'color:green'></i></td>\n";
+            if(($row['codice']!=='DT') && ($row['codice']!=='PR')){
+                if($row['pagata']) {
+                    print "<td><i class = 'fa fa-fw fa-circle fa-lg' style = 'color:green'></i></td>\n";
+                } else {
+                    print "<td><i class = 'fa fa-fw fa-circle fa-lg' style = 'color:red'></i></td>\n";
+                }
             } else {
-                print "<td><i class = 'fa fa-fw fa-circle fa-lg' style = 'color:red'></i></td>\n";
+                print "<td><i class = 'fa fa-fw fa-minus' style = 'margin-left: 5px'></i></td>\n";
             }
 
 
