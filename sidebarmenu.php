@@ -61,7 +61,7 @@
         </a>
         <ul class="treeview-menu">
             <li><a href="magazzinolistasv.php"><i class="fa fa-building"></i> Magazzino St-Vincent</a></li>
-            <li><a href="magazzinolistapd.php"><i class="fa fa-building"></i> Magazzino Padova</a></li>
+            <li><a href="magazzinosoggetto.php?fksoggetto=3"><i class="fa fa-building"></i> Magazzino Padova</a></li>
             <li><a href="magazzinosoggettoseleziona.php"><i class="fa fa-building-o"></i> Magazzino per soggetto</a></li>
         </ul>
     </li>
