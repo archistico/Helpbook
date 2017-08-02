@@ -120,7 +120,7 @@ include 'php/utilita.php';
                             </div>
                             <!-- /.col -->
 
-                            <div class="col-md-6">
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <label>Data movimento</label>
                                     <div class="input-group date">
@@ -129,6 +129,13 @@ include 'php/utilita.php';
                                         </div>
                                         <input type="text" class="form-control pull-right" id="datepicker1" name='dataEmissione' required>
                                     </div>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Numero documento</label>
+                                    <input type="text" class="form-control" placeholder="Numero documento" name='numerodocumentonuovo' value='<?php echo $numero; ?>'>
                                 </div>
                             </div>
                             <!-- /.col -->

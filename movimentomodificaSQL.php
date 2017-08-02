@@ -16,6 +16,12 @@ if (empty($_GET['idmovimento'])) {
     $idmovimento = $_GET['idmovimento'];
 }
 
+if (empty($_GET['numerodocumentonuovo'])) {
+    $errors['numerodocumentonuovo'] = 'numero documento non passato';
+} else {
+    $numerodocumentonuovo = $_GET['numerodocumentonuovo'];
+}
+
 if (empty($_GET['cliente'])) {
     $errors['cliente'] = 'ID cliente non passato';
 } else {
@@ -114,10 +120,10 @@ $dettagliolibri = json_decode($_GET['opere']);
 $db = new PDO("mysql:host=" . $dbhost . ";dbname=" . $dbname, $dbuser, $dbpswd, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_EMULATE_PREPARES => false ));
 
 // Trova il numero del movimento
-$sqlultimo = "SELECT numero FROM movimenti WHERE idmovimento = '" . $idmovimento . "';";
-$result = $db->query($sqlultimo);
-$row = $result->fetch(PDO::FETCH_ASSOC);
-$numeroMovimento = $row['numero'];
+//$sqlultimo = "SELECT numero FROM movimenti WHERE idmovimento = '" . $idmovimento . "';";
+//$result = $db->query($sqlultimo);
+//$row = $result->fetch(PDO::FETCH_ASSOC);
+//$numeroMovimento = $row['numero'];
 
 //Inizia la transazione
 $db->beginTransaction();
@@ -142,7 +148,7 @@ try {
                 fktrasporto, note, cancellato)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
         $stmt = $db->prepare($sql);
-        $stmt->execute(array($tipologia, $causale, $fkmagazzino, $numeroMovimento, $dataEmissione->format('Y'), $riferimento, $cliente, $dataEmissione->format('Y-m-d'), $dataEntro->format('Y-m-d'), $pagato, $modalita, NULL, $spedizione, $spedizionesconto, $aspetto, $trasporto, $note, 0));
+        $stmt->execute(array($tipologia, $causale, $fkmagazzino, $numerodocumentonuovo, $dataEmissione->format('Y'), $riferimento, $cliente, $dataEmissione->format('Y-m-d'), $dataEntro->format('Y-m-d'), $pagato, $modalita, NULL, $spedizione, $spedizionesconto, $aspetto, $trasporto, $note, 0));
     } else {
         //Query MOVIMENTO
         $sql = "INSERT INTO movimenti 
@@ -152,7 +158,7 @@ try {
                 fktrasporto, note, cancellato)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
         $stmt = $db->prepare($sql);
-        $stmt->execute(array($tipologia, $causale, $fkmagazzino, $numeroMovimento, $dataEmissione->format('Y'), $riferimento, $cliente, $dataEmissione->format('Y-m-d'), $dataEntro->format('Y-m-d'), $pagato, $modalita, $dataPagamento->format('Y-m-d'), $spedizione, $spedizionesconto, $aspetto, $trasporto, $note, 0));
+        $stmt->execute(array($tipologia, $causale, $fkmagazzino, $numerodocumentonuovo, $dataEmissione->format('Y'), $riferimento, $cliente, $dataEmissione->format('Y-m-d'), $dataEntro->format('Y-m-d'), $pagato, $modalita, $dataPagamento->format('Y-m-d'), $spedizione, $spedizionesconto, $aspetto, $trasporto, $note, 0));
     }
     $idmovimento = $db->lastInsertId();
 
